@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SISTEMADECONVENIOSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACTIVIDADECONOMICA">
+    <Key>
+      <PropertyRef Name="idActEcon" />
+    </Key>
+    <Property Name="idActEcon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionActEcon" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AMBITO">
+    <Key>
+      <PropertyRef Name="idAmbito" />
+    </Key>
+    <Property Name="idAmbito" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionAmbito" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONVENIO">
+    <Key>
+      <PropertyRef Name="numConvenio" />
+    </Key>
+    <Property Name="numConvenio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreInstrumento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="inicioConvenio" Type="date" />
+    <Property Name="finConvenio" Type="date" />
+    <Property Name="plazoConvenio" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="publicadoActivo" Type="bit" Nullable="false" />
+    <Property Name="publicadoDonde" Type="varchar" MaxLength="50" />
+    <Property Name="objetivoInstrumento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idNaturaleza" Type="int" Nullable="false" />
+    <Property Name="naturalezaModalidad" Type="int" />
+    <Property Name="becas" Type="varchar" MaxLength="100" />
+    <Property Name="movilidad" Type="int" />
+    <Property Name="prestacionServicio" Type="varchar" MaxLength="100" />
+    <Property Name="donacion" Type="varchar" MaxLength="100" />
+    <Property Name="comodato" Type="varchar" MaxLength="100" />
+    <Property Name="educacionContinua" Type="varchar" MaxLength="100" />
+    <Property Name="nombreRepITH" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="nombreInstitucion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="nombreRepInstitucion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="cargoRepInstitucion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idRecursos" Type="int" Nullable="false" />
+    <Property Name="montoRecursoFinanciero" Type="float" />
+    <Property Name="propiedadIntelActivo" Type="bit" Nullable="false" />
+    <Property Name="propiedadIntelDonde" Type="varchar" MaxLength="100" />
+    <Property Name="entregable" Type="varchar" MaxLength="100" />
+    <Property Name="idTipoConvenio" Type="int" Nullable="false" />
+    <Property Name="idTipoConvenioEsp" Type="int" Nullable="false" />
+    <Property Name="idSector" Type="int" Nullable="false" />
+    <Property Name="idActEcon" Type="int" Nullable="false" />
+    <Property Name="cantidadActEcon" Type="int" />
+    <Property Name="idAmbito" Type="int" Nullable="false" />
+    <Property Name="eje" Type="varchar" MaxLength="200" />
+    <Property Name="ODSActivo" Type="bit" Nullable="false" />
+    <Property Name="idODS" Type="int" />
+    <Property Name="num_participantes" Type="int" />
+  </EntityType>
+  <EntityType Name="MODALIDAD">
+    <Key>
+      <PropertyRef Name="idModalidad" />
+    </Key>
+    <Property Name="idModalidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionMod" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NATURALEZA">
+    <Key>
+      <PropertyRef Name="idNaturaleza" />
+    </Key>
+    <Property Name="idNaturaleza" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreInstrumento" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ODS">
+    <Key>
+      <PropertyRef Name="idODS" />
+    </Key>
+    <Property Name="idODS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionOds" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PARTICIPANTE">
+    <Key>
+      <PropertyRef Name="idTablaParticipante" />
+    </Key>
+    <Property Name="idTablaParticipante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreProyecto" Type="varchar" MaxLength="100" />
+    <Property Name="num_participantes" Type="int" />
+    <Property Name="num_convenio" Type="int" />
+  </EntityType>
+  <EntityType Name="RECURSOS">
+    <Key>
+      <PropertyRef Name="idRecursos" />
+    </Key>
+    <Property Name="idRecursos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionRec" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SECTOR">
+    <Key>
+      <PropertyRef Name="idSector" />
+    </Key>
+    <Property Name="idSector" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionSec" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TIPOCONVENIO">
+    <Key>
+      <PropertyRef Name="idTipoConvenio" />
+    </Key>
+    <Property Name="idTipoConvenio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionTC" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPOCONVENIOESP">
+    <Key>
+      <PropertyRef Name="idTipoConvenioEsp" />
+    </Key>
+    <Property Name="idTipoConvenioEsp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionTCE" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPOUSUARIO">
+    <Key>
+      <PropertyRef Name="tipoUsuario" />
+    </Key>
+    <Property Name="tipoUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="primer_apellido" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="segundo_apellido" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contrasena" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="empresa" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tipoUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TablaParticipantes">
+    <Key>
+      <PropertyRef Name="numConvenio" />
+      <PropertyRef Name="nombreInstrumento" />
+      <PropertyRef Name="plazoConvenio" />
+      <PropertyRef Name="nombreInstitucion" />
+      <PropertyRef Name="idTablaParticipante" />
+    </Key>
+    <Property Name="numConvenio" Type="int" Nullable="false" />
+    <Property Name="nombreInstrumento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="inicioConvenio" Type="date" />
+    <Property Name="finConvenio" Type="date" />
+    <Property Name="plazoConvenio" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombreInstitucion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="idTablaParticipante" Type="int" Nullable="false" />
+    <Property Name="nombreProyecto" Type="varchar" MaxLength="100" />
+    <Property Name="num_participantes" Type="int" />
+    <Property Name="num_convenio" Type="int" />
+  </EntityType>
+  <Association Name="FK__CONVENIO__idActE__078C1F06">
+    <End Role="ACTIVIDADECONOMICA" Type="Self.ACTIVIDADECONOMICA" Multiplicity="1" />
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACTIVIDADECONOMICA">
+        <PropertyRef Name="idActEcon" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idActEcon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idAmbi__0880433F">
+    <End Role="AMBITO" Type="Self.AMBITO" Multiplicity="1" />
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AMBITO">
+        <PropertyRef Name="idAmbito" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idAmbito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idNatu__00DF2177">
+    <End Role="NATURALEZA" Type="Self.NATURALEZA" Multiplicity="1" />
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NATURALEZA">
+        <PropertyRef Name="idNaturaleza" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idNaturaleza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idODS__09746778">
+    <End Role="ODS" Type="Self.ODS" Multiplicity="0..1" />
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ODS">
+        <PropertyRef Name="idODS" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idODS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idRecu__03BB8E22">
+    <End Role="RECURSOS" Type="Self.RECURSOS" Multiplicity="1" />
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RECURSOS">
+        <PropertyRef Name="idRecursos" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idRecursos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idSect__0697FACD">
+    <End Role="SECTOR" Type="Self.SECTOR" Multiplicity="1" />
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECTOR">
+        <PropertyRef Name="idSector" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idSector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idTipo__04AFB25B">
+    <End Role="TIPOCONVENIO" Type="Self.TIPOCONVENIO" Multiplicity="1" />
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOCONVENIO">
+        <PropertyRef Name="idTipoConvenio" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idTipoConvenio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idTipo__05A3D694">
+    <End Role="TIPOCONVENIOESP" Type="Self.TIPOCONVENIOESP" Multiplicity="1" />
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOCONVENIOESP">
+        <PropertyRef Name="idTipoConvenioEsp" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idTipoConvenioEsp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__movili__02C769E9">
+    <End Role="MODALIDAD" Type="Self.MODALIDAD" Multiplicity="0..1" />
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODALIDAD">
+        <PropertyRef Name="idModalidad" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="movilidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__natura__01D345B0">
+    <End Role="MODALIDAD" Type="Self.MODALIDAD" Multiplicity="0..1" />
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODALIDAD">
+        <PropertyRef Name="idModalidad" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="naturalezaModalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USUARIO__tipoUsu__37703C52">
+    <End Role="TIPOUSUARIO" Type="Self.TIPOUSUARIO" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOUSUARIO">
+        <PropertyRef Name="tipoUsuario" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="tipoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARTICIPANTE_CONVENIO">
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PARTICIPANTE" Type="Self.PARTICIPANTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONVENIO">
+        <PropertyRef Name="numConvenio" />
+      </Principal>
+      <Dependent Role="PARTICIPANTE">
+        <PropertyRef Name="num_convenio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="SISTEMADECONVENIOSModelStoreContainer">
+    <EntitySet Name="ACTIVIDADECONOMICA" EntityType="Self.ACTIVIDADECONOMICA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMBITO" EntityType="Self.AMBITO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONVENIO" EntityType="Self.CONVENIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODALIDAD" EntityType="Self.MODALIDAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NATURALEZA" EntityType="Self.NATURALEZA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ODS" EntityType="Self.ODS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PARTICIPANTE" EntityType="Self.PARTICIPANTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RECURSOS" EntityType="Self.RECURSOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SECTOR" EntityType="Self.SECTOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPOCONVENIO" EntityType="Self.TIPOCONVENIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPOCONVENIOESP" EntityType="Self.TIPOCONVENIOESP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPOUSUARIO" EntityType="Self.TIPOUSUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TablaParticipantes" EntityType="Self.TablaParticipantes" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TablaParticipantes].[numConvenio] AS [numConvenio], 
+    [TablaParticipantes].[nombreInstrumento] AS [nombreInstrumento], 
+    [TablaParticipantes].[inicioConvenio] AS [inicioConvenio], 
+    [TablaParticipantes].[finConvenio] AS [finConvenio], 
+    [TablaParticipantes].[plazoConvenio] AS [plazoConvenio], 
+    [TablaParticipantes].[nombreInstitucion] AS [nombreInstitucion], 
+    [TablaParticipantes].[idTablaParticipante] AS [idTablaParticipante], 
+    [TablaParticipantes].[nombreProyecto] AS [nombreProyecto], 
+    [TablaParticipantes].[num_participantes] AS [num_participantes], 
+    [TablaParticipantes].[num_convenio] AS [num_convenio]
+    FROM [dbo].[TablaParticipantes] AS [TablaParticipantes]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__CONVENIO__idActE__078C1F06" Association="Self.FK__CONVENIO__idActE__078C1F06">
+      <End Role="ACTIVIDADECONOMICA" EntitySet="ACTIVIDADECONOMICA" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idAmbi__0880433F" Association="Self.FK__CONVENIO__idAmbi__0880433F">
+      <End Role="AMBITO" EntitySet="AMBITO" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idNatu__00DF2177" Association="Self.FK__CONVENIO__idNatu__00DF2177">
+      <End Role="NATURALEZA" EntitySet="NATURALEZA" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idODS__09746778" Association="Self.FK__CONVENIO__idODS__09746778">
+      <End Role="ODS" EntitySet="ODS" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idRecu__03BB8E22" Association="Self.FK__CONVENIO__idRecu__03BB8E22">
+      <End Role="RECURSOS" EntitySet="RECURSOS" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idSect__0697FACD" Association="Self.FK__CONVENIO__idSect__0697FACD">
+      <End Role="SECTOR" EntitySet="SECTOR" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idTipo__04AFB25B" Association="Self.FK__CONVENIO__idTipo__04AFB25B">
+      <End Role="TIPOCONVENIO" EntitySet="TIPOCONVENIO" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idTipo__05A3D694" Association="Self.FK__CONVENIO__idTipo__05A3D694">
+      <End Role="TIPOCONVENIOESP" EntitySet="TIPOCONVENIOESP" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__movili__02C769E9" Association="Self.FK__CONVENIO__movili__02C769E9">
+      <End Role="MODALIDAD" EntitySet="MODALIDAD" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__natura__01D345B0" Association="Self.FK__CONVENIO__natura__01D345B0">
+      <End Role="MODALIDAD" EntitySet="MODALIDAD" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USUARIO__tipoUsu__37703C52" Association="Self.FK__USUARIO__tipoUsu__37703C52">
+      <End Role="TIPOUSUARIO" EntitySet="TIPOUSUARIO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARTICIPANTE_CONVENIO" Association="Self.FK_PARTICIPANTE_CONVENIO">
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+      <End Role="PARTICIPANTE" EntitySet="PARTICIPANTE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
