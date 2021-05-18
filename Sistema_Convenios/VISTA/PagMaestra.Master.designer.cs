@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace VISTA {
-    
-    
-    public partial class PagMaestra {
-        
+namespace VISTA
+{
+
+
+    public partial class PagMaestra
+    {
+
         /// <summary>
         /// Control head.
         /// </summary>
@@ -20,7 +22,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-        
+
         /// <summary>
         /// Control btnAgregarConvenio.
         /// </summary>
@@ -29,7 +31,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnAgregarConvenio;
-        
+
         /// <summary>
         /// Control linkAgregarConvenio.
         /// </summary>
@@ -38,7 +40,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor linkAgregarConvenio;
-        
+
         /// <summary>
         /// Control btnModificarConvenio.
         /// </summary>
@@ -47,7 +49,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnModificarConvenio;
-        
+
         /// <summary>
         /// Control linkModificarConvenio.
         /// </summary>
@@ -56,7 +58,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor linkModificarConvenio;
-        
+
         /// <summary>
         /// Control btnRenovarConvenio.
         /// </summary>
@@ -65,7 +67,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnRenovarConvenio;
-        
+
         /// <summary>
         /// Control linkRenovarConvenio.
         /// </summary>
@@ -74,7 +76,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor linkRenovarConvenio;
-        
+
         /// <summary>
         /// Control btnBuscarConvenio.
         /// </summary>
@@ -83,7 +85,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnBuscarConvenio;
-        
+
         /// <summary>
         /// Control Form1.
         /// </summary>
@@ -92,7 +94,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
-        
+
         /// <summary>
         /// Control nombreLbl.
         /// </summary>
@@ -101,7 +103,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label nombreLbl;
-        
+
         /// <summary>
         /// Control HyperLink1.
         /// </summary>
@@ -110,7 +112,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
-        
+
         /// <summary>
         /// Control linkUsuarios.
         /// </summary>
@@ -119,7 +121,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor linkUsuarios;
-        
+
         /// <summary>
         /// Control lbtnCS.
         /// </summary>
@@ -128,7 +130,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnCS;
-        
+
         /// <summary>
         /// Control Titulos.
         /// </summary>
@@ -137,7 +139,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Titulos;
-        
+
         /// <summary>
         /// Control ContentPlaceHolder1.
         /// </summary>

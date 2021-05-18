@@ -11,9 +11,8 @@
         <div class="form-row">
           <asp:Label ID="Label1" runat="server" Text="Nombre del Proyecto:" style="font-size: 0.8571em;margin-bottom: 5px;
             color: #9A9A9A;"></asp:Label>
-
-          <asp:TextBox ID="txbNombreProyecto" runat="server" Style="margin-left: 20px; margin-top: 24px;
-            "Width="335px" Height="41px">
+          <asp:TextBox ID="txbNombreProyecto" runat="server" Style="margin-left: 20px; margin-top: 24px;"
+            Width="335px" Height="41px">
           </asp:TextBox>
         </div>
       </div>

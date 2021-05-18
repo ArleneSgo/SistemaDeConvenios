@@ -12,17 +12,17 @@ namespace VISTA
     public partial class ModificarParticipante : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {  
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             try
-            {   ///Agrega los datos registrados al objeto creado
+            {
                 if (Convert.ToInt32(proyectoSeleccionado.SelectedValue) == 1)
                 {
                 }
                 else
-                {
+                {   ///Agrega los datos registrados al objeto creado
                     var numCon = Convert.ToInt32(Request.QueryString["NUM"]);
                     var idParticipante = Convert.ToInt32(proyectoSeleccionado.SelectedValue);
                     PARTICIPANTE participanteModificado = ParticipanteControlador.BuscarParticipantePorID(idParticipante);
@@ -30,6 +30,7 @@ namespace VISTA
                     CONVENIO convenio = ConvenioControlador.BuscarConvenioPorNumero(Convert.ToInt32(numCon));
                     convenio.num_participantes = convenio.num_participantes + num_participantes;
                     ConvenioControlador.ModificarConvenio(convenio);
+                    participanteModificado.num_participantes = Convert.ToInt32(txbNumParticipantes.Text);
                     participanteModificado.num_convenio = Convert.ToInt32(numCon);
                     ParticipanteControlador.ModificarParticipante(participanteModificado);
                     mensaje.Visible = true;
@@ -53,7 +54,6 @@ namespace VISTA
             var idParticipante = Convert.ToInt32(proyectoSeleccionado.SelectedValue);
             PARTICIPANTE participante = ParticipanteControlador.BuscarParticipantePorID(idParticipante);
             txbNumParticipantes.Text = participante.num_participantes.ToString();
-            
         }
     }
 }

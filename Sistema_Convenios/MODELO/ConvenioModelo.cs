@@ -23,23 +23,24 @@ namespace MODELO
             using (var modelo = new SISTEMADECONVENIOSEntities())
             {
                 List<CONVENIO> resultado = (from con in modelo.CONVENIO
-                where (con.nombreInstrumento.Contains(criterios)
-                || con.publicadoDonde.Contains(criterios)
-                || con.objetivoInstrumento.Contains(criterios)
-                || con.becas.Contains(criterios)
-                || con.prestacionServicio.Contains(criterios)
-                || con.donacion.Contains(criterios)
-                || con.comodato.Contains(criterios)
-                || con.educacionContinua.Contains(criterios)
-                || con.nombreRepITH.Contains(criterios)
-                || con.nombreInstitucion.Contains(criterios)
-                || con.nombreRepInstitucion.Contains(criterios)
-                || con.cargoRepInstitucion.Contains(criterios)
-                || con.propiedadIntelDonde.Contains(criterios)
-                || con.entregable.Contains(criterios)
-                || con.eje.Contains(criterios)
-                || con.plazoConvenio.Contains(criterios)
-                ) select con).ToList();
+                                            where (con.nombreInstrumento.Contains(criterios)
+                                            || con.publicadoDonde.Contains(criterios)
+                                            || con.objetivoInstrumento.Contains(criterios)
+                                            || con.becas.Contains(criterios)
+                                            || con.prestacionServicio.Contains(criterios)
+                                            || con.donacion.Contains(criterios)
+                                            || con.comodato.Contains(criterios)
+                                            || con.educacionContinua.Contains(criterios)
+                                            || con.nombreRepITH.Contains(criterios)
+                                            || con.nombreInstitucion.Contains(criterios)
+                                            || con.nombreRepInstitucion.Contains(criterios)
+                                            || con.cargoRepInstitucion.Contains(criterios)
+                                            || con.propiedadIntelDonde.Contains(criterios)
+                                            || con.entregable.Contains(criterios)
+                                            || con.eje.Contains(criterios)
+                                            || con.plazoConvenio.Contains(criterios)
+                                            )
+                                            select con).ToList();
                 return resultado;
             }
         }
@@ -51,8 +52,8 @@ namespace MODELO
             {
                 ///Busca convenio donde el inicio de convenio sea mayor o igual a las fechas establecidas
                 List<CONVENIO> resultado = (from con in modelo.CONVENIO
-                where (con.inicioConvenio >= fecha1 && con.inicioConvenio <= fecha2)
-                select con).ToList();
+                                            where (con.inicioConvenio >= fecha1 && con.inicioConvenio <= fecha2)
+                                            select con).ToList();
                 return resultado;
             }
         }
@@ -64,8 +65,8 @@ namespace MODELO
             {
                 ///Busca convenio donde el fin de convenio sea mayor o igual a las fechas establecidas
                 List<CONVENIO> resultado = (from con in modelo.CONVENIO
-                where (con.finConvenio >= fecha1 && con.finConvenio <= fecha2)
-                select con).ToList();
+                                            where (con.finConvenio >= fecha1 && con.finConvenio <= fecha2)
+                                            select con).ToList();
                 return resultado;
             }
         }
@@ -75,8 +76,8 @@ namespace MODELO
             {
                 ///Busca convenio donde el inicio de convenio sea el mes establecido
                 List<CONVENIO> resultado = (from con in modelo.CONVENIO
-                where (con.inicioConvenio.ToString().Contains(criterios))
-                select con).ToList();
+                                            where (con.inicioConvenio.ToString().Contains(criterios))
+                                            select con).ToList();
                 return resultado;
             }
         }
@@ -86,8 +87,8 @@ namespace MODELO
             {
                 ///Busca convenio donde el fin de convenio sea el mes establecido
                 List<CONVENIO> resultado = (from con in modelo.CONVENIO
-                where (con.finConvenio.ToString().Contains(criterios))
-                select con).ToList();
+                                            where (con.finConvenio.ToString().Contains(criterios))
+                                            select con).ToList();
                 return resultado;
             }
         }
@@ -97,8 +98,8 @@ namespace MODELO
             {
                 ///Busca convenio donde el inicio de convenio sea el año establecido
                 List<CONVENIO> resultado = (from con in modelo.CONVENIO
-                where (con.inicioConvenio.ToString().Contains(criterios))
-                select con).ToList();
+                                            where (con.inicioConvenio.ToString().Contains(criterios))
+                                            select con).ToList();
                 return resultado;
             }
         }
@@ -108,8 +109,8 @@ namespace MODELO
             {
                 ///Busca convenio donde el fin de convenio sea el mes establecido
                 List<CONVENIO> resultado = (from con in modelo.CONVENIO
-                where (con.finConvenio.ToString().Contains(criterios))
-                select con).ToList();
+                                            where (con.finConvenio.ToString().Contains(criterios))
+                                            select con).ToList();
                 return resultado;
             }
         }
@@ -188,3 +189,4 @@ namespace MODELO
         }
     }
 }
+

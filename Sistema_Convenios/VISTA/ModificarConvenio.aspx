@@ -432,143 +432,138 @@
 </div>
 
 <script>
-function Selected() 
-{
-  var rbtnSiMedio = document.getElementById("rbtnSiMedio");
-  var rbtnNoMedio = document.getElementById("rbtnNoMedio");
-  var cualmedio = document.getElementById("cualmedio");
-  if (rbtnSiMedio.checked == true)
-  {
-    cualmedio.style.display = "block"
-  }
-  if (rbtnNoMedio.checked == true) 
-  {
-    cualmedio.style.display = "none"
-  }
-}
+    function Selected() {
+        var rbtnSiMedio = document.getElementById("rbtnSiMedio");
+        var rbtnNoMedio = document.getElementById("rbtnNoMedio");
+        var cualmedio = document.getElementById("cualmedio");
+        if (rbtnSiMedio.checked == true) {
+            cualmedio.style.display = "block"
+        }
+        if (rbtnNoMedio.checked == true) {
+            cualmedio.style.display = "none"
+        }
+    }
 </script>
 
 <script>
-function Checado() 
-{
-  var cbxBecas = document.getElementById("cbxBecas");
-  var becas = document.getElementById("becas");
-  var becasMod = document.getElementById("becasMod");
-  if (cbxBecas.checked == true) 
-  {
-    becas.style.display = "block";
-    becasMod.style.display = "block";
-  }
-}
+    function Checado() {
+        var cbxBecas = document.getElementById("cbxBecas");
+        var becas = document.getElementById("becas");
+        var becasMod = document.getElementById("becasMod");
+        if (cbxBecas.checked == true) {
+            becas.style.display = "block";
+            becasMod.style.display = "block";
+        }
+    }
 </script>
 
 <script>
-function SelectedMonto() {
-  var rbtnFinancieros = document.getElementById("rbtnFinancieros");
-  var monto = document.getElementById("monto");
-  if (rbtnFinancieros.checked == true) {
-    monto.style.display = "block"
-  }
-  if (rbtnFinancieros.checked == false) {
-    monto.style.display = "none" 
-  }
-}
+    function SelectedMonto() {
+        var rbtnFinancieros = document.getElementById("rbtnFinancieros");
+        var monto = document.getElementById("monto");
+        if (rbtnFinancieros.checked == true) {
+            monto.style.display = "block"
+        }
+        if (rbtnFinancieros.checked == false) {
+            monto.style.display = "none"
+        }
+    }
 </script>
 
 <script>
-function SelectedProp() {
-  var rbtnSiPropInt = document.getElementById("rbtnSiPropInt");
-  var propiedad = document.getElementById("propiedadInt");
-  if (rbtnSiPropInt.checked == true) {
-    propiedad.style.display = "block"
-  }
-  if (rbtnSiPropInt.checked == false) {
-    propiedad.style.display = "block"
-  }
-}
+    function SelectedProp() {
+        var rbtnSiPropInt = document.getElementById("rbtnSiPropInt");
+        var propiedad = document.getElementById("propiedadInt");
+        if (rbtnSiPropInt.checked == true) {
+            propiedad.style.display = "block"
+        }
+        if (rbtnSiPropInt.checked == false) {
+            propiedad.style.display = "block"
+        }
+    }
 </script>
 
 <script>
-function SelectedAct() {
-  var rbtnPrimaria = document.getElementById("rbtnPrimaria");
-  var rbtnSecundaria = document.getElementById("rbtnSecundaria");
-  var rbtnTerciaria = document.getElementById("rbtnTerciaria");
-  var vprimariaDDL = document.getElementById("vprimariaDDL");
-  var vsecundariaDDL = document.getElementById("vsecundariaDDL");
-  var vterciariaDDL = document.getElementById("vterciariaDDL");
-  if (rbtnPrimaria.checked == true) {
-    vsecundariaDDL.style.display = "none";
-    vterciariaDDL.style.display = "none";
-    vprimariaDDL.style.display = "block";
-  }
-  if (rbtnSecundaria.checked == true) {
-    vprimariaDDL.style.display = "none";
-    vterciariaDDL.style.display = "none";
-    vsecundariaDDL.style.display = "block";
-  }
-  if (rbtnTerciaria.checked == true) {
-    vprimariaDDL.style.display = "none";
-    vsecundariaDDL.style.display = "none";
-    vterciariaDDL.style.display = "block";
-  }
-}
+    function SelectedAct() {
+        var rbtnPrimaria = document.getElementById("rbtnPrimaria");
+        var rbtnSecundaria = document.getElementById("rbtnSecundaria");
+        var rbtnTerciaria = document.getElementById("rbtnTerciaria");
+        var vprimariaDDL = document.getElementById("vprimariaDDL");
+        var vsecundariaDDL = document.getElementById("vsecundariaDDL");
+        var vterciariaDDL = document.getElementById("vterciariaDDL");
+        if (rbtnPrimaria.checked == true) {
+            vsecundariaDDL.style.display = "none";
+            vterciariaDDL.style.display = "none";
+            vprimariaDDL.style.display = "block";
+        }
+        if (rbtnSecundaria.checked == true) {
+            vprimariaDDL.style.display = "none";
+            vterciariaDDL.style.display = "none";
+            vsecundariaDDL.style.display = "block";
+        }
+        if (rbtnTerciaria.checked == true) {
+            vprimariaDDL.style.display = "none";
+            vsecundariaDDL.style.display = "none";
+            vterciariaDDL.style.display = "block";
+        }
+    }
 </script>
 
 <script>
-function SelectedODS() {
-  var rbtnSiODS = document.getElementById("rbtnSiODS");
-  var vods = document.getElementById("vods");
-  if (rbtnSiODS.checked == true) {
-    vods.style.display = "block";
-    ValidatorEnable(document.getElementById('<%= rfvvods.ClientID %>'), true);
-  }
-  if (rbtnSiODS.checked == false) {
-    vods.style.display = "none";
-    ValidatorEnable(document.getElementById('<%= rfvvods.ClientID %>'), false);
-  }
-}
+    function SelectedODS() {
+        var rbtnSiODS = document.getElementById("rbtnSiODS");
+        var vods = document.getElementById("vods");
+        if (rbtnSiODS.checked == true) {
+            vods.style.display = "block";
+            ValidatorEnable(document.getElementById('<%= rfvvods.ClientID %>'), true);
+        }
+        if (rbtnSiODS.checked == false) {
+            vods.style.display = "none";
+            ValidatorEnable(document.getElementById('<%= rfvvods.ClientID %>'), false);
+        }
+    }
 </script>
   
 <script>
-function SelectedOtro() {
+    function SelectedOtro() {
 
-  var cbxOtro = document.getElementById("cbxOtro");
-  var otro = document.getElementById("otro");
-  if (cbxOtro.checked == true) {
-    otro.style.display = "block"
-  }
-  if (cbxOtro.checked == false) {
-    otro.style.display = "block"
-  }
-}
+        var cbxOtro = document.getElementById("cbxOtro");
+        var otro = document.getElementById("otro");
+        if (cbxOtro.checked == true) {
+            otro.style.display = "block"
+        }
+        if (cbxOtro.checked == false) {
+            otro.style.display = "block"
+        }
+    }
 </script>
       
 <script>
-function SelectedAct() {
-    var rbtnPrimaria = document.getElementById("rbtnPrimaria");
-    var rbtnSecundaria = document.getElementById("rbtnSecundaria");
-    var rbtnTerciaria = document.getElementById("rbtnTerciaria");
-    var vprimariaDDL = document.getElementById("vprimariaDDL");
-    var vsecundariaDDL = document.getElementById("vsecundariaDDL");
-    var vterciariaDDL = document.getElementById("vterciariaDDL");
+    function SelectedAct() {
+        var rbtnPrimaria = document.getElementById("rbtnPrimaria");
+        var rbtnSecundaria = document.getElementById("rbtnSecundaria");
+        var rbtnTerciaria = document.getElementById("rbtnTerciaria");
+        var vprimariaDDL = document.getElementById("vprimariaDDL");
+        var vsecundariaDDL = document.getElementById("vsecundariaDDL");
+        var vterciariaDDL = document.getElementById("vterciariaDDL");
 
-    if (rbtnPrimaria.checked == true) {
+        if (rbtnPrimaria.checked == true) {
             vsecundariaDDL.style.display = "none";
             vterciariaDDL.style.display = "none";
             vprimariaDDL.style.display = "block";
             ValidatorEnable(document.getElementById('<%= rfvPrimaria.ClientID %>'), true);
             ValidatorEnable(document.getElementById('<%= rfvSecundaria.ClientID %>'), false);
             ValidatorEnable(document.getElementById('<%= rfvTerciaria.ClientID %>'), false);
-    }
-    if (rbtnSecundaria.checked == true) {
+        }
+        if (rbtnSecundaria.checked == true) {
             vprimariaDDL.style.display = "none";
             vterciariaDDL.style.display = "none";
             vsecundariaDDL.style.display = "block";
             ValidatorEnable(document.getElementById('<%= rfvPrimaria.ClientID %>'), false);
-            ValidatorEnable(document.getElementById('<%= rfvSecundaria.ClientID %>'), true);
-            ValidatorEnable(document.getElementById('<%= rfvTerciaria.ClientID %>'), false);
-    }
-    if (rbtnTerciaria.checked == true) {
+        ValidatorEnable(document.getElementById('<%= rfvSecundaria.ClientID %>'), true);
+        ValidatorEnable(document.getElementById('<%= rfvTerciaria.ClientID %>'), false);
+        }
+        if (rbtnTerciaria.checked == true) {
             vprimariaDDL.style.display = "none";
             vsecundariaDDL.style.display = "none";
             vterciariaDDL.style.display = "block";
@@ -608,8 +603,7 @@ function SelectedODS() {
     if (rbtnSiODS.checked == false) {
     vods.style.display = "none";
     ValidatorEnable(document.getElementById('<%= rfvvods.ClientID %>'), false);
+        }
     }
-}
-
 </script>
 </asp:Content>

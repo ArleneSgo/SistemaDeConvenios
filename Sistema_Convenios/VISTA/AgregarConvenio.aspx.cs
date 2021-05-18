@@ -11,7 +11,7 @@ namespace VISTA
 {
     public partial class AgregarConvenio : System.Web.UI.Page
     {
-        
+
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             int totalmeses = 0;
@@ -22,7 +22,7 @@ namespace VISTA
             bool ods = rbtnSiODS.Checked;
             int? natmod = null;
             int? becmod = null;
-            int rec=2;
+            int rec = 2;
             int tipoconv;
             int tipo2;
             int sector = Convert.ToInt32(rbtnSector.SelectedValue);
@@ -120,7 +120,7 @@ namespace VISTA
             {
                 rec = Convert.ToInt32(rbtnTecnologicos.Value);
             }
-            
+
             ///revisar si hay monto
             if (txtMonto.Text.Length != 0)
             {
@@ -128,10 +128,10 @@ namespace VISTA
             }
 
             ///revisar tipo convenio
-            tipoconv =Convert.ToInt32( rbtnTipo.SelectedValue);
-            
+            tipoconv = Convert.ToInt32(rbtnTipo.SelectedValue);
+
             tipo2 = Convert.ToInt32(rbtnTipo2.SelectedValue);
-            
+
             ///act econ
             if (rbtnPrimaria.Checked == true)
             {
@@ -151,8 +151,8 @@ namespace VISTA
                 acteconnum = Convert.ToInt32(terciariaDDL.SelectedValue);
             }
             ///ambito
-            ambito =Convert.ToInt32( rbtnAmbito.SelectedValue);
-            
+            ambito = Convert.ToInt32(rbtnAmbito.SelectedValue);
+
             ///eje
             if (cbxEducacion.Checked == true)
             {
@@ -200,7 +200,7 @@ namespace VISTA
                         inicioConvenio = fechaini,
                         finConvenio = fechafin,
                         plazoConvenio = totalmeses.ToString(),
-                        publicadoActivo =Convert.ToBoolean( pubbit),
+                        publicadoActivo = Convert.ToBoolean(pubbit),
                         publicadoDonde = txtMedio.Text.ToUpper(),
                         objetivoInstrumento = ObjJurDDL.SelectedValue,
                         idNaturaleza = Convert.ToInt32(NaturalezaDDL.SelectedValue),
@@ -217,7 +217,7 @@ namespace VISTA
                         cargoRepInstitucion = txtCargoRepInstitucion.Text.ToUpper(),
                         idRecursos = rec,
                         montoRecursoFinanciero = monto,
-                        propiedadIntelActivo =Convert.ToBoolean( propInt),
+                        propiedadIntelActivo = Convert.ToBoolean(propInt),
                         propiedadIntelDonde = txtPropiedadInt.Text.ToUpper(),
                         entregable = txtEntregables.Text.ToUpper(),
                         idTipoConvenio = tipoconv,
@@ -254,7 +254,7 @@ namespace VISTA
                         inicioConvenio = fechaini,
                         finConvenio = fechafin,
                         plazoConvenio = "INDEFINIDO",
-                        publicadoActivo =Convert.ToBoolean( pubbit),
+                        publicadoActivo = Convert.ToBoolean(pubbit),
                         publicadoDonde = txtMedio.Text.ToUpper(),
                         objetivoInstrumento = ObjJurDDL.SelectedValue,
                         idNaturaleza = Convert.ToInt32(NaturalezaDDL.SelectedValue),
@@ -271,7 +271,7 @@ namespace VISTA
                         cargoRepInstitucion = txtCargoRepInstitucion.Text.ToUpper(),
                         idRecursos = rec,
                         montoRecursoFinanciero = monto,
-                        propiedadIntelActivo =Convert.ToBoolean( propInt),
+                        propiedadIntelActivo = Convert.ToBoolean(propInt),
                         propiedadIntelDonde = txtPropiedadInt.Text.ToUpper(),
                         entregable = txtEntregables.Text.ToUpper(),
                         idTipoConvenio = tipoconv,

@@ -195,9 +195,7 @@
     <Content Include="scripts\start.js" />
     <Content Include="Usuarios.aspx" />
     <Content Include="VisualizarConvenio.aspx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="RenovarConvenio.aspx" />
   </ItemGroup>
   <ItemGroup>

@@ -64,7 +64,7 @@ namespace VISTA
             }
         }
         protected void btnAtras_Click(object sender, EventArgs e)
-        {   
+        {
             var idUsuario = Convert.ToInt32(Request.QueryString["ID"]);
             USUARIO user = UsuarioModelo.BuscarUsuarioPorID(idUsuario);
             var rol = user.id_usuario;

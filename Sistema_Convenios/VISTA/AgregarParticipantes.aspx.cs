@@ -13,7 +13,6 @@ namespace VISTA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -22,7 +21,7 @@ namespace VISTA
                 var newparticipante = new PARTICIPANTE()
                 {
                     nombreProyecto = txbNombreProyecto.Text,
-                    num_participantes=Convert.ToInt32(txbNumParticipantes.Text)
+                    num_participantes = Convert.ToInt32(txbNumParticipantes.Text)
                 };
                 ParticipanteModelo.InsertarParticipante(newparticipante);
                 mensaje.Visible = true;

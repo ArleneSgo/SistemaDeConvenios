@@ -23,12 +23,23 @@
           <asp:TextBox ID="txbNumParticipantes" runat="server" TextMode="Number" Style="margin-left: 20px; margin-top: 24px;" Width="335px" Height="41px"></asp:TextBox>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="*Solo se admiten números" 
           ControlToValidate="txbNumParticipantes" Display="Dynamic" ForeColor="Red" ValidationExpression="\d+"></asp:RegularExpressionValidator>
+          <asp:RequiredFieldValidator ID="valNumero" runat="server" ErrorMessage=" * Favor de agregar un número" 
+          ControlToValidate="txbNumParticipantes" Display="Dynamic" ForeColor="Red" InitialValue=""></asp:RequiredFieldValidator>
         </div>
       </div>
     </div>
-    <asp:Button ID="btnAtras" class="btn btn-primary align-content-center" runat="server" Text="Atras" OnClick="btnAtras_Click" Visible="true" />
+    <asp:Button ID="btnAtras" class="btn btn-primary align-content-center" runat="server" Text="Atras" OnClientClick="btnAtrasClick()" OnClick="btnAtras_Click" Visible="true" />
     <asp:Button ID="btnGuardar" class="btn btn-primary" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
     <div id="mensaje" visible="false" runat="server" class="alert alert-success mt-1" role="alert"> Guardado
     </div>
   </div>
+
+  <script>
+      /*Deshabilitar RequireValidator*/
+      function btnAtrasClick() {
+          ValidatorEnable(document.getElementById('<%= valNombreExiste.ClientID %>'), false);
+          ValidatorEnable(document.getElementById('<%= valNumero.ClientID %>'), false);
+      }
+  </script>
 </asp:Content>
+

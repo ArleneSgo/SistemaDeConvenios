@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace VISTA {
-    
-    
-    public partial class ModificarConvenio {
-        
+namespace VISTA
+{
+
+
+    public partial class ModificarConvenio
+    {
+
         /// <summary>
         /// Control NomJurDDL.
         /// </summary>
@@ -20,7 +22,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList NomJurDDL;
-        
+
         /// <summary>
         /// Control RequiredFieldValidator1.
         /// </summary>
@@ -29,7 +31,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
+
         /// <summary>
         /// Control rbtnSiMedio.
         /// </summary>
@@ -38,7 +40,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnSiMedio;
-        
+
         /// <summary>
         /// Control rbtnNoMedio.
         /// </summary>
@@ -47,7 +49,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnNoMedio;
-        
+
         /// <summary>
         /// Control txtMedio.
         /// </summary>
@@ -56,7 +58,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMedio;
-        
+
         /// <summary>
         /// Control ObjJurDDL.
         /// </summary>
@@ -65,7 +67,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ObjJurDDL;
-        
+
         /// <summary>
         /// Control RequiredFieldValidator2.
         /// </summary>
@@ -74,7 +76,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-        
+
         /// <summary>
         /// Control NaturalezaDDL.
         /// </summary>
@@ -83,7 +85,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList NaturalezaDDL;
-        
+
         /// <summary>
         /// Control RequiredFieldValidator3.
         /// </summary>
@@ -92,7 +94,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
+
         /// <summary>
         /// Control rbtnPresencial.
         /// </summary>
@@ -101,7 +103,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnPresencial;
-        
+
         /// <summary>
         /// Control rbtnVirtual.
         /// </summary>
@@ -110,7 +112,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnVirtual;
-        
+
         /// <summary>
         /// Control rbtnMixta.
         /// </summary>
@@ -119,7 +121,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnMixta;
-        
+
         /// <summary>
         /// Control txtPrestacion.
         /// </summary>
@@ -128,7 +130,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrestacion;
-        
+
         /// <summary>
         /// Control txtDonacion.
         /// </summary>
@@ -137,7 +139,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDonacion;
-        
+
         /// <summary>
         /// Control txtComodato.
         /// </summary>
@@ -146,7 +148,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtComodato;
-        
+
         /// <summary>
         /// Control txtEducacion.
         /// </summary>
@@ -155,7 +157,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEducacion;
-        
+
         /// <summary>
         /// Control rbtnPresencialBecas.
         /// </summary>
@@ -164,7 +166,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnPresencialBecas;
-        
+
         /// <summary>
         /// Control rbtnVirtualBecas.
         /// </summary>
@@ -173,7 +175,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnVirtualBecas;
-        
+
         /// <summary>
         /// Control rbtnMixtaBecas.
         /// </summary>
@@ -182,7 +184,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnMixtaBecas;
-        
+
         /// <summary>
         /// Control txtBecas.
         /// </summary>
@@ -191,7 +193,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBecas;
-        
+
         /// <summary>
         /// Control txtNombreRepITH.
         /// </summary>
@@ -200,7 +202,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombreRepITH;
-        
+
         /// <summary>
         /// Control rfvnombreRepITH.
         /// </summary>
@@ -209,7 +211,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvnombreRepITH;
-        
+
         /// <summary>
         /// Control rfvnombreRepITH1.
         /// </summary>
@@ -218,7 +220,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator rfvnombreRepITH1;
-        
+
         /// <summary>
         /// Control rfvnombreRepITH2.
         /// </summary>
@@ -227,7 +229,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator rfvnombreRepITH2;
-        
+
         /// <summary>
         /// Control txtNombreInstitucion.
         /// </summary>
@@ -236,7 +238,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombreInstitucion;
-        
+
         /// <summary>
         /// Control RequiredFieldValidator4.
         /// </summary>
@@ -245,7 +247,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-        
+
         /// <summary>
         /// Control RegularExpressionValidator6.
         /// </summary>
@@ -254,7 +256,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator6;
-        
+
         /// <summary>
         /// Control RegularExpressionValidator7.
         /// </summary>
@@ -263,7 +265,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator7;
-        
+
         /// <summary>
         /// Control txtNombreRepInstitucion.
         /// </summary>
@@ -272,7 +274,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombreRepInstitucion;
-        
+
         /// <summary>
         /// Control RequiredFieldValidator5.
         /// </summary>
@@ -281,7 +283,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
-        
+
         /// <summary>
         /// Control RegularExpressionValidator2.
         /// </summary>
@@ -290,7 +292,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
-        
+
         /// <summary>
         /// Control RegularExpressionValidator3.
         /// </summary>
@@ -299,7 +301,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator3;
-        
+
         /// <summary>
         /// Control txtCargoRepInstitucion.
         /// </summary>
@@ -308,7 +310,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCargoRepInstitucion;
-        
+
         /// <summary>
         /// Control RequiredFieldValidator6.
         /// </summary>
@@ -317,7 +319,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
-        
+
         /// <summary>
         /// Control RegularExpressionValidator4.
         /// </summary>
@@ -326,7 +328,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator4;
-        
+
         /// <summary>
         /// Control RegularExpressionValidator5.
         /// </summary>
@@ -335,7 +337,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator5;
-        
+
         /// <summary>
         /// Control rbtnFinancieros.
         /// </summary>
@@ -344,7 +346,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnFinancieros;
-        
+
         /// <summary>
         /// Control rbtnHumanos.
         /// </summary>
@@ -353,7 +355,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnHumanos;
-        
+
         /// <summary>
         /// Control rbtnInfraestructura.
         /// </summary>
@@ -362,7 +364,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnInfraestructura;
-        
+
         /// <summary>
         /// Control rbtnEquipo.
         /// </summary>
@@ -371,7 +373,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnEquipo;
-        
+
         /// <summary>
         /// Control rbtnTecnologicos.
         /// </summary>
@@ -380,7 +382,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnTecnologicos;
-        
+
         /// <summary>
         /// Control txtMonto.
         /// </summary>
@@ -389,7 +391,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMonto;
-        
+
         /// <summary>
         /// Control RegularExpressionValidator1.
         /// </summary>
@@ -398,7 +400,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
-        
+
         /// <summary>
         /// Control rbtnSiPropInt.
         /// </summary>
@@ -407,7 +409,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnSiPropInt;
-        
+
         /// <summary>
         /// Control rbtnNoPropInt.
         /// </summary>
@@ -416,7 +418,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnNoPropInt;
-        
+
         /// <summary>
         /// Control txtPropiedadInt.
         /// </summary>
@@ -425,7 +427,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPropiedadInt;
-        
+
         /// <summary>
         /// Control txtEntregables.
         /// </summary>
@@ -434,7 +436,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEntregables;
-        
+
         /// <summary>
         /// Control rbtnBilateral.
         /// </summary>
@@ -443,7 +445,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnBilateral;
-        
+
         /// <summary>
         /// Control rbtnMultilateral.
         /// </summary>
@@ -452,7 +454,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnMultilateral;
-        
+
         /// <summary>
         /// Control rbtnMarco.
         /// </summary>
@@ -461,7 +463,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnMarco;
-        
+
         /// <summary>
         /// Control rbtnEspecifico.
         /// </summary>
@@ -470,7 +472,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnEspecifico;
-        
+
         /// <summary>
         /// Control rbtnPublico.
         /// </summary>
@@ -479,7 +481,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnPublico;
-        
+
         /// <summary>
         /// Control rbtnPrivado.
         /// </summary>
@@ -488,7 +490,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnPrivado;
-        
+
         /// <summary>
         /// Control rbtnSocial.
         /// </summary>
@@ -497,7 +499,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnSocial;
-        
+
         /// <summary>
         /// Control rbtnPrimaria.
         /// </summary>
@@ -506,7 +508,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnPrimaria;
-        
+
         /// <summary>
         /// Control rbtnSecundaria.
         /// </summary>
@@ -515,7 +517,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnSecundaria;
-        
+
         /// <summary>
         /// Control rbtnTerciaria.
         /// </summary>
@@ -524,7 +526,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnTerciaria;
-        
+
         /// <summary>
         /// Control primariaDDL.
         /// </summary>
@@ -533,7 +535,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList primariaDDL;
-        
+
         /// <summary>
         /// Control rfvPrimaria.
         /// </summary>
@@ -542,7 +544,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrimaria;
-        
+
         /// <summary>
         /// Control secundariaDDL.
         /// </summary>
@@ -551,7 +553,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList secundariaDDL;
-        
+
         /// <summary>
         /// Control rfvSecundaria.
         /// </summary>
@@ -560,7 +562,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSecundaria;
-        
+
         /// <summary>
         /// Control terciariaDDL.
         /// </summary>
@@ -569,7 +571,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList terciariaDDL;
-        
+
         /// <summary>
         /// Control rfvTerciaria.
         /// </summary>
@@ -578,7 +580,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTerciaria;
-        
+
         /// <summary>
         /// Control rbtnMunicipal.
         /// </summary>
@@ -587,7 +589,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnMunicipal;
-        
+
         /// <summary>
         /// Control rbtnEstatal.
         /// </summary>
@@ -596,7 +598,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnEstatal;
-        
+
         /// <summary>
         /// Control rbtnRegional.
         /// </summary>
@@ -605,7 +607,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnRegional;
-        
+
         /// <summary>
         /// Control rbtnNacional.
         /// </summary>
@@ -614,7 +616,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnNacional;
-        
+
         /// <summary>
         /// Control rbtnInternacional.
         /// </summary>
@@ -623,7 +625,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnInternacional;
-        
+
         /// <summary>
         /// Control cbxEducacion.
         /// </summary>
@@ -632,7 +634,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbxEducacion;
-        
+
         /// <summary>
         /// Control cbxCiencia.
         /// </summary>
@@ -641,7 +643,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbxCiencia;
-        
+
         /// <summary>
         /// Control cbxDesarrollo.
         /// </summary>
@@ -650,7 +652,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbxDesarrollo;
-        
+
         /// <summary>
         /// Control cbxCultura.
         /// </summary>
@@ -659,7 +661,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbxCultura;
-        
+
         /// <summary>
         /// Control cbxDeporte.
         /// </summary>
@@ -668,7 +670,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbxDeporte;
-        
+
         /// <summary>
         /// Control cbxOtro.
         /// </summary>
@@ -677,7 +679,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbxOtro;
-        
+
         /// <summary>
         /// Control txtOtro.
         /// </summary>
@@ -686,7 +688,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtOtro;
-        
+
         /// <summary>
         /// Control rfvOtro.
         /// </summary>
@@ -695,7 +697,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvOtro;
-        
+
         /// <summary>
         /// Control rbtnSiODS.
         /// </summary>
@@ -704,7 +706,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnSiODS;
-        
+
         /// <summary>
         /// Control rbtnNoODS.
         /// </summary>
@@ -713,7 +715,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbtnNoODS;
-        
+
         /// <summary>
         /// Control odsDDL.
         /// </summary>
@@ -722,7 +724,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList odsDDL;
-        
+
         /// <summary>
         /// Control rfvvods.
         /// </summary>
@@ -731,7 +733,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvvods;
-        
+
         /// <summary>
         /// Control btnAtras.
         /// </summary>
@@ -740,7 +742,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAtras;
-        
+
         /// <summary>
         /// Control btnGuardar.
         /// </summary>
@@ -749,7 +751,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardar;
-        
+
         /// <summary>
         /// Control mensaje.
         /// </summary>

@@ -13,7 +13,6 @@ namespace VISTA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -36,7 +35,6 @@ namespace VISTA
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
                 Response.Redirect("Usuarios.aspx");
             }
-
             catch (Exception ex)
             {
                 var datos = "<script> alert('" + ex.Message + "') </script>";

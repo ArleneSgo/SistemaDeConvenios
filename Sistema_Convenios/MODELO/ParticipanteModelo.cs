@@ -43,7 +43,8 @@ namespace MODELO
             using (var modelo = new SISTEMADECONVENIOSEntities())
             {
                 List<TablaParticipantes> resultado =
-                    (from part in modelo.TablaParticipantes orderby part.num_convenio
+                    (from part in modelo.TablaParticipantes
+                     orderby part.num_convenio
                      where (part.nombreInstrumento.Contains(criterios)
                      || part.nombreInstitucion.Contains(criterios)
                      || part.nombreProyecto.Contains(criterios))

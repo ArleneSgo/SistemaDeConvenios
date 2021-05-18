@@ -147,7 +147,7 @@ namespace VISTA
                     cbxCiencia.Checked = true;
                 else if (convenio.eje == "DESARROLLO TECNOLOGICO E INNOVACION" || convenio.eje == "DESARROLLO TECNOLOGICO E INNOVACION_")
                     cbxDesarrollo.Checked = true;
-                else if (convenio.eje == "CULTURA" || convenio.eje == "CULTURA_" )
+                else if (convenio.eje == "CULTURA" || convenio.eje == "CULTURA_")
                     cbxCultura.Checked = true;
                 else if (convenio.eje == "DEPORTE" || convenio.eje == "DEPORTE_")
                     cbxDeporte.Checked = true;
@@ -327,4 +327,3 @@ namespace VISTA
         }
     }
 }
-

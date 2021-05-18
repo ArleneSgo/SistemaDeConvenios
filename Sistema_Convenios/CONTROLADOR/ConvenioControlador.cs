@@ -13,9 +13,9 @@ namespace CONTROLADOR
         {
             try
             {   ///Verifica que los campos requeridos no esten vacios
-                if (newConvenio.nombreInstrumento != string.Empty && newConvenio.plazoConvenio 
+                if (newConvenio.nombreInstrumento != string.Empty && newConvenio.plazoConvenio
                     != string.Empty && newConvenio.objetivoInstrumento != string.Empty &&
-                    newConvenio.nombreRepITH != string.Empty && newConvenio.nombreInstitucion 
+                    newConvenio.nombreRepITH != string.Empty && newConvenio.nombreInstitucion
                     != string.Empty && newConvenio.nombreRepInstitucion != string.Empty &&
                     newConvenio.cargoRepInstitucion != string.Empty)
                 {

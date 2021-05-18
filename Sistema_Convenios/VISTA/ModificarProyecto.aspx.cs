@@ -33,7 +33,7 @@ namespace VISTA
                 else
                     convenio.num_participantes = convenio.num_participantes - participanteModificado.num_participantes;
                 participanteModificado.num_participantes = Convert.ToInt32(txbNumParticipantes.Text);
-                ParticipanteControlador.ModificarParticipante(participanteModificado);convenio.num_participantes = convenio.num_participantes + participanteModificado.num_participantes;
+                ParticipanteControlador.ModificarParticipante(participanteModificado); convenio.num_participantes = convenio.num_participantes + participanteModificado.num_participantes;
                 ConvenioControlador.ModificarConvenio(convenio);
                 mensaje.Visible = true;
                 string javaScript = "OcultarMensaje();";

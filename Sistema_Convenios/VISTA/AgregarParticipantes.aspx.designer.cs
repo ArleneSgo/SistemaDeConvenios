@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace VISTA {
-    
-    
-    public partial class AgregarParticipantes {
-        
+namespace VISTA
+{
+
+
+    public partial class AgregarParticipantes
+    {
+
         /// <summary>
         /// Control Label1.
         /// </summary>
@@ -20,7 +22,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// Control txbNombreProyecto.
         /// </summary>
@@ -29,7 +31,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbNombreProyecto;
-        
+
         /// <summary>
         /// Control valNombre1.
         /// </summary>
@@ -38,7 +40,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator valNombre1;
-        
+
         /// <summary>
         /// Control valNombreExiste.
         /// </summary>
@@ -47,7 +49,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator valNombreExiste;
-        
+
         /// <summary>
         /// Control lbl.
         /// </summary>
@@ -56,7 +58,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl;
-        
+
         /// <summary>
         /// Control txbNumParticipantes.
         /// </summary>
@@ -65,7 +67,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbNumParticipantes;
-        
+
         /// <summary>
         /// Control RegularExpressionValidator1.
         /// </summary>
@@ -74,7 +76,16 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
-        
+
+        /// <summary>
+        /// Control valNumero.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator valNumero;
+
         /// <summary>
         /// Control btnAtras.
         /// </summary>
@@ -83,7 +94,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAtras;
-        
+
         /// <summary>
         /// Control btnGuardar.
         /// </summary>
@@ -92,7 +103,7 @@ namespace VISTA {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardar;
-        
+
         /// <summary>
         /// Control mensaje.
         /// </summary>

@@ -19,7 +19,6 @@ namespace VISTA
             ///si es cero despliega no hay
             if (gvBuscarConvenios.Rows.Count == 0)
             {
-
                 lblNohay.Visible = true;
             }
         }

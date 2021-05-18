@@ -53,7 +53,7 @@
           <label for="inputAddress">Correo Electronico</label>
           <asp:TextBox ID="txtCorreoElectronico" class="input100" CssClass="form-control" placeholder="ejemplo@dominio.com" runat="server" TextMode="Email"
           MaxLength="50" ></asp:TextBox>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtCorreoElectronico"
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtCorreoElectronico"
           Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" ErrorMessage="* Formato incorrecto " 
           ControlToValidate="txtCorreoElectronico" Display="Dynamic" ForeColor="Red" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
@@ -67,7 +67,7 @@
         <div class="form-group col-md-4">
           <label for="inputAddress">Empresa/Institución</label>
           <asp:TextBox ID="txtEmpresa" CssClass="form-control"  runat="server" MaxLength="50"></asp:TextBox>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtEmpresa" 
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtEmpresa" 
           Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el nombre 
           de la empresa correctamente " ControlToValidate="txtEmpresa" Display="Dynamic" ForeColor="Red" ValidationExpression=".{2}.*"></asp:RegularExpressionValidator>
@@ -77,17 +77,29 @@
         <div class="form-group col-md-6">
           <label for="inputAddress">Contraseña</label>
           <asp:TextBox ID="txtContrasena" CssClass="form-control" TextMode="Password"  runat="server"  MaxLength="5"></asp:TextBox>
-          <asp:RequiredFieldValidator ID="rfvContrasena" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtContrasena" 
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtContrasena" 
           Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator" runat="server" ErrorMessage="* Formato Incorrecto 1 May 5 Caracteres"
           ControlToValidate="txtContrasena" Display="Dynamic" ForeColor="Red" ValidationExpression="[A-Z]\w{4}"></asp:RegularExpressionValidator>
         </div>  
       </div>
-      <asp:Button ID="btnAtras" class="btn btn-primary align-content-center" runat="server" Text="Atras" OnClick="btnAtras_Click" Visible="true" />
+      <asp:Button ID="btnAtras" class="btn btn-primary align-content-center" runat="server" Text="Atras" OnClientClick="btnAtrasClick()" OnClick="btnAtras_Click" Visible="true" />
       <asp:Button ID="btnGuardar" class="btn btn-primary" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
       <div id="mensaje" visible="false" runat="server" class="alert alert-success mt-1" role="alert">
                           Guardado
       </div>
     </div>
-  </div>  	
+  </div>  
+    
+  <script>
+        /*Deshabilitar RequireValidator*/
+        function btnAtrasClick() {
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator1.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator2.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator3.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator4.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator5.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator6.ClientID %>'), false);
+        }
+  </script>
 </asp:Content>

@@ -253,12 +253,12 @@
   <script src="Include/js/xepOnline.jqPlugin.js"></script>
   <script src="../dist/js/scripts.js"></script>
   <script>
-    function ImprimeDiv() {
-      var divToPrint = document.getElementById('ConvenioCompleto');
-      var newWin = window.open('', 'Print-Window');
-      newWin.document.open();
-      newWin.document.write('<html><head><link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>  </head><body onload="window.print()">' + divToPrint.innerHTML + '</body></html>');
-      newWin.document.close();      
-     }
+      function ImprimeDiv() {
+          var divToPrint = document.getElementById('ConvenioCompleto');
+          var newWin = window.open('', 'Print-Window');
+          newWin.document.open();
+          newWin.document.write('<html><head><link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>  </head><body onload="window.print()">' + divToPrint.innerHTML + '</body></html>');
+          newWin.document.close();
+      }
   </script>
 </asp:Content>

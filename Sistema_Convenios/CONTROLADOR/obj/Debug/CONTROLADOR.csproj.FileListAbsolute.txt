@@ -82,51 +82,15 @@ C:\Users\Usuario\Desktop\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Deb
 C:\Users\Usuario\Desktop\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.dll
 C:\Users\Usuario\Desktop\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.pdb
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.dll
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.pdb
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.dll
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.pdb
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll.config
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.xml
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csprojAssemblyReference.cache
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CoreCompileInputs.cache
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.dll
-C:\Users\Naomi\Desktop\semestre 7\DPSW\12\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.pdb
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.dll
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.pdb
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.dll
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.pdb
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll.config
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.xml
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csprojAssemblyReference.cache
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CoreCompileInputs.cache
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.dll
-C:\Users\naomi\Desktop\semestre8\GPSW\2\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.pdb
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.dll
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.pdb
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.dll
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.pdb
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll.config
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.xml
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csprojAssemblyReference.cache
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CoreCompileInputs.cache
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.dll
-C:\Control de Versiones\Sistema Convenios\11\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.pdb
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.dll
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.pdb
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.dll
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.pdb
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll.config
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.xml
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csprojAssemblyReference.cache
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CoreCompileInputs.cache
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.dll
-C:\Users\naomi\Desktop\semestre8\GPSW\3\Sistema_Convenios (15)\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.pdb
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.dll
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.pdb
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.pdb
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll.config
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.dll
+C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.pdb

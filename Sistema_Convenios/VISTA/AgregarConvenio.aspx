@@ -146,36 +146,36 @@
                 <input type="checkbox" id="cbxBecas" name="becas" onclick="Checado()" />
                 <label for="cbxBecas"> Becas</label><br>
                 <div class="form-row" id="becas" style="display: none" >
-                <label>Indique nombre de la Beca:</label>
-                <asp:TextBox ID="txtBecas" CssClass="form-control" runat="server" MaxLength="100"></asp:TextBox>
-              </div>  
-            </div>                                  
+                  <label>Indique nombre de la Beca:</label>
+                  <asp:TextBox ID="txtBecas" CssClass="form-control" runat="server" MaxLength="100"></asp:TextBox>
+                </div>  
+              </div>                                  
+            </div>
           </div>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <h6>Nombre del Representante del IT que suscribió el instrumento jurídico &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <h6>Nombre del Representante del IT que suscribió el instrumento jurídico &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
             <asp:TextBox ID="txtNombreRepITH" CssClass="form-control" runat="server" MaxLength="150"></asp:TextBox>
             <asp:RequiredFieldValidator ID="rfvnombreRepITH" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtNombreRepITH" 
             Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-              <asp:RegularExpressionValidator ID="rfvnombreRepITH1" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " 
-              ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
-              <asp:RegularExpressionValidator ID="rfvnombreRepITH2" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el nombre 
-              correctamente " ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red" ValidationExpression=".{8}.*"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="rfvnombreRepITH1" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " 
+            ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="rfvnombreRepITH2" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el nombre 
+            correctamente " ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red" ValidationExpression=".{8}.*"></asp:RegularExpressionValidator>
         </div>
         <div class="form-group col-md-6">
           <h6>Nombre de la(s) Institución(es) con la que se suscribe el instrumento jurídico &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
-            <asp:TextBox ID="txtNombreInstitucion" CssClass="form-control" runat="server" MaxLength="150"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="* Campo Requerido" 
-            ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " 
-            ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el 
-            nombre correctamente " ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression=".{2}.*"></asp:RegularExpressionValidator>
+          <asp:TextBox ID="txtNombreInstitucion" CssClass="form-control" runat="server" MaxLength="150"></asp:TextBox>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="* Campo Requerido" 
+          ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " 
+          ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el 
+          nombre correctamente " ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression=".{2}.*"></asp:RegularExpressionValidator>
         </div>
       </div>
       <div class="form-row">
@@ -383,8 +383,8 @@
         <div class="form-row">
           <h5>Eje</h5>
         </div>                      
-      <div class="form-row">
-        <div class="form-group col-md-6">
+        <div class="form-row">
+          <div class="form-group col-md-6">
           <input type="checkbox" id="cbxEducacion" name="eje" value="EDUCACION" onclick="SelectedOtro();" runat="server"  ClientIDMode="Static"/>
           <label for="cbxEducacion">Educación</label><br>
           <input type="checkbox" id="cbxCiencia" name="eje" value="CIENCIA" onclick="SelectedOtro();" runat="server"  ClientIDMode="Static"/>
@@ -393,7 +393,7 @@
           ClientIDMode="Static"/>
           <label for="cbxDesarrollo">Desarrollo Tecnológico e Innovación</label><br>
         </div>
-        <div class="form-group col-md-4">
+          <div class="form-group col-md-4">
           <input type="checkbox" id="cbxCultura" name="eje" value="CULTURA" onclick="SelectedOtro();" runat="server"  ClientIDMode="Static"/>
           <label for="cbxCultura">Cultura</label><br>
           <input type="checkbox" id="cbxDeporte" name="eje" value="DEPORTE" onclick="SelectedOtro();" runat="server"  ClientIDMode="Static"/>
@@ -401,32 +401,32 @@
           <input type="checkbox" id="cbxOtro" name="eje" value="6" onclick="SelectedOtro();" runat="server"  ClientIDMode="Static"/>
           <label for="cbxOtro" >Otro</label><br>
         </div>
-      </div>
-      <div class="form-row" id="otro" style="display: none" >
-        <div class="form-col-md-2"><label>Indique:</label></div>
+        </div>
+        <div class="form-row" id="otro" style="display: none" >
+          <div class="form-col-md-2"><label>Indique:</label></div>
           <div class="form-col-md-5"><asp:TextBox ID="txtOtro" CssClass="form-control" runat="server" MaxLength="100"></asp:TextBox></div>
-            <asp:RequiredFieldValidator Enabled="false" ID="rfvOtro" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtOtro" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+          <asp:RequiredFieldValidator Enabled="false" ID="rfvOtro" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtOtro" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+    <h5>Objetivos del Desarrollo Sostenible de la ONU (ODS)</h5> 
+  </div>
+      <div class="form-row">
+        <h6>Se encuentra alineado</h6>
+      </div>
+      <div class="form-row">
+        <div class="form-row">
+          <div class="form-col-md-6">
+            <input type="radio" id="rbtnSiODS" name="ods" value="1"  onclick="SelectedODS();" runat="server"  ClientIDMode="Static"/>
+            <label for="rbtnSiODS">Si&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
+          </div>
+          <div class="form-col-md-6">
+            <input type="radio" id="rbtnNoODS" name="ods" value="2"  onclick="SelectedODS();" runat="server"  ClientIDMode="Static" checked/>
+            <label for="rbtnNoODS">No&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
           </div>
         </div>
-      </div>
-    <div class="form-row">
-      <h5>Objetivos del Desarrollo Sostenible de la ONU (ODS)</h5> 
-    </div>
-    <div class="form-row">
-      <h6>Se encuentra alineado</h6>
-    </div>
-    <div class="form-row">
-      <div class="form-row">
-        <div class="form-col-md-6">
-          <input type="radio" id="rbtnSiODS" name="ods" value="1"  onclick="SelectedODS();" runat="server"  ClientIDMode="Static"/>
-          <label for="rbtnSiODS">Si&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
-        </div>
-        <div class="form-col-md-6">
-          <input type="radio" id="rbtnNoODS" name="ods" value="2"  onclick="SelectedODS();" runat="server"  ClientIDMode="Static" checked/>
-          <label for="rbtnNoODS">No&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
-        </div>
-      </div>
-    </div>
+     </div>
     <div class="form-row" id="vods" style="display: none" >
       <asp:DropDownList ID="odsDDL" runat="server">
         <asp:ListItem Value="">Seleccionar</asp:ListItem>
@@ -451,33 +451,30 @@
       <asp:RequiredFieldValidator Enabled="false" ID="rfvvods"  runat="server" ErrorMessage=" * Favor de seleccionar una opción" 
       ControlToValidate="odsDDL" Display="Dynamic" ForeColor="Red" InitialValue=""></asp:RequiredFieldValidator>
     </div>  
-    <asp:Button ID="btnAtras" class="btn btn-primary align-content-center" runat="server" Text="Atras" OnClick="btnAtras_Click" Visible="true" />
+    <asp:Button ID="btnAtras" class="btn btn-primary align-content-center" runat="server" Text="Atras" OnClick=" btnAtras_Click" OnClientClick="btnAtrasClick()" Visible="true" />
     <asp:Button ID="btnGuardar" class="btn btn-primary" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
     <div id="mensaje" visible="false" runat="server" class="alert alert-success mt-1" role="alert"> Guardado
     </div>
   </div>
 
-
-
-
-    <script>
-      /*funcion para desplegar input si se selecciona si en "medio" */  
-      function Selected() {
-        var rbtnSiMedio = document.getElementById("rbtnSiMedio");
-        var rbtnNoMedio = document.getElementById("rbtnNoMedio");
-        var cualmedio = document.getElementById("cualmedio");
-        if (rbtnSiMedio.checked == true) {
-          cualmedio.style.display = "block";
-          ValidatorEnable(document.getElementById('<%= rfvMedio.ClientID %>'), true); 
-        }
-        if (rbtnNoMedio.checked == true)    {
-          cualmedio.style.display = "none";
-          ValidatorEnable(document.getElementById('<%= rfvMedio.ClientID %>'), false); 
-        }
+  <script>
+  /*funcion para desplegar input si se selecciona si en "medio" */
+    function Selected() {
+      var rbtnSiMedio = document.getElementById("rbtnSiMedio");
+      var rbtnNoMedio = document.getElementById("rbtnNoMedio");
+      var cualmedio = document.getElementById("cualmedio");
+      if (rbtnSiMedio.checked == true) {
+        cualmedio.style.display = "block";
+        ValidatorEnable(document.getElementById('<%= rfvMedio.ClientID %>'), true);
       }
+      if (rbtnNoMedio.checked == true) {
+        cualmedio.style.display = "none";
+        ValidatorEnable(document.getElementById('<%= rfvMedio.ClientID %>'), false);
+      }
+    }
     </script>
     <script>
-      /*funcion para desplegar input si se selecciona si en "becas" */
+    /*funcion para desplegar input si se selecciona si en "becas" */
       function Checado() {
         var cbxBecas = document.getElementById("cbxBecas");
         var becas = document.getElementById("becas");
@@ -490,7 +487,7 @@
       }
     </script>
     <script>
-      /*funcion para desplegar input si se selecciona si en "financieros" */
+    /*funcion para desplegar input si se selecciona si en "financieros" */
       function SelectedMonto() {
         var rbtnFinancieros = document.getElementById("rbtnFinancieros");
         var monto = document.getElementById("monto");
@@ -505,22 +502,22 @@
       }
     </script>
     <script>
-      /*funcion para desplegar input si se selecciona si en "propiedad intelectual" */
+    /*funcion para desplegar input si se selecciona si en "propiedad intelectual" */
       function SelectedProp() {
-        var rbtnSiPropInt = document.getElementById("rbtnSiPropInt");         
+        var rbtnSiPropInt = document.getElementById("rbtnSiPropInt");
         var propiedad = document.getElementById("propiedadInt");
         if (rbtnSiPropInt.checked == true) {
           propiedad.style.display = "block";
-          ValidatorEnable(document.getElementById('<%= rfvPropInt.ClientID %>'), true); 
+          ValidatorEnable(document.getElementById('<%= rfvPropInt.ClientID %>'), true);
         }
         if (rbtnSiPropInt.checked == false) {
           propiedad.style.display = "none";
-          ValidatorEnable(document.getElementById('<%= rfvPropInt.ClientID %>'), false); 
+          ValidatorEnable(document.getElementById('<%= rfvPropInt.ClientID %>'), false);
         }
       }
     </script>
     <script>
-      /*funcion para desplegar input dependiendo seleccion en "actividad economica" */
+    /*funcion para desplegar input dependiendo seleccion en "actividad economica" */
       function SelectedAct() {
         var rbtnPrimaria = document.getElementById("rbtnPrimaria");
         var rbtnSecundaria = document.getElementById("rbtnSecundaria");
@@ -532,9 +529,9 @@
           vsecundariaDDL.style.display = "none";
           vterciariaDDL.style.display = "none";
           vprimariaDDL.style.display = "block";
-          ValidatorEnable(document.getElementById('<%= rfvPrimaria.ClientID %>'), true); 
-          ValidatorEnable(document.getElementById('<%= rfvSecundaria.ClientID %>'), false); 
-          ValidatorEnable(document.getElementById('<%= rfvTerciaria.ClientID %>'), false); 
+          ValidatorEnable(document.getElementById('<%= rfvPrimaria.ClientID %>'), true);
+          ValidatorEnable(document.getElementById('<%= rfvSecundaria.ClientID %>'), false);
+          ValidatorEnable(document.getElementById('<%= rfvTerciaria.ClientID %>'), false);
         }
         if (rbtnSecundaria.checked == true) {
           vprimariaDDL.style.display = "none";
@@ -555,7 +552,7 @@
       }
     </script>
     <script>
-      /*funcion para desplegar input dependiendo seleccion en "otro"*/
+    /*funcion para desplegar input dependiendo seleccion en "otro"*/
       function SelectedOtro() {
         var cbxOtro = document.getElementById("cbxOtro");
         var otro = document.getElementById("otro");
@@ -583,5 +580,29 @@
           ValidatorEnable(document.getElementById('<%= rfvvods.ClientID %>'), false);
         }
       }
+    </script>
+    <script>
+        /*Deshabilitar RequireValidator*/
+        function btnAtrasClick() {
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator1.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= rfvMedio.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator2.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator3.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= rfvnombreRepITH.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator4.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator5.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator6.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= rfvMonto.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= rfvPropInt.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator10.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator11.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator12.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= rfvPrimaria.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= rfvSecundaria.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= rfvTerciaria.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= RequiredFieldValidator16.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= rfvOtro.ClientID %>'), false);
+            ValidatorEnable(document.getElementById('<%= rfvvods.ClientID %>'), false);
+        }
     </script>
 </asp:Content>

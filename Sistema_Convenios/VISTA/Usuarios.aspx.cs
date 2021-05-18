@@ -40,7 +40,6 @@ namespace VISTA
         {
             ///detecta si el texto cambia en el buscador
         }
-
         protected void imgModificar_Command(object sender, CommandEventArgs e)
         {  ///Selecciona al usuario que se desea modificar y redirige a la pagina de modificacion
             var id_usuario = Convert.ToInt32(e.CommandArgument);
