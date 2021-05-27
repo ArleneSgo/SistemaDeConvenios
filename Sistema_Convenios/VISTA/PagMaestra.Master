@@ -121,6 +121,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                       <asp:HyperLink ID="HyperLink1" runat="server" Text="Perfil" CssClass="nav-item dropdown-item"></asp:HyperLink>
                       <a id="linkUsuarios" runat="server" class="dropdown-item" href="Usuarios.aspx">Administrador de Usuarios</a>  
+                      <a id="linkRespaldo" runat="server" class="dropdown-item" href="Respaldo.aspx">Respaldar Base de Datos</a>  
                       <asp:LinkButton ID="lbtnCS" runat="server" OnClick="cerrarSesion_Click" Text="Cerrar Sesión" CssClass="nav-item dropdown-item"></asp:LinkButton>
                     </div>
                   </li>
@@ -140,14 +141,14 @@
             </div>
           </div>
         </form>
+        <footer class="footer">
+          <div class="copyright" id="copyright">
+          &copy;<script>
+             document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+                </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+          </div>
+        </footer>
       </div>  
-      <footer class="footer">
-        <div class="copyright" id="copyright">
-        &copy;<script>
-                 document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-              </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-        </div>
-      </footer>
     </div>
     <!--   Core JS Files   -->
     <script src="../assets/js/core/popper.min.js"></script>

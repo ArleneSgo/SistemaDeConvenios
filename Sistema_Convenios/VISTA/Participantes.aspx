@@ -5,24 +5,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Titulos" runat="server">
   <h1 class="display-4 mb-2 mx-auto text-center" style="color:aliceblue">Participantes</h1>
-  <div class="row">
-    <div class="col-lg-5 ml-auto mr-auto"> 
-      <div class="row">
-        <div class="col-lg-3">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-5 ml-auto" >
-          <p>
+    <div class="row">
+        <div class="col-lg-5 mx-auto" >
             <a href="AgregarParticipantes.aspx" class="btn btn-sq-lg btn-primary btn-block">
-              <i class="now-ui-icons  ui-1_simple-add"></i>
-              <label style="font-size:18px">Nuevo Proyecto</label>
+                <i class="now-ui-icons  ui-1_simple-add"></i>
+                <label style="font-size:18px">Nuevo Proyecto</label>
             </a>
-          </p>
         </div>
-      </div>
     </div>
-  </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <div class="p-4 m-4 border-top-0">
