@@ -123,6 +123,15 @@ namespace VISTA
         protected global::System.Web.UI.HtmlControls.HtmlAnchor linkUsuarios;
 
         /// <summary>
+        /// Control linkRespaldo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor linkRespaldo;
+
+        /// <summary>
         /// Control lbtnCS.
         /// </summary>
         /// <remarks>

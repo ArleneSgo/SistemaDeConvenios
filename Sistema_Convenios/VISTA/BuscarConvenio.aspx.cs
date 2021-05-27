@@ -16,12 +16,9 @@ namespace VISTA
         protected void Page_Load(object sender, EventArgs e)
         {
             /// este metodo busca convenios
-            if (!IsPostBack)
-            {
-                var resultado = ConvenioControlador.BuscarConvenioCriterios(txtCriterios.Text);
-                gvBuscarConvenios.DataSource = resultado;
-                gvBuscarConvenios.DataBind();
-            }
+            var resultado = ConvenioControlador.BuscarConvenioCriterios(txtCriterios.Text);
+            gvBuscarConvenios.DataSource = resultado;
+            gvBuscarConvenios.DataBind();
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)

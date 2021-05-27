@@ -66,8 +66,7 @@ namespace MODELO
                 using (var modelo = new SISTEMADECONVENIOSEntities())
                 {
                     var resultado = (from us in modelo.USUARIO
-                                     where (us.contrasena == usuario.contrasena
-                                     && us.email == usuario.email)
+                                     where (us.email == usuario.email)
                                      select us).FirstOrDefault();
                     return resultado;
                 }
@@ -86,7 +85,7 @@ namespace MODELO
                 var resultado = (from us in modelo.USUARIO
                                  where (us.email == correo)
                                  select us);
-                return resultado.Count() > 0 ? true : false;
+                return resultado.Count() > 0;
             }
         }
 

@@ -26,6 +26,7 @@ namespace VISTA
                     linkAgregarConvenio.Visible = false;
                     linkModificarConvenio.Visible = false;
                     linkRenovarConvenio.Visible = false;
+                    linkRespaldo.Visible = false;
                 }
                 Session["LoginId"] = sesion;
             }
