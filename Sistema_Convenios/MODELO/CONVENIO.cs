@@ -17,7 +17,7 @@ namespace MODELO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CONVENIO()
         {
-            this.PARTICIPANTE = new HashSet<PARTICIPANTE>();
+            this.PROYECTO = new HashSet<PROYECTO>();
         }
     
         public int numConvenio { get; set; }
@@ -67,6 +67,6 @@ namespace MODELO
         public virtual MODALIDAD MODALIDAD { get; set; }
         public virtual MODALIDAD MODALIDAD1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PARTICIPANTE> PARTICIPANTE { get; set; }
+        public virtual ICollection<PROYECTO> PROYECTO { get; set; }
     }
 }

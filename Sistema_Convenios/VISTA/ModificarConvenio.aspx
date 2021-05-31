@@ -142,14 +142,14 @@
             <h6>Nombre del Representante del IT que suscribió el instrumento jurídico &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
             <asp:TextBox ID="txtNombreRepITH" CssClass="form-control" runat="server" MaxLength="150"></asp:TextBox>
             <asp:RequiredFieldValidator ID="rfvnombreRepITH" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>        
-            <asp:RegularExpressionValidator ID="rfvnombreRepITH1" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="rfvnombreRepITH1" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-ZÀ-ÿ0-Z0-9'@&#.ñ\s]{3,100}$"></asp:RegularExpressionValidator>
             <asp:RegularExpressionValidator ID="rfvnombreRepITH2" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el nombre correctamente " ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red" ValidationExpression=".{8}.*"></asp:RegularExpressionValidator>
           </div>
           <div class="form-group col-md-6">
             <h6>Nombre de la(s) Institución(es) con la que se suscribe el instrumento jurídico &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
             <asp:TextBox ID="txtNombreInstitucion" CssClass="form-control" runat="server" MaxLength="150"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>        
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-ZÀ-ÿ0-Z0-9'@&#.ñ\s]{3,100}$"></asp:RegularExpressionValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el nombre correctamente " ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression=".{2}.*"></asp:RegularExpressionValidator>
           </div>
         </div>
@@ -158,14 +158,14 @@
             <h6>Nombre del Representante de la Institución con la que se suscribe el instrumento jurídico</h6>
             <asp:TextBox ID="txtNombreRepInstitucion" CssClass="form-control" runat="server" MaxLength="150"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtNombreRepInstitucion" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>        
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtNombreRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtNombreRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-ZÀ-ÿ0-Z0-9'@&#.ñ\s]{3,100}$"></asp:RegularExpressionValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el nombre correctamente " ControlToValidate="txtNombreRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression=".{8}.*"></asp:RegularExpressionValidator>
           </div>
           <div class="form-group col-md-6">
             <h6>Cargo del Representante de la Institución con la que se suscribe el instrumento jurídico</h6>
             <asp:TextBox ID="txtCargoRepInstitucion" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtCargoRepInstitucion" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>        
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtCargoRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtCargoRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-ZÀ-ÿ0-Z0-9'@&#.ñ\s]{3,100}$"></asp:RegularExpressionValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el nombre correctamente " ControlToValidate="txtCargoRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression=".{3}.*"></asp:RegularExpressionValidator>
           </div>
         </div>

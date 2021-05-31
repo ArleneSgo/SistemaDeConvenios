@@ -106,3 +106,15 @@ C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\SistemaDeConvenio
 C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csproj.CopyComplete
 C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.dll
 C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.pdb
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\bin\Debug\MODELO.dll.config
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\bin\Debug\MODELO.dll
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\bin\Debug\MODELO.pdb
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.dll
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.xml
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csprojAssemblyReference.cache
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csproj.CoreCompileInputs.cache
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csproj.CopyComplete
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.dll
+C:\Control de Versiones\Sistema Convenios\Sistema de Convenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.pdb

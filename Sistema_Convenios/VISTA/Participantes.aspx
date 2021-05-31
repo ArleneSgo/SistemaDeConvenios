@@ -4,15 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Titulos" runat="server">
-  <h1 class="display-4 mb-2 mx-auto text-center" style="color:aliceblue">Participantes</h1>
-    <div class="row">
-        <div class="col-lg-5 mx-auto" >
-            <a href="AgregarParticipantes.aspx" class="btn btn-sq-lg btn-primary btn-block">
-                <i class="now-ui-icons  ui-1_simple-add"></i>
-                <label style="font-size:18px">Nuevo Proyecto</label>
-            </a>
-        </div>
-    </div>
+  <h1 class="display-4 mb-2 mx-auto text-center" style="color:aliceblue">Proyectos</h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <div class="p-4 m-4 border-top-0">
@@ -22,7 +14,7 @@
           <a class="nav-link active" href="#!">Convenios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ParticipantesRegistrados.aspx">Proyectos</a>
+          <a class="nav-link" href="Proyecto.aspx">Proyectos</a>
         </li>
       </ul>
       <div class="card-body" >

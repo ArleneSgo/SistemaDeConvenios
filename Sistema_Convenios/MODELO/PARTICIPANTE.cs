@@ -14,11 +14,12 @@ namespace MODELO
     
     public partial class PARTICIPANTE
     {
-        public int idTablaParticipante { get; set; }
-        public string nombreProyecto { get; set; }
-        public Nullable<int> num_participantes { get; set; }
-        public Nullable<int> num_convenio { get; set; }
+        public int idParticipante { get; set; }
+        public string nombreParticipante { get; set; }
+        public string rol { get; set; }
+        public string carrera { get; set; }
+        public int idProyecto { get; set; }
     
-        public virtual CONVENIO CONVENIO { get; set; }
+        public virtual PROYECTO PROYECTO { get; set; }
     }
 }

@@ -22,7 +22,9 @@ namespace MODELO
             {
                 List<PARTICIPANTE> resultado =
                     (from part in modelo.PARTICIPANTE
-                     where (part.nombreProyecto.Contains(criterios))
+                     where (part.nombreParticipante.Contains(criterios) ||
+                     part.carrera.Contains(criterios) ||
+                     part.rol.Contains(criterios))
                      select part).ToList();
                 return resultado;
             }
@@ -33,21 +35,7 @@ namespace MODELO
             {
                 List<PARTICIPANTE> resultado =
                     (from part in modelo.PARTICIPANTE
-                     where (part.num_convenio == conv)
-                     select part).ToList();
-                return resultado;
-            }
-        }
-        public static List<TablaParticipantes> BuscarParticipantesCriterios(string criterios)
-        {   ///Busca y regresa una lista de participantes con los criterios 
-            using (var modelo = new SISTEMADECONVENIOSEntities())
-            {
-                List<TablaParticipantes> resultado =
-                    (from part in modelo.TablaParticipantes
-                     orderby part.num_convenio
-                     where (part.nombreInstrumento.Contains(criterios)
-                     || part.nombreInstitucion.Contains(criterios)
-                     || part.nombreProyecto.Contains(criterios))
+                     where (part.idProyecto == conv)
                      select part).ToList();
                 return resultado;
             }
@@ -57,30 +45,19 @@ namespace MODELO
             using (var modelo = new SISTEMADECONVENIOSEntities())
             {
                 var resultado = (from part in modelo.PARTICIPANTE
-                                 where part.idTablaParticipante == idParticipante
+                                 where part.idParticipante == idParticipante
                                  select part).Single();
                 return resultado;
             }
         }
-        public static TablaParticipantes BuscarParticipantesPorID(int idConvenio)
-        {   ///Regresa el numero de particpantes con el id buscado
-            using (var modelo = new SISTEMADECONVENIOSEntities())
-            {
-                var resultado = (from part in modelo.TablaParticipantes
-                                 where part.numConvenio == idConvenio
-                                 select part).Single();
-                return resultado;
-            }
-        }
-
         public static void ModificarParticipante(PARTICIPANTE participanteModificado)
         {   ///Modifica el participante deseado
             using (var modelo = new SISTEMADECONVENIOSEntities())
             {
-                PARTICIPANTE participante = modelo.PARTICIPANTE.Find(participanteModificado.idTablaParticipante);
-                participante.nombreProyecto = participanteModificado.nombreProyecto;
-                participante.num_participantes = participanteModificado.num_participantes;
-                participante.num_convenio = participanteModificado.num_convenio;
+                PARTICIPANTE participante = modelo.PARTICIPANTE.Find(participanteModificado.idParticipante);
+                participante.nombreParticipante = participanteModificado.nombreParticipante;
+                participante.rol = participanteModificado.rol;
+                participante.carrera = participanteModificado.carrera;
                 modelo.SaveChanges();
             }
         }

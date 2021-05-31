@@ -77,12 +77,24 @@
   </EntityType>
   <EntityType Name="PARTICIPANTE">
     <Key>
-      <PropertyRef Name="idTablaParticipante" />
+      <PropertyRef Name="idParticipante" />
     </Key>
-    <Property Name="idTablaParticipante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nombreProyecto" Type="varchar" MaxLength="100" />
-    <Property Name="num_participantes" Type="int" />
-    <Property Name="num_convenio" Type="int" />
+    <Property Name="idParticipante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreParticipante" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="rol" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="carrera" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="idProyecto" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROYECTO">
+    <Key>
+      <PropertyRef Name="idProyecto" />
+    </Key>
+    <Property Name="idProyecto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreProyecto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="numParticipantes" Type="int" />
+    <Property Name="fechaInicio" Type="date" />
+    <Property Name="fechaFin" Type="date" />
+    <Property Name="num_convenio" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="RECURSOS">
     <Key>
@@ -145,25 +157,23 @@
     <Property Name="tipoUsuario" Type="int" Nullable="false" />
   </EntityType>
   <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
-  <EntityType Name="TablaParticipantes">
+advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaProyectos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TablaProyectos">
     <Key>
       <PropertyRef Name="numConvenio" />
+      <PropertyRef Name="nombreProyecto" />
       <PropertyRef Name="nombreInstrumento" />
-      <PropertyRef Name="plazoConvenio" />
       <PropertyRef Name="nombreInstitucion" />
-      <PropertyRef Name="idTablaParticipante" />
+      <PropertyRef Name="nombreRepInstitucion" />
+      <PropertyRef Name="idProyecto" />
     </Key>
     <Property Name="numConvenio" Type="int" Nullable="false" />
+    <Property Name="nombreProyecto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="numParticipantes" Type="int" />
     <Property Name="nombreInstrumento" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="inicioConvenio" Type="date" />
-    <Property Name="finConvenio" Type="date" />
-    <Property Name="plazoConvenio" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="nombreInstitucion" Type="varchar" MaxLength="150" Nullable="false" />
-    <Property Name="idTablaParticipante" Type="int" Nullable="false" />
-    <Property Name="nombreProyecto" Type="varchar" MaxLength="100" />
-    <Property Name="num_participantes" Type="int" />
-    <Property Name="num_convenio" Type="int" />
+    <Property Name="nombreRepInstitucion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="idProyecto" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK__CONVENIO__idActE__078C1F06">
     <End Role="ACTIVIDADECONOMICA" Type="Self.ACTIVIDADECONOMICA" Multiplicity="1" />
@@ -297,16 +307,26 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PARTICIPANTE_CONVENIO">
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
+  <Association Name="FK_PARTICIPANTE_PROYECTO">
+    <End Role="PROYECTO" Type="Self.PROYECTO" Multiplicity="1" />
     <End Role="PARTICIPANTE" Type="Self.PARTICIPANTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROYECTO">
+        <PropertyRef Name="idProyecto" />
+      </Principal>
+      <Dependent Role="PARTICIPANTE">
+        <PropertyRef Name="idProyecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROYECTO_CONVENIO">
+    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="1" />
+    <End Role="PROYECTO" Type="Self.PROYECTO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CONVENIO">
         <PropertyRef Name="numConvenio" />
       </Principal>
-      <Dependent Role="PARTICIPANTE">
+      <Dependent Role="PROYECTO">
         <PropertyRef Name="num_convenio" />
       </Dependent>
     </ReferentialConstraint>
@@ -350,6 +370,7 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
     <EntitySet Name="NATURALEZA" EntityType="Self.NATURALEZA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ODS" EntityType="Self.ODS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PARTICIPANTE" EntityType="Self.PARTICIPANTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROYECTO" EntityType="Self.PROYECTO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RECURSOS" EntityType="Self.RECURSOS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SECTOR" EntityType="Self.SECTOR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -357,19 +378,16 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
     <EntitySet Name="TIPOCONVENIOESP" EntityType="Self.TIPOCONVENIOESP" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TIPOUSUARIO" EntityType="Self.TIPOUSUARIO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="TablaParticipantes" EntityType="Self.TablaParticipantes" store:Type="Views" store:Schema="dbo">
+    <EntitySet Name="TablaProyectos" EntityType="Self.TablaProyectos" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [TablaParticipantes].[numConvenio] AS [numConvenio], 
-    [TablaParticipantes].[nombreInstrumento] AS [nombreInstrumento], 
-    [TablaParticipantes].[inicioConvenio] AS [inicioConvenio], 
-    [TablaParticipantes].[finConvenio] AS [finConvenio], 
-    [TablaParticipantes].[plazoConvenio] AS [plazoConvenio], 
-    [TablaParticipantes].[nombreInstitucion] AS [nombreInstitucion], 
-    [TablaParticipantes].[idTablaParticipante] AS [idTablaParticipante], 
-    [TablaParticipantes].[nombreProyecto] AS [nombreProyecto], 
-    [TablaParticipantes].[num_participantes] AS [num_participantes], 
-    [TablaParticipantes].[num_convenio] AS [num_convenio]
-    FROM [dbo].[TablaParticipantes] AS [TablaParticipantes]</DefiningQuery>
+    [TablaProyectos].[numConvenio] AS [numConvenio], 
+    [TablaProyectos].[nombreProyecto] AS [nombreProyecto], 
+    [TablaProyectos].[numParticipantes] AS [numParticipantes], 
+    [TablaProyectos].[nombreInstrumento] AS [nombreInstrumento], 
+    [TablaProyectos].[nombreInstitucion] AS [nombreInstitucion], 
+    [TablaProyectos].[nombreRepInstitucion] AS [nombreRepInstitucion], 
+    [TablaProyectos].[idProyecto] AS [idProyecto]
+    FROM [dbo].[TablaProyectos] AS [TablaProyectos]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__CONVENIO__idActE__078C1F06" Association="Self.FK__CONVENIO__idActE__078C1F06">
       <End Role="ACTIVIDADECONOMICA" EntitySet="ACTIVIDADECONOMICA" />
@@ -415,9 +433,13 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
       <End Role="TIPOUSUARIO" EntitySet="TIPOUSUARIO" />
       <End Role="USUARIO" EntitySet="USUARIO" />
     </AssociationSet>
-    <AssociationSet Name="FK_PARTICIPANTE_CONVENIO" Association="Self.FK_PARTICIPANTE_CONVENIO">
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    <AssociationSet Name="FK_PARTICIPANTE_PROYECTO" Association="Self.FK_PARTICIPANTE_PROYECTO">
+      <End Role="PROYECTO" EntitySet="PROYECTO" />
       <End Role="PARTICIPANTE" EntitySet="PARTICIPANTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROYECTO_CONVENIO" Association="Self.FK_PROYECTO_CONVENIO">
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+      <End Role="PROYECTO" EntitySet="PROYECTO" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

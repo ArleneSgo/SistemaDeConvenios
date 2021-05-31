@@ -87,7 +87,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AgregarConvenio.aspx" />
-    <Content Include="AgregarParticipantes.aspx" />
+    <Content Include="AgregarParticipante.aspx" />
+    <Content Include="AgregarProyecto.aspx" />
     <Content Include="AgregarUsuario.aspx" />
     <Content Include="assets\css\bootstrap-datepicker.css" />
     <Content Include="assets\css\bootstrap.min.css" />
@@ -176,11 +177,11 @@
     <Content Include="InicioSesion.aspx" />
     <Content Include="ModificarConvenio.aspx" />
     <Content Include="ModificarFechaConvenio.aspx" />
-    <Content Include="ModificarParticipante.aspx" />
     <Content Include="ModificarProyecto.aspx" />
     <Content Include="ModificarUsuario.aspx" />
     <Content Include="Participantes.aspx" />
-    <Content Include="ParticipantesRegistrados.aspx" />
+    <Content Include="Proyecto.aspx" />
+    <Content Include="Respaldo.aspx" />
     <Content Include="scripts\build-assets.js" />
     <Content Include="scripts\build-pug.js" />
     <Content Include="scripts\build-scripts.js" />
@@ -206,12 +207,19 @@
     <Compile Include="AgregarConvenio.aspx.designer.cs">
       <DependentUpon>AgregarConvenio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AgregarParticipantes.aspx.cs">
-      <DependentUpon>AgregarParticipantes.aspx</DependentUpon>
+    <Compile Include="AgregarParticipante.aspx.cs">
+      <DependentUpon>AgregarParticipante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AgregarParticipantes.aspx.designer.cs">
-      <DependentUpon>AgregarParticipantes.aspx</DependentUpon>
+    <Compile Include="AgregarParticipante.aspx.designer.cs">
+      <DependentUpon>AgregarParticipante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarProyecto.aspx.cs">
+      <DependentUpon>AgregarProyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarProyecto.aspx.designer.cs">
+      <DependentUpon>AgregarProyecto.aspx</DependentUpon>
     </Compile>
     <Compile Include="AgregarUsuario.aspx.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
@@ -262,13 +270,6 @@
     <Compile Include="ModificarFechaConvenio.aspx.designer.cs">
       <DependentUpon>ModificarFechaConvenio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ModificarParticipante.aspx.cs">
-      <DependentUpon>ModificarParticipante.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ModificarParticipante.aspx.designer.cs">
-      <DependentUpon>ModificarParticipante.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ModificarProyecto.aspx.cs">
       <DependentUpon>ModificarProyecto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -297,14 +298,21 @@
     <Compile Include="Participantes.aspx.designer.cs">
       <DependentUpon>Participantes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ParticipantesRegistrados.aspx.cs">
-      <DependentUpon>ParticipantesRegistrados.aspx</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proyecto.aspx.cs">
+      <DependentUpon>Proyecto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ParticipantesRegistrados.aspx.designer.cs">
-      <DependentUpon>ParticipantesRegistrados.aspx</DependentUpon>
+    <Compile Include="Proyecto.aspx.designer.cs">
+      <DependentUpon>Proyecto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respaldo.aspx.cs">
+      <DependentUpon>Respaldo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Respaldo.aspx.designer.cs">
+      <DependentUpon>Respaldo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -1,180 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="SISTEMADECONVENIOSModelStoreContainer" CdmEntityContainer="SISTEMADECONVENIOSEntities">
-    <EntitySetMapping Name="ACTIVIDADECONOMICA">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.ACTIVIDADECONOMICA">
-        <MappingFragment StoreEntitySet="ACTIVIDADECONOMICA">
-          <ScalarProperty Name="idActEcon" ColumnName="idActEcon" />
-          <ScalarProperty Name="descripcionActEcon" ColumnName="descripcionActEcon" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="AMBITO">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.AMBITO">
-        <MappingFragment StoreEntitySet="AMBITO">
-          <ScalarProperty Name="idAmbito" ColumnName="idAmbito" />
-          <ScalarProperty Name="descripcionAmbito" ColumnName="descripcionAmbito" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CONVENIO">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.CONVENIO">
-        <MappingFragment StoreEntitySet="CONVENIO">
-          <ScalarProperty Name="numConvenio" ColumnName="numConvenio" />
-          <ScalarProperty Name="nombreInstrumento" ColumnName="nombreInstrumento" />
-          <ScalarProperty Name="inicioConvenio" ColumnName="inicioConvenio" />
-          <ScalarProperty Name="finConvenio" ColumnName="finConvenio" />
-          <ScalarProperty Name="plazoConvenio" ColumnName="plazoConvenio" />
-          <ScalarProperty Name="publicadoActivo" ColumnName="publicadoActivo" />
-          <ScalarProperty Name="publicadoDonde" ColumnName="publicadoDonde" />
-          <ScalarProperty Name="objetivoInstrumento" ColumnName="objetivoInstrumento" />
-          <ScalarProperty Name="idNaturaleza" ColumnName="idNaturaleza" />
-          <ScalarProperty Name="naturalezaModalidad" ColumnName="naturalezaModalidad" />
-          <ScalarProperty Name="becas" ColumnName="becas" />
-          <ScalarProperty Name="movilidad" ColumnName="movilidad" />
-          <ScalarProperty Name="prestacionServicio" ColumnName="prestacionServicio" />
-          <ScalarProperty Name="donacion" ColumnName="donacion" />
-          <ScalarProperty Name="comodato" ColumnName="comodato" />
-          <ScalarProperty Name="educacionContinua" ColumnName="educacionContinua" />
-          <ScalarProperty Name="nombreRepITH" ColumnName="nombreRepITH" />
-          <ScalarProperty Name="nombreInstitucion" ColumnName="nombreInstitucion" />
-          <ScalarProperty Name="nombreRepInstitucion" ColumnName="nombreRepInstitucion" />
-          <ScalarProperty Name="cargoRepInstitucion" ColumnName="cargoRepInstitucion" />
-          <ScalarProperty Name="idRecursos" ColumnName="idRecursos" />
-          <ScalarProperty Name="montoRecursoFinanciero" ColumnName="montoRecursoFinanciero" />
-          <ScalarProperty Name="propiedadIntelActivo" ColumnName="propiedadIntelActivo" />
-          <ScalarProperty Name="propiedadIntelDonde" ColumnName="propiedadIntelDonde" />
-          <ScalarProperty Name="entregable" ColumnName="entregable" />
-          <ScalarProperty Name="idTipoConvenio" ColumnName="idTipoConvenio" />
-          <ScalarProperty Name="idTipoConvenioEsp" ColumnName="idTipoConvenioEsp" />
-          <ScalarProperty Name="idSector" ColumnName="idSector" />
-          <ScalarProperty Name="idActEcon" ColumnName="idActEcon" />
-          <ScalarProperty Name="cantidadActEcon" ColumnName="cantidadActEcon" />
-          <ScalarProperty Name="idAmbito" ColumnName="idAmbito" />
-          <ScalarProperty Name="eje" ColumnName="eje" />
-          <ScalarProperty Name="ODSActivo" ColumnName="ODSActivo" />
-          <ScalarProperty Name="idODS" ColumnName="idODS" />
-          <ScalarProperty Name="num_participantes" ColumnName="num_participantes" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="MODALIDAD">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.MODALIDAD">
-        <MappingFragment StoreEntitySet="MODALIDAD">
-          <ScalarProperty Name="idModalidad" ColumnName="idModalidad" />
-          <ScalarProperty Name="descripcionMod" ColumnName="descripcionMod" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="NATURALEZA">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.NATURALEZA">
-        <MappingFragment StoreEntitySet="NATURALEZA">
-          <ScalarProperty Name="idNaturaleza" ColumnName="idNaturaleza" />
-          <ScalarProperty Name="nombreInstrumento" ColumnName="nombreInstrumento" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ODS">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.ODS">
-        <MappingFragment StoreEntitySet="ODS">
-          <ScalarProperty Name="idODS" ColumnName="idODS" />
-          <ScalarProperty Name="descripcionOds" ColumnName="descripcionOds" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PARTICIPANTE">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.PARTICIPANTE">
-        <MappingFragment StoreEntitySet="PARTICIPANTE">
-          <ScalarProperty Name="idTablaParticipante" ColumnName="idTablaParticipante" />
-          <ScalarProperty Name="nombreProyecto" ColumnName="nombreProyecto" />
-          <ScalarProperty Name="num_participantes" ColumnName="num_participantes" />
-          <ScalarProperty Name="num_convenio" ColumnName="num_convenio" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="RECURSOS">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.RECURSOS">
-        <MappingFragment StoreEntitySet="RECURSOS">
-          <ScalarProperty Name="idRecursos" ColumnName="idRecursos" />
-          <ScalarProperty Name="descripcionRec" ColumnName="descripcionRec" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SECTOR">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.SECTOR">
-        <MappingFragment StoreEntitySet="SECTOR">
-          <ScalarProperty Name="idSector" ColumnName="idSector" />
-          <ScalarProperty Name="descripcionSec" ColumnName="descripcionSec" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TIPOCONVENIO">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TIPOCONVENIO">
-        <MappingFragment StoreEntitySet="TIPOCONVENIO">
-          <ScalarProperty Name="idTipoConvenio" ColumnName="idTipoConvenio" />
-          <ScalarProperty Name="descripcionTC" ColumnName="descripcionTC" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TIPOCONVENIOESP">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TIPOCONVENIOESP">
-        <MappingFragment StoreEntitySet="TIPOCONVENIOESP">
-          <ScalarProperty Name="idTipoConvenioEsp" ColumnName="idTipoConvenioEsp" />
-          <ScalarProperty Name="descripcionTCE" ColumnName="descripcionTCE" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TIPOUSUARIO">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TIPOUSUARIO">
-        <MappingFragment StoreEntitySet="TIPOUSUARIO">
-          <ScalarProperty Name="tipoUsuario1" ColumnName="tipoUsuario" />
-          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-          <ScalarProperty Name="activo" ColumnName="activo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="USUARIO">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.USUARIO">
-        <MappingFragment StoreEntitySet="USUARIO">
-          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="primer_apellido" ColumnName="primer_apellido" />
-          <ScalarProperty Name="segundo_apellido" ColumnName="segundo_apellido" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="telefono" ColumnName="telefono" />
-          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
-          <ScalarProperty Name="empresa" ColumnName="empresa" />
-          <ScalarProperty Name="tipoUsuario" ColumnName="tipoUsuario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TablaParticipantes">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TablaParticipantes">
-        <MappingFragment StoreEntitySet="TablaParticipantes">
-          <ScalarProperty Name="numConvenio" ColumnName="numConvenio" />
-          <ScalarProperty Name="nombreInstrumento" ColumnName="nombreInstrumento" />
-          <ScalarProperty Name="inicioConvenio" ColumnName="inicioConvenio" />
-          <ScalarProperty Name="finConvenio" ColumnName="finConvenio" />
-          <ScalarProperty Name="plazoConvenio" ColumnName="plazoConvenio" />
-          <ScalarProperty Name="nombreInstitucion" ColumnName="nombreInstitucion" />
-          <ScalarProperty Name="idTablaParticipante" ColumnName="idTablaParticipante" />
-          <ScalarProperty Name="nombreProyecto" ColumnName="nombreProyecto" />
-          <ScalarProperty Name="num_participantes" ColumnName="num_participantes" />
-          <ScalarProperty Name="num_convenio" ColumnName="num_convenio" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_creatediagram" />
     <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_dropdiagram" />
@@ -199,5 +25,189 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SISTEMADECONVENIOSModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="ACTIVIDADECONOMICA">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.ACTIVIDADECONOMICA">
+        <MappingFragment StoreEntitySet="ACTIVIDADECONOMICA">
+          <ScalarProperty Name="descripcionActEcon" ColumnName="descripcionActEcon" />
+          <ScalarProperty Name="idActEcon" ColumnName="idActEcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMBITO">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.AMBITO">
+        <MappingFragment StoreEntitySet="AMBITO">
+          <ScalarProperty Name="descripcionAmbito" ColumnName="descripcionAmbito" />
+          <ScalarProperty Name="idAmbito" ColumnName="idAmbito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONVENIO">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.CONVENIO">
+        <MappingFragment StoreEntitySet="CONVENIO">
+          <ScalarProperty Name="num_participantes" ColumnName="num_participantes" />
+          <ScalarProperty Name="idODS" ColumnName="idODS" />
+          <ScalarProperty Name="ODSActivo" ColumnName="ODSActivo" />
+          <ScalarProperty Name="eje" ColumnName="eje" />
+          <ScalarProperty Name="idAmbito" ColumnName="idAmbito" />
+          <ScalarProperty Name="cantidadActEcon" ColumnName="cantidadActEcon" />
+          <ScalarProperty Name="idActEcon" ColumnName="idActEcon" />
+          <ScalarProperty Name="idSector" ColumnName="idSector" />
+          <ScalarProperty Name="idTipoConvenioEsp" ColumnName="idTipoConvenioEsp" />
+          <ScalarProperty Name="idTipoConvenio" ColumnName="idTipoConvenio" />
+          <ScalarProperty Name="entregable" ColumnName="entregable" />
+          <ScalarProperty Name="propiedadIntelDonde" ColumnName="propiedadIntelDonde" />
+          <ScalarProperty Name="propiedadIntelActivo" ColumnName="propiedadIntelActivo" />
+          <ScalarProperty Name="montoRecursoFinanciero" ColumnName="montoRecursoFinanciero" />
+          <ScalarProperty Name="idRecursos" ColumnName="idRecursos" />
+          <ScalarProperty Name="cargoRepInstitucion" ColumnName="cargoRepInstitucion" />
+          <ScalarProperty Name="nombreRepInstitucion" ColumnName="nombreRepInstitucion" />
+          <ScalarProperty Name="nombreInstitucion" ColumnName="nombreInstitucion" />
+          <ScalarProperty Name="nombreRepITH" ColumnName="nombreRepITH" />
+          <ScalarProperty Name="educacionContinua" ColumnName="educacionContinua" />
+          <ScalarProperty Name="comodato" ColumnName="comodato" />
+          <ScalarProperty Name="donacion" ColumnName="donacion" />
+          <ScalarProperty Name="prestacionServicio" ColumnName="prestacionServicio" />
+          <ScalarProperty Name="movilidad" ColumnName="movilidad" />
+          <ScalarProperty Name="becas" ColumnName="becas" />
+          <ScalarProperty Name="naturalezaModalidad" ColumnName="naturalezaModalidad" />
+          <ScalarProperty Name="idNaturaleza" ColumnName="idNaturaleza" />
+          <ScalarProperty Name="objetivoInstrumento" ColumnName="objetivoInstrumento" />
+          <ScalarProperty Name="publicadoDonde" ColumnName="publicadoDonde" />
+          <ScalarProperty Name="publicadoActivo" ColumnName="publicadoActivo" />
+          <ScalarProperty Name="plazoConvenio" ColumnName="plazoConvenio" />
+          <ScalarProperty Name="finConvenio" ColumnName="finConvenio" />
+          <ScalarProperty Name="inicioConvenio" ColumnName="inicioConvenio" />
+          <ScalarProperty Name="nombreInstrumento" ColumnName="nombreInstrumento" />
+          <ScalarProperty Name="numConvenio" ColumnName="numConvenio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODALIDAD">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.MODALIDAD">
+        <MappingFragment StoreEntitySet="MODALIDAD">
+          <ScalarProperty Name="descripcionMod" ColumnName="descripcionMod" />
+          <ScalarProperty Name="idModalidad" ColumnName="idModalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NATURALEZA">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.NATURALEZA">
+        <MappingFragment StoreEntitySet="NATURALEZA">
+          <ScalarProperty Name="nombreInstrumento" ColumnName="nombreInstrumento" />
+          <ScalarProperty Name="idNaturaleza" ColumnName="idNaturaleza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ODS">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.ODS">
+        <MappingFragment StoreEntitySet="ODS">
+          <ScalarProperty Name="descripcionOds" ColumnName="descripcionOds" />
+          <ScalarProperty Name="idODS" ColumnName="idODS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PARTICIPANTE">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.PARTICIPANTE">
+        <MappingFragment StoreEntitySet="PARTICIPANTE">
+          <ScalarProperty Name="idProyecto" ColumnName="idProyecto" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="nombreParticipante" ColumnName="nombreParticipante" />
+          <ScalarProperty Name="idParticipante" ColumnName="idParticipante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROYECTO">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.PROYECTO">
+        <MappingFragment StoreEntitySet="PROYECTO">
+          <ScalarProperty Name="num_convenio" ColumnName="num_convenio" />
+          <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="numParticipantes" ColumnName="numParticipantes" />
+          <ScalarProperty Name="nombreProyecto" ColumnName="nombreProyecto" />
+          <ScalarProperty Name="idProyecto" ColumnName="idProyecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RECURSOS">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.RECURSOS">
+        <MappingFragment StoreEntitySet="RECURSOS">
+          <ScalarProperty Name="descripcionRec" ColumnName="descripcionRec" />
+          <ScalarProperty Name="idRecursos" ColumnName="idRecursos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SECTOR">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.SECTOR">
+        <MappingFragment StoreEntitySet="SECTOR">
+          <ScalarProperty Name="descripcionSec" ColumnName="descripcionSec" />
+          <ScalarProperty Name="idSector" ColumnName="idSector" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOCONVENIO">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TIPOCONVENIO">
+        <MappingFragment StoreEntitySet="TIPOCONVENIO">
+          <ScalarProperty Name="descripcionTC" ColumnName="descripcionTC" />
+          <ScalarProperty Name="idTipoConvenio" ColumnName="idTipoConvenio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOCONVENIOESP">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TIPOCONVENIOESP">
+        <MappingFragment StoreEntitySet="TIPOCONVENIOESP">
+          <ScalarProperty Name="descripcionTCE" ColumnName="descripcionTCE" />
+          <ScalarProperty Name="idTipoConvenioEsp" ColumnName="idTipoConvenioEsp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOUSUARIO">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TIPOUSUARIO">
+        <MappingFragment StoreEntitySet="TIPOUSUARIO">
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="tipoUsuario1" ColumnName="tipoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="tipoUsuario" ColumnName="tipoUsuario" />
+          <ScalarProperty Name="empresa" ColumnName="empresa" />
+          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="segundo_apellido" ColumnName="segundo_apellido" />
+          <ScalarProperty Name="primer_apellido" ColumnName="primer_apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TablaProyectos">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TablaProyectos">
+        <MappingFragment StoreEntitySet="TablaProyectos">
+          <ScalarProperty Name="idProyecto" ColumnName="idProyecto" />
+          <ScalarProperty Name="nombreRepInstitucion" ColumnName="nombreRepInstitucion" />
+          <ScalarProperty Name="nombreInstitucion" ColumnName="nombreInstitucion" />
+          <ScalarProperty Name="nombreInstrumento" ColumnName="nombreInstrumento" />
+          <ScalarProperty Name="numParticipantes" ColumnName="numParticipantes" />
+          <ScalarProperty Name="nombreProyecto" ColumnName="nombreProyecto" />
+          <ScalarProperty Name="numConvenio" ColumnName="numConvenio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

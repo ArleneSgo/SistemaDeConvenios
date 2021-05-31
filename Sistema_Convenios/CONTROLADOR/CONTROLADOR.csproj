@@ -44,6 +44,7 @@
     <Compile Include="ConvenioControlador.cs" />
     <Compile Include="Errores.cs" />
     <Compile Include="ParticipanteControlador.cs" />
+    <Compile Include="ProyectoControlador.cs" />
     <Compile Include="TipoUsuarioControlador.cs" />
     <Compile Include="UsuarioControlador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

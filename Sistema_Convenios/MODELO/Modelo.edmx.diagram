@@ -4,34 +4,36 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0456a683d86d43b78d20b07d4e9a6979" Name="Diagram1" ZoomLevel="57">
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.ACTIVIDADECONOMICA" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.AMBITO" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.CONVENIO" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.MODALIDAD" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.NATURALEZA" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.ODS" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.PARTICIPANTE" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.RECURSOS" Width="1.5" PointX="0.75" PointY="18" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.SECTOR" Width="1.5" PointX="0.75" PointY="20.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.TIPOCONVENIO" Width="1.5" PointX="0.75" PointY="22.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.TIPOCONVENIOESP" Width="1.5" PointX="0.75" PointY="25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.TIPOUSUARIO" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.USUARIO" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.TablaParticipantes" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idActE__078C1F06" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idAmbi__0880433F" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idNatu__00DF2177" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idODS__09746778" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idRecu__03BB8E22" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idSect__0697FACD" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idTipo__04AFB25B" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idTipo__05A3D694" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__movili__02C769E9" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__natura__01D345B0" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK_PARTICIPANTE_CONVENIO" ManuallyRouted="false" />
-        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__USUARIO__tipoUsu__37703C52" ManuallyRouted="false" />
+      <Diagram DiagramId="0456a683d86d43b78d20b07d4e9a6979" Name="Diagram1" ZoomLevel="40">
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.ACTIVIDADECONOMICA" Width="1.5" PointX="0.75" PointY="18" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.AMBITO" Width="1.5" PointX="0.75" PointY="11" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.CONVENIO" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.MODALIDAD" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.NATURALEZA" Width="1.5" PointX="0.75" PointY="22.625" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.ODS" Width="1.5" PointX="0.75" PointY="13.25" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.PARTICIPANTE" Width="1.5" PointX="7.5" PointY="5.125" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.PROYECTO" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.RECURSOS" Width="1.5" PointX="0.75" PointY="25" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.SECTOR" Width="1.5" PointX="0.75" PointY="15.625" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.TIPOCONVENIO" Width="1.5" PointX="0.75" PointY="8.625" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.TIPOCONVENIOESP" Width="1.5" PointX="0.75" PointY="20.375" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.TIPOUSUARIO" Width="1.5" PointX="5.75" PointY="1.5" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.USUARIO" Width="1.5" PointX="8" PointY="1" />
+        <EntityTypeShape EntityType="SISTEMADECONVENIOSModel.TablaProyectos" Width="1.5" PointX="7.75" PointY="8.75" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idActE__078C1F06" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idAmbi__0880433F" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idNatu__00DF2177" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idODS__09746778" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idRecu__03BB8E22" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idSect__0697FACD" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idTipo__04AFB25B" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idTipo__05A3D694" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__movili__02C769E9" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__CONVENIO__natura__01D345B0" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK_PROYECTO_CONVENIO" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK_PARTICIPANTE_PROYECTO" />
+        <AssociationConnector Association="SISTEMADECONVENIOSModel.FK__USUARIO__tipoUsu__37703C52" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

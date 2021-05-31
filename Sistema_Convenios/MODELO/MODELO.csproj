@@ -88,6 +88,10 @@
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="ParticipanteModelo.cs" />
+    <Compile Include="PROYECTO.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoModelo.cs" />
     <Compile Include="RECURSOS.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
@@ -103,7 +107,7 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
-    <Compile Include="TablaParticipantes.cs">
+    <Compile Include="TablaProyectos.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="TIPOCONVENIO.cs">

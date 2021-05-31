@@ -11,7 +11,7 @@ namespace VISTA
 {
 
 
-    public partial class ParticipantesRegistrados
+    public partial class Proyecto
     {
 
         /// <summary>
@@ -33,13 +33,13 @@ namespace VISTA
         protected global::System.Web.UI.WebControls.Button btnBuscar;
 
         /// <summary>
-        /// Control gvParticipantes.
+        /// Control gvProyectos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvParticipantes;
+        protected global::System.Web.UI.WebControls.GridView gvProyectos;
 
         /// <summary>
         /// Control hiddenId.

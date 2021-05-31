@@ -9,25 +9,33 @@ using CONTROLADOR;
 
 namespace VISTA
 {
-    public partial class AgregarParticipantes : System.Web.UI.Page
+    public partial class AgregarParticipante : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
+                var idProy = Convert.ToInt32(Request.QueryString["ID"]);
+                PROYECTO proyecto = ProyectoControlador.BuscarProyectoPorID(idProy);
                 var newparticipante = new PARTICIPANTE()
                 {
-                    nombreProyecto = txbNombreProyecto.Text,
-                    num_participantes = Convert.ToInt32(txbNumParticipantes.Text)
+                    nombreParticipante = txbNombreParticipante.Text,
+                    rol = rbtn.SelectedValue.ToString(),
+                    carrera = txbCarrera.Text,
+                    idProyecto = proyecto.idProyecto,
                 };
+                var num = proyecto.numParticipantes;
+                proyecto.numParticipantes = num + 1;
                 ParticipanteModelo.InsertarParticipante(newparticipante);
+                ProyectoModelo.ModificarProyecto(proyecto);
                 mensaje.Visible = true;
                 string javaScript = "OcultarMensaje();";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);
-                Response.Redirect("Participantes.aspx");
+                Response.Redirect("Proyecto.aspx");
             }
             catch (Exception ex)
             {
@@ -37,7 +45,7 @@ namespace VISTA
         }
         protected void btnAtras_Click(object sender, EventArgs e)
         {
-            Response.RedirectPermanent("Participantes.aspx");
+            Response.RedirectPermanent("Proyecto.aspx");
         }
     }
 }

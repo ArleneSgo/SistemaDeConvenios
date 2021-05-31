@@ -34,6 +34,7 @@ namespace MODELO
         public virtual DbSet<NATURALEZA> NATURALEZA { get; set; }
         public virtual DbSet<ODS> ODS { get; set; }
         public virtual DbSet<PARTICIPANTE> PARTICIPANTE { get; set; }
+        public virtual DbSet<PROYECTO> PROYECTO { get; set; }
         public virtual DbSet<RECURSOS> RECURSOS { get; set; }
         public virtual DbSet<SECTOR> SECTOR { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
@@ -41,7 +42,7 @@ namespace MODELO
         public virtual DbSet<TIPOCONVENIOESP> TIPOCONVENIOESP { get; set; }
         public virtual DbSet<TIPOUSUARIO> TIPOUSUARIO { get; set; }
         public virtual DbSet<USUARIO> USUARIO { get; set; }
-        public virtual DbSet<TablaParticipantes> TablaParticipantes { get; set; }
+        public virtual DbSet<TablaProyectos> TablaProyectos { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

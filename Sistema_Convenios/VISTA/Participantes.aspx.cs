@@ -31,12 +31,8 @@ namespace VISTA
         protected void imgAgregar_Command(object sender, CommandEventArgs e)
         {   //Selecciona al participante que se desea modificar y redirige a la pagina de modificacion
             var numConvenio = Convert.ToInt32(e.CommandArgument);
-            Response.Redirect("ModificarParticipante.aspx?NUM=" + numConvenio);
+            Response.Redirect("AgregarProyecto.aspx?NUM=" + numConvenio);
         }
-        protected void img_Command(object sender, CommandEventArgs e)
-        {   //Selecciona al participante que se desea visualizar y redirige a la pagina con su informacion
-            var numConvenio = Convert.ToInt32(e.CommandArgument);
-            Response.Redirect("Participantes.aspx?NUM=" + numConvenio);
-        }
+        
     }
 }

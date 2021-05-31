@@ -12,17 +12,14 @@ namespace MODELO
     using System;
     using System.Collections.Generic;
     
-    public partial class TablaParticipantes
+    public partial class TablaProyectos
     {
         public int numConvenio { get; set; }
-        public string nombreInstrumento { get; set; }
-        public Nullable<System.DateTime> inicioConvenio { get; set; }
-        public Nullable<System.DateTime> finConvenio { get; set; }
-        public string plazoConvenio { get; set; }
-        public string nombreInstitucion { get; set; }
-        public int idTablaParticipante { get; set; }
         public string nombreProyecto { get; set; }
-        public Nullable<int> num_participantes { get; set; }
-        public Nullable<int> num_convenio { get; set; }
+        public Nullable<int> numParticipantes { get; set; }
+        public string nombreInstrumento { get; set; }
+        public string nombreInstitucion { get; set; }
+        public string nombreRepInstitucion { get; set; }
+        public int idProyecto { get; set; }
     }
 }

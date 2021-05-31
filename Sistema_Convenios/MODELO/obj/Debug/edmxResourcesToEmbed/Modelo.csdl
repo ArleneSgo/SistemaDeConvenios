@@ -1,402 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="SISTEMADECONVENIOSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="ACTIVIDADECONOMICA">
-    <Key>
-      <PropertyRef Name="idActEcon" />
-    </Key>
-    <Property Name="idActEcon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcionActEcon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CONVENIO" Relationship="Self.FK__CONVENIO__idActE__078C1F06" FromRole="ACTIVIDADECONOMICA" ToRole="CONVENIO" />
-  </EntityType>
-  <EntityType Name="AMBITO">
-    <Key>
-      <PropertyRef Name="idAmbito" />
-    </Key>
-    <Property Name="idAmbito" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcionAmbito" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CONVENIO" Relationship="Self.FK__CONVENIO__idAmbi__0880433F" FromRole="AMBITO" ToRole="CONVENIO" />
-  </EntityType>
-  <EntityType Name="CONVENIO">
-    <Key>
-      <PropertyRef Name="numConvenio" />
-    </Key>
-    <Property Name="numConvenio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nombreInstrumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="inicioConvenio" Type="DateTime" Precision="0" />
-    <Property Name="finConvenio" Type="DateTime" Precision="0" />
-    <Property Name="plazoConvenio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="publicadoActivo" Type="Boolean" Nullable="false" />
-    <Property Name="publicadoDonde" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="objetivoInstrumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="idNaturaleza" Type="Int32" Nullable="false" />
-    <Property Name="naturalezaModalidad" Type="Int32" />
-    <Property Name="becas" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="movilidad" Type="Int32" />
-    <Property Name="prestacionServicio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="donacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="comodato" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="educacionContinua" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="nombreRepITH" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="nombreInstitucion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="nombreRepInstitucion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="cargoRepInstitucion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="idRecursos" Type="Int32" Nullable="false" />
-    <Property Name="montoRecursoFinanciero" Type="Double" />
-    <Property Name="propiedadIntelActivo" Type="Boolean" Nullable="false" />
-    <Property Name="propiedadIntelDonde" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="entregable" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="idTipoConvenio" Type="Int32" Nullable="false" />
-    <Property Name="idTipoConvenioEsp" Type="Int32" Nullable="false" />
-    <Property Name="idSector" Type="Int32" Nullable="false" />
-    <Property Name="idActEcon" Type="Int32" Nullable="false" />
-    <Property Name="cantidadActEcon" Type="Int32" />
-    <Property Name="idAmbito" Type="Int32" Nullable="false" />
-    <Property Name="eje" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="ODSActivo" Type="Boolean" Nullable="false" />
-    <Property Name="idODS" Type="Int32" />
-    <Property Name="num_participantes" Type="Int32" />
-    <NavigationProperty Name="ACTIVIDADECONOMICA" Relationship="Self.FK__CONVENIO__idActE__078C1F06" FromRole="CONVENIO" ToRole="ACTIVIDADECONOMICA" />
-    <NavigationProperty Name="AMBITO" Relationship="Self.FK__CONVENIO__idAmbi__0880433F" FromRole="CONVENIO" ToRole="AMBITO" />
-    <NavigationProperty Name="NATURALEZA" Relationship="Self.FK__CONVENIO__idNatu__00DF2177" FromRole="CONVENIO" ToRole="NATURALEZA" />
-    <NavigationProperty Name="ODS" Relationship="Self.FK__CONVENIO__idODS__09746778" FromRole="CONVENIO" ToRole="ODS" />
-    <NavigationProperty Name="RECURSOS" Relationship="Self.FK__CONVENIO__idRecu__03BB8E22" FromRole="CONVENIO" ToRole="RECURSOS" />
-    <NavigationProperty Name="SECTOR" Relationship="Self.FK__CONVENIO__idSect__0697FACD" FromRole="CONVENIO" ToRole="SECTOR" />
-    <NavigationProperty Name="TIPOCONVENIO" Relationship="Self.FK__CONVENIO__idTipo__04AFB25B" FromRole="CONVENIO" ToRole="TIPOCONVENIO" />
-    <NavigationProperty Name="TIPOCONVENIOESP" Relationship="Self.FK__CONVENIO__idTipo__05A3D694" FromRole="CONVENIO" ToRole="TIPOCONVENIOESP" />
-    <NavigationProperty Name="MODALIDAD" Relationship="Self.FK__CONVENIO__movili__02C769E9" FromRole="CONVENIO" ToRole="MODALIDAD" />
-    <NavigationProperty Name="MODALIDAD1" Relationship="Self.FK__CONVENIO__natura__01D345B0" FromRole="CONVENIO" ToRole="MODALIDAD" />
-    <NavigationProperty Name="PARTICIPANTE" Relationship="Self.FK_PARTICIPANTE_CONVENIO" FromRole="CONVENIO" ToRole="PARTICIPANTE" />
-  </EntityType>
-  <EntityType Name="MODALIDAD">
-    <Key>
-      <PropertyRef Name="idModalidad" />
-    </Key>
-    <Property Name="idModalidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcionMod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CONVENIO" Relationship="Self.FK__CONVENIO__movili__02C769E9" FromRole="MODALIDAD" ToRole="CONVENIO" />
-    <NavigationProperty Name="CONVENIO1" Relationship="Self.FK__CONVENIO__natura__01D345B0" FromRole="MODALIDAD" ToRole="CONVENIO" />
-  </EntityType>
-  <EntityType Name="NATURALEZA">
-    <Key>
-      <PropertyRef Name="idNaturaleza" />
-    </Key>
-    <Property Name="idNaturaleza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nombreInstrumento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CONVENIO" Relationship="Self.FK__CONVENIO__idNatu__00DF2177" FromRole="NATURALEZA" ToRole="CONVENIO" />
-  </EntityType>
-  <EntityType Name="ODS">
-    <Key>
-      <PropertyRef Name="idODS" />
-    </Key>
-    <Property Name="idODS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcionOds" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CONVENIO" Relationship="Self.FK__CONVENIO__idODS__09746778" FromRole="ODS" ToRole="CONVENIO" />
-  </EntityType>
-  <EntityType Name="PARTICIPANTE">
-    <Key>
-      <PropertyRef Name="idTablaParticipante" />
-    </Key>
-    <Property Name="idTablaParticipante" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nombreProyecto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="num_participantes" Type="Int32" />
-    <Property Name="num_convenio" Type="Int32" />
-    <NavigationProperty Name="CONVENIO" Relationship="Self.FK_PARTICIPANTE_CONVENIO" FromRole="PARTICIPANTE" ToRole="CONVENIO" />
-  </EntityType>
-  <EntityType Name="RECURSOS">
-    <Key>
-      <PropertyRef Name="idRecursos" />
-    </Key>
-    <Property Name="idRecursos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcionRec" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CONVENIO" Relationship="Self.FK__CONVENIO__idRecu__03BB8E22" FromRole="RECURSOS" ToRole="CONVENIO" />
-  </EntityType>
-  <EntityType Name="SECTOR">
-    <Key>
-      <PropertyRef Name="idSector" />
-    </Key>
-    <Property Name="idSector" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcionSec" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CONVENIO" Relationship="Self.FK__CONVENIO__idSect__0697FACD" FromRole="SECTOR" ToRole="CONVENIO" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="TIPOCONVENIO">
-    <Key>
-      <PropertyRef Name="idTipoConvenio" />
-    </Key>
-    <Property Name="idTipoConvenio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcionTC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CONVENIO" Relationship="Self.FK__CONVENIO__idTipo__04AFB25B" FromRole="TIPOCONVENIO" ToRole="CONVENIO" />
-  </EntityType>
-  <EntityType Name="TIPOCONVENIOESP">
-    <Key>
-      <PropertyRef Name="idTipoConvenioEsp" />
-    </Key>
-    <Property Name="idTipoConvenioEsp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcionTCE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CONVENIO" Relationship="Self.FK__CONVENIO__idTipo__05A3D694" FromRole="TIPOCONVENIOESP" ToRole="CONVENIO" />
-  </EntityType>
-  <EntityType Name="TIPOUSUARIO">
-    <Key>
-      <PropertyRef Name="tipoUsuario1" />
-    </Key>
-    <Property Name="tipoUsuario1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="activo" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="USUARIO" Relationship="Self.FK__USUARIO__tipoUsu__37703C52" FromRole="TIPOUSUARIO" ToRole="USUARIO" />
-  </EntityType>
-  <EntityType Name="USUARIO">
-    <Key>
-      <PropertyRef Name="id_usuario" />
-    </Key>
-    <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="primer_apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="segundo_apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="tipoUsuario" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="TIPOUSUARIO1" Relationship="Self.FK__USUARIO__tipoUsu__37703C52" FromRole="USUARIO" ToRole="TIPOUSUARIO" />
-  </EntityType>
-  <EntityType Name="TablaParticipantes">
-    <Key>
-      <PropertyRef Name="numConvenio" />
-      <PropertyRef Name="nombreInstrumento" />
-      <PropertyRef Name="plazoConvenio" />
-      <PropertyRef Name="nombreInstitucion" />
-      <PropertyRef Name="idTablaParticipante" />
-    </Key>
-    <Property Name="numConvenio" Type="Int32" Nullable="false" />
-    <Property Name="nombreInstrumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="inicioConvenio" Type="DateTime" Precision="0" />
-    <Property Name="finConvenio" Type="DateTime" Precision="0" />
-    <Property Name="plazoConvenio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="nombreInstitucion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="idTablaParticipante" Type="Int32" Nullable="false" />
-    <Property Name="nombreProyecto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="num_participantes" Type="Int32" />
-    <Property Name="num_convenio" Type="Int32" />
-  </EntityType>
-  <Association Name="FK__CONVENIO__idActE__078C1F06">
-    <End Role="ACTIVIDADECONOMICA" Type="Self.ACTIVIDADECONOMICA" Multiplicity="1" />
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ACTIVIDADECONOMICA">
-        <PropertyRef Name="idActEcon" />
-      </Principal>
-      <Dependent Role="CONVENIO">
-        <PropertyRef Name="idActEcon" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CONVENIO__idAmbi__0880433F">
-    <End Role="AMBITO" Type="Self.AMBITO" Multiplicity="1" />
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AMBITO">
-        <PropertyRef Name="idAmbito" />
-      </Principal>
-      <Dependent Role="CONVENIO">
-        <PropertyRef Name="idAmbito" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CONVENIO__idNatu__00DF2177">
-    <End Role="NATURALEZA" Type="Self.NATURALEZA" Multiplicity="1" />
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NATURALEZA">
-        <PropertyRef Name="idNaturaleza" />
-      </Principal>
-      <Dependent Role="CONVENIO">
-        <PropertyRef Name="idNaturaleza" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CONVENIO__idODS__09746778">
-    <End Role="ODS" Type="Self.ODS" Multiplicity="0..1" />
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ODS">
-        <PropertyRef Name="idODS" />
-      </Principal>
-      <Dependent Role="CONVENIO">
-        <PropertyRef Name="idODS" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CONVENIO__idRecu__03BB8E22">
-    <End Role="RECURSOS" Type="Self.RECURSOS" Multiplicity="1" />
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="RECURSOS">
-        <PropertyRef Name="idRecursos" />
-      </Principal>
-      <Dependent Role="CONVENIO">
-        <PropertyRef Name="idRecursos" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CONVENIO__idSect__0697FACD">
-    <End Role="SECTOR" Type="Self.SECTOR" Multiplicity="1" />
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="SECTOR">
-        <PropertyRef Name="idSector" />
-      </Principal>
-      <Dependent Role="CONVENIO">
-        <PropertyRef Name="idSector" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CONVENIO__idTipo__04AFB25B">
-    <End Role="TIPOCONVENIO" Type="Self.TIPOCONVENIO" Multiplicity="1" />
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TIPOCONVENIO">
-        <PropertyRef Name="idTipoConvenio" />
-      </Principal>
-      <Dependent Role="CONVENIO">
-        <PropertyRef Name="idTipoConvenio" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CONVENIO__idTipo__05A3D694">
-    <End Role="TIPOCONVENIOESP" Type="Self.TIPOCONVENIOESP" Multiplicity="1" />
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TIPOCONVENIOESP">
-        <PropertyRef Name="idTipoConvenioEsp" />
-      </Principal>
-      <Dependent Role="CONVENIO">
-        <PropertyRef Name="idTipoConvenioEsp" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CONVENIO__movili__02C769E9">
-    <End Role="MODALIDAD" Type="Self.MODALIDAD" Multiplicity="0..1" />
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MODALIDAD">
-        <PropertyRef Name="idModalidad" />
-      </Principal>
-      <Dependent Role="CONVENIO">
-        <PropertyRef Name="movilidad" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CONVENIO__natura__01D345B0">
-    <End Role="MODALIDAD" Type="Self.MODALIDAD" Multiplicity="0..1" />
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MODALIDAD">
-        <PropertyRef Name="idModalidad" />
-      </Principal>
-      <Dependent Role="CONVENIO">
-        <PropertyRef Name="naturalezaModalidad" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_PARTICIPANTE_CONVENIO">
-    <End Role="CONVENIO" Type="Self.CONVENIO" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="PARTICIPANTE" Type="Self.PARTICIPANTE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CONVENIO">
-        <PropertyRef Name="numConvenio" />
-      </Principal>
-      <Dependent Role="PARTICIPANTE">
-        <PropertyRef Name="num_convenio" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__USUARIO__tipoUsu__37703C52">
-    <End Role="TIPOUSUARIO" Type="Self.TIPOUSUARIO" Multiplicity="1" />
-    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TIPOUSUARIO">
-        <PropertyRef Name="tipoUsuario1" />
-      </Principal>
-      <Dependent Role="USUARIO">
-        <PropertyRef Name="tipoUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="SISTEMADECONVENIOSEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="ACTIVIDADECONOMICA" EntityType="Self.ACTIVIDADECONOMICA" />
-    <EntitySet Name="AMBITO" EntityType="Self.AMBITO" />
-    <EntitySet Name="CONVENIO" EntityType="Self.CONVENIO" />
-    <EntitySet Name="MODALIDAD" EntityType="Self.MODALIDAD" />
-    <EntitySet Name="NATURALEZA" EntityType="Self.NATURALEZA" />
-    <EntitySet Name="ODS" EntityType="Self.ODS" />
-    <EntitySet Name="PARTICIPANTE" EntityType="Self.PARTICIPANTE" />
-    <EntitySet Name="RECURSOS" EntityType="Self.RECURSOS" />
-    <EntitySet Name="SECTOR" EntityType="Self.SECTOR" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="TIPOCONVENIO" EntityType="Self.TIPOCONVENIO" />
-    <EntitySet Name="TIPOCONVENIOESP" EntityType="Self.TIPOCONVENIOESP" />
-    <EntitySet Name="TIPOUSUARIO" EntityType="Self.TIPOUSUARIO" />
-    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
-    <EntitySet Name="TablaParticipantes" EntityType="Self.TablaParticipantes" />
-    <AssociationSet Name="FK__CONVENIO__idActE__078C1F06" Association="Self.FK__CONVENIO__idActE__078C1F06">
-      <End Role="ACTIVIDADECONOMICA" EntitySet="ACTIVIDADECONOMICA" />
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CONVENIO__idAmbi__0880433F" Association="Self.FK__CONVENIO__idAmbi__0880433F">
-      <End Role="AMBITO" EntitySet="AMBITO" />
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CONVENIO__idNatu__00DF2177" Association="Self.FK__CONVENIO__idNatu__00DF2177">
-      <End Role="NATURALEZA" EntitySet="NATURALEZA" />
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CONVENIO__idODS__09746778" Association="Self.FK__CONVENIO__idODS__09746778">
-      <End Role="ODS" EntitySet="ODS" />
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CONVENIO__idRecu__03BB8E22" Association="Self.FK__CONVENIO__idRecu__03BB8E22">
-      <End Role="RECURSOS" EntitySet="RECURSOS" />
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CONVENIO__idSect__0697FACD" Association="Self.FK__CONVENIO__idSect__0697FACD">
-      <End Role="SECTOR" EntitySet="SECTOR" />
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CONVENIO__idTipo__04AFB25B" Association="Self.FK__CONVENIO__idTipo__04AFB25B">
-      <End Role="TIPOCONVENIO" EntitySet="TIPOCONVENIO" />
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CONVENIO__idTipo__05A3D694" Association="Self.FK__CONVENIO__idTipo__05A3D694">
-      <End Role="TIPOCONVENIOESP" EntitySet="TIPOCONVENIOESP" />
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CONVENIO__movili__02C769E9" Association="Self.FK__CONVENIO__movili__02C769E9">
-      <End Role="MODALIDAD" EntitySet="MODALIDAD" />
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CONVENIO__natura__01D345B0" Association="Self.FK__CONVENIO__natura__01D345B0">
-      <End Role="MODALIDAD" EntitySet="MODALIDAD" />
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PARTICIPANTE_CONVENIO" Association="Self.FK_PARTICIPANTE_CONVENIO">
-      <End Role="CONVENIO" EntitySet="CONVENIO" />
-      <End Role="PARTICIPANTE" EntitySet="PARTICIPANTE" />
-    </AssociationSet>
-    <AssociationSet Name="FK__USUARIO__tipoUsu__37703C52" Association="Self.FK__USUARIO__tipoUsu__37703C52">
-      <End Role="TIPOUSUARIO" EntitySet="TIPOUSUARIO" />
-      <End Role="USUARIO" EntitySet="USUARIO" />
-    </AssociationSet>
     <FunctionImport Name="sp_alterdiagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -427,6 +31,74 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="ACTIVIDADECONOMICA" EntityType="SISTEMADECONVENIOSModel.ACTIVIDADECONOMICA" />
+    <EntitySet Name="AMBITO" EntityType="SISTEMADECONVENIOSModel.AMBITO" />
+    <EntitySet Name="CONVENIO" EntityType="SISTEMADECONVENIOSModel.CONVENIO" />
+    <EntitySet Name="MODALIDAD" EntityType="SISTEMADECONVENIOSModel.MODALIDAD" />
+    <EntitySet Name="NATURALEZA" EntityType="SISTEMADECONVENIOSModel.NATURALEZA" />
+    <EntitySet Name="ODS" EntityType="SISTEMADECONVENIOSModel.ODS" />
+    <EntitySet Name="PARTICIPANTE" EntityType="SISTEMADECONVENIOSModel.PARTICIPANTE" />
+    <EntitySet Name="PROYECTO" EntityType="SISTEMADECONVENIOSModel.PROYECTO" />
+    <EntitySet Name="RECURSOS" EntityType="SISTEMADECONVENIOSModel.RECURSOS" />
+    <EntitySet Name="SECTOR" EntityType="SISTEMADECONVENIOSModel.SECTOR" />
+    <EntitySet Name="sysdiagrams" EntityType="SISTEMADECONVENIOSModel.sysdiagrams" />
+    <EntitySet Name="TIPOCONVENIO" EntityType="SISTEMADECONVENIOSModel.TIPOCONVENIO" />
+    <EntitySet Name="TIPOCONVENIOESP" EntityType="SISTEMADECONVENIOSModel.TIPOCONVENIOESP" />
+    <EntitySet Name="TIPOUSUARIO" EntityType="SISTEMADECONVENIOSModel.TIPOUSUARIO" />
+    <EntitySet Name="USUARIO" EntityType="SISTEMADECONVENIOSModel.USUARIO" />
+    <EntitySet Name="TablaProyectos" EntityType="SISTEMADECONVENIOSModel.TablaProyectos" />
+    <AssociationSet Name="FK__CONVENIO__idActE__078C1F06" Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idActE__078C1F06">
+      <End Role="ACTIVIDADECONOMICA" EntitySet="ACTIVIDADECONOMICA" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idAmbi__0880433F" Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idAmbi__0880433F">
+      <End Role="AMBITO" EntitySet="AMBITO" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idNatu__00DF2177" Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idNatu__00DF2177">
+      <End Role="NATURALEZA" EntitySet="NATURALEZA" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idODS__09746778" Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idODS__09746778">
+      <End Role="ODS" EntitySet="ODS" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idRecu__03BB8E22" Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idRecu__03BB8E22">
+      <End Role="RECURSOS" EntitySet="RECURSOS" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idSect__0697FACD" Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idSect__0697FACD">
+      <End Role="SECTOR" EntitySet="SECTOR" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idTipo__04AFB25B" Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idTipo__04AFB25B">
+      <End Role="TIPOCONVENIO" EntitySet="TIPOCONVENIO" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__idTipo__05A3D694" Association="SISTEMADECONVENIOSModel.FK__CONVENIO__idTipo__05A3D694">
+      <End Role="TIPOCONVENIOESP" EntitySet="TIPOCONVENIOESP" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__movili__02C769E9" Association="SISTEMADECONVENIOSModel.FK__CONVENIO__movili__02C769E9">
+      <End Role="MODALIDAD" EntitySet="MODALIDAD" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONVENIO__natura__01D345B0" Association="SISTEMADECONVENIOSModel.FK__CONVENIO__natura__01D345B0">
+      <End Role="MODALIDAD" EntitySet="MODALIDAD" />
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROYECTO_CONVENIO" Association="SISTEMADECONVENIOSModel.FK_PROYECTO_CONVENIO">
+      <End Role="CONVENIO" EntitySet="CONVENIO" />
+      <End Role="PROYECTO" EntitySet="PROYECTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARTICIPANTE_PROYECTO" Association="SISTEMADECONVENIOSModel.FK_PARTICIPANTE_PROYECTO">
+      <End Role="PROYECTO" EntitySet="PROYECTO" />
+      <End Role="PARTICIPANTE" EntitySet="PARTICIPANTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USUARIO__tipoUsu__37703C52" Association="SISTEMADECONVENIOSModel.FK__USUARIO__tipoUsu__37703C52">
+      <End Role="TIPOUSUARIO" EntitySet="TIPOUSUARIO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -439,4 +111,359 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="ACTIVIDADECONOMICA">
+    <Key>
+      <PropertyRef Name="idActEcon" />
+    </Key>
+    <Property Name="idActEcon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcionActEcon" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CONVENIO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idActE__078C1F06" FromRole="ACTIVIDADECONOMICA" ToRole="CONVENIO" />
+  </EntityType>
+  <EntityType Name="AMBITO">
+    <Key>
+      <PropertyRef Name="idAmbito" />
+    </Key>
+    <Property Name="idAmbito" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcionAmbito" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CONVENIO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idAmbi__0880433F" FromRole="AMBITO" ToRole="CONVENIO" />
+  </EntityType>
+  <EntityType Name="CONVENIO">
+    <Key>
+      <PropertyRef Name="numConvenio" />
+    </Key>
+    <Property Name="numConvenio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreInstrumento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="inicioConvenio" Type="DateTime" Precision="0" />
+    <Property Name="finConvenio" Type="DateTime" Precision="0" />
+    <Property Name="plazoConvenio" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="publicadoActivo" Type="Boolean" Nullable="false" />
+    <Property Name="publicadoDonde" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="objetivoInstrumento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idNaturaleza" Type="Int32" Nullable="false" />
+    <Property Name="naturalezaModalidad" Type="Int32" />
+    <Property Name="becas" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="movilidad" Type="Int32" />
+    <Property Name="prestacionServicio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="donacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="comodato" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="educacionContinua" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombreRepITH" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="nombreInstitucion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="nombreRepInstitucion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="cargoRepInstitucion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idRecursos" Type="Int32" Nullable="false" />
+    <Property Name="montoRecursoFinanciero" Type="Double" />
+    <Property Name="propiedadIntelActivo" Type="Boolean" Nullable="false" />
+    <Property Name="propiedadIntelDonde" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="entregable" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoConvenio" Type="Int32" Nullable="false" />
+    <Property Name="idTipoConvenioEsp" Type="Int32" Nullable="false" />
+    <Property Name="idSector" Type="Int32" Nullable="false" />
+    <Property Name="idActEcon" Type="Int32" Nullable="false" />
+    <Property Name="cantidadActEcon" Type="Int32" />
+    <Property Name="idAmbito" Type="Int32" Nullable="false" />
+    <Property Name="eje" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ODSActivo" Type="Boolean" Nullable="false" />
+    <Property Name="idODS" Type="Int32" />
+    <Property Name="num_participantes" Type="Int32" />
+    <NavigationProperty Name="ACTIVIDADECONOMICA" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idActE__078C1F06" FromRole="CONVENIO" ToRole="ACTIVIDADECONOMICA" />
+    <NavigationProperty Name="AMBITO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idAmbi__0880433F" FromRole="CONVENIO" ToRole="AMBITO" />
+    <NavigationProperty Name="NATURALEZA" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idNatu__00DF2177" FromRole="CONVENIO" ToRole="NATURALEZA" />
+    <NavigationProperty Name="ODS" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idODS__09746778" FromRole="CONVENIO" ToRole="ODS" />
+    <NavigationProperty Name="RECURSOS" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idRecu__03BB8E22" FromRole="CONVENIO" ToRole="RECURSOS" />
+    <NavigationProperty Name="SECTOR" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idSect__0697FACD" FromRole="CONVENIO" ToRole="SECTOR" />
+    <NavigationProperty Name="TIPOCONVENIO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idTipo__04AFB25B" FromRole="CONVENIO" ToRole="TIPOCONVENIO" />
+    <NavigationProperty Name="TIPOCONVENIOESP" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idTipo__05A3D694" FromRole="CONVENIO" ToRole="TIPOCONVENIOESP" />
+    <NavigationProperty Name="MODALIDAD" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__movili__02C769E9" FromRole="CONVENIO" ToRole="MODALIDAD" />
+    <NavigationProperty Name="MODALIDAD1" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__natura__01D345B0" FromRole="CONVENIO" ToRole="MODALIDAD" />
+    <NavigationProperty Name="PROYECTO" Relationship="SISTEMADECONVENIOSModel.FK_PROYECTO_CONVENIO" FromRole="CONVENIO" ToRole="PROYECTO" />
+  </EntityType>
+  <EntityType Name="MODALIDAD">
+    <Key>
+      <PropertyRef Name="idModalidad" />
+    </Key>
+    <Property Name="idModalidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcionMod" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CONVENIO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__movili__02C769E9" FromRole="MODALIDAD" ToRole="CONVENIO" />
+    <NavigationProperty Name="CONVENIO1" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__natura__01D345B0" FromRole="MODALIDAD" ToRole="CONVENIO" />
+  </EntityType>
+  <EntityType Name="NATURALEZA">
+    <Key>
+      <PropertyRef Name="idNaturaleza" />
+    </Key>
+    <Property Name="idNaturaleza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreInstrumento" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CONVENIO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idNatu__00DF2177" FromRole="NATURALEZA" ToRole="CONVENIO" />
+  </EntityType>
+  <EntityType Name="ODS">
+    <Key>
+      <PropertyRef Name="idODS" />
+    </Key>
+    <Property Name="idODS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcionOds" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CONVENIO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idODS__09746778" FromRole="ODS" ToRole="CONVENIO" />
+  </EntityType>
+  <EntityType Name="PARTICIPANTE">
+    <Key>
+      <PropertyRef Name="idParticipante" />
+    </Key>
+    <Property Name="idParticipante" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreParticipante" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rol" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="carrera" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idProyecto" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PROYECTO" Relationship="SISTEMADECONVENIOSModel.FK_PARTICIPANTE_PROYECTO" FromRole="PARTICIPANTE" ToRole="PROYECTO" />
+  </EntityType>
+  <EntityType Name="PROYECTO">
+    <Key>
+      <PropertyRef Name="idProyecto" />
+    </Key>
+    <Property Name="idProyecto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreProyecto" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="numParticipantes" Type="Int32" />
+    <Property Name="fechaInicio" Type="DateTime" Precision="0" />
+    <Property Name="fechaFin" Type="DateTime" Precision="0" />
+    <Property Name="num_convenio" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CONVENIO" Relationship="SISTEMADECONVENIOSModel.FK_PROYECTO_CONVENIO" FromRole="PROYECTO" ToRole="CONVENIO" />
+    <NavigationProperty Name="PARTICIPANTE" Relationship="SISTEMADECONVENIOSModel.FK_PARTICIPANTE_PROYECTO" FromRole="PROYECTO" ToRole="PARTICIPANTE" />
+  </EntityType>
+  <EntityType Name="RECURSOS">
+    <Key>
+      <PropertyRef Name="idRecursos" />
+    </Key>
+    <Property Name="idRecursos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcionRec" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CONVENIO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idRecu__03BB8E22" FromRole="RECURSOS" ToRole="CONVENIO" />
+  </EntityType>
+  <EntityType Name="SECTOR">
+    <Key>
+      <PropertyRef Name="idSector" />
+    </Key>
+    <Property Name="idSector" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcionSec" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CONVENIO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idSect__0697FACD" FromRole="SECTOR" ToRole="CONVENIO" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TIPOCONVENIO">
+    <Key>
+      <PropertyRef Name="idTipoConvenio" />
+    </Key>
+    <Property Name="idTipoConvenio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcionTC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CONVENIO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idTipo__04AFB25B" FromRole="TIPOCONVENIO" ToRole="CONVENIO" />
+  </EntityType>
+  <EntityType Name="TIPOCONVENIOESP">
+    <Key>
+      <PropertyRef Name="idTipoConvenioEsp" />
+    </Key>
+    <Property Name="idTipoConvenioEsp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcionTCE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CONVENIO" Relationship="SISTEMADECONVENIOSModel.FK__CONVENIO__idTipo__05A3D694" FromRole="TIPOCONVENIOESP" ToRole="CONVENIO" />
+  </EntityType>
+  <EntityType Name="TIPOUSUARIO">
+    <Key>
+      <PropertyRef Name="tipoUsuario1" />
+    </Key>
+    <Property Name="tipoUsuario1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="USUARIO" Relationship="SISTEMADECONVENIOSModel.FK__USUARIO__tipoUsu__37703C52" FromRole="TIPOUSUARIO" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="primer_apellido" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="segundo_apellido" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contrasena" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="empresa" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tipoUsuario" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TIPOUSUARIO1" Relationship="SISTEMADECONVENIOSModel.FK__USUARIO__tipoUsu__37703C52" FromRole="USUARIO" ToRole="TIPOUSUARIO" />
+  </EntityType>
+  <EntityType Name="TablaProyectos">
+    <Key>
+      <PropertyRef Name="numConvenio" />
+      <PropertyRef Name="nombreProyecto" />
+      <PropertyRef Name="nombreInstrumento" />
+      <PropertyRef Name="nombreInstitucion" />
+      <PropertyRef Name="nombreRepInstitucion" />
+      <PropertyRef Name="idProyecto" />
+    </Key>
+    <Property Name="numConvenio" Type="Int32" Nullable="false" />
+    <Property Name="nombreProyecto" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="numParticipantes" Type="Int32" />
+    <Property Name="nombreInstrumento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nombreInstitucion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="nombreRepInstitucion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="idProyecto" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__CONVENIO__idActE__078C1F06">
+    <End Type="SISTEMADECONVENIOSModel.ACTIVIDADECONOMICA" Role="ACTIVIDADECONOMICA" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACTIVIDADECONOMICA">
+        <PropertyRef Name="idActEcon" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idActEcon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idAmbi__0880433F">
+    <End Type="SISTEMADECONVENIOSModel.AMBITO" Role="AMBITO" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AMBITO">
+        <PropertyRef Name="idAmbito" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idAmbito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idNatu__00DF2177">
+    <End Type="SISTEMADECONVENIOSModel.NATURALEZA" Role="NATURALEZA" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NATURALEZA">
+        <PropertyRef Name="idNaturaleza" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idNaturaleza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idODS__09746778">
+    <End Type="SISTEMADECONVENIOSModel.ODS" Role="ODS" Multiplicity="0..1" />
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ODS">
+        <PropertyRef Name="idODS" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idODS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idRecu__03BB8E22">
+    <End Type="SISTEMADECONVENIOSModel.RECURSOS" Role="RECURSOS" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RECURSOS">
+        <PropertyRef Name="idRecursos" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idRecursos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idSect__0697FACD">
+    <End Type="SISTEMADECONVENIOSModel.SECTOR" Role="SECTOR" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECTOR">
+        <PropertyRef Name="idSector" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idSector" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idTipo__04AFB25B">
+    <End Type="SISTEMADECONVENIOSModel.TIPOCONVENIO" Role="TIPOCONVENIO" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOCONVENIO">
+        <PropertyRef Name="idTipoConvenio" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idTipoConvenio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__idTipo__05A3D694">
+    <End Type="SISTEMADECONVENIOSModel.TIPOCONVENIOESP" Role="TIPOCONVENIOESP" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOCONVENIOESP">
+        <PropertyRef Name="idTipoConvenioEsp" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="idTipoConvenioEsp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__movili__02C769E9">
+    <End Type="SISTEMADECONVENIOSModel.MODALIDAD" Role="MODALIDAD" Multiplicity="0..1" />
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODALIDAD">
+        <PropertyRef Name="idModalidad" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="movilidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONVENIO__natura__01D345B0">
+    <End Type="SISTEMADECONVENIOSModel.MODALIDAD" Role="MODALIDAD" Multiplicity="0..1" />
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MODALIDAD">
+        <PropertyRef Name="idModalidad" />
+      </Principal>
+      <Dependent Role="CONVENIO">
+        <PropertyRef Name="naturalezaModalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROYECTO_CONVENIO">
+    <End Type="SISTEMADECONVENIOSModel.CONVENIO" Role="CONVENIO" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.PROYECTO" Role="PROYECTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONVENIO">
+        <PropertyRef Name="numConvenio" />
+      </Principal>
+      <Dependent Role="PROYECTO">
+        <PropertyRef Name="num_convenio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARTICIPANTE_PROYECTO">
+    <End Type="SISTEMADECONVENIOSModel.PROYECTO" Role="PROYECTO" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.PARTICIPANTE" Role="PARTICIPANTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROYECTO">
+        <PropertyRef Name="idProyecto" />
+      </Principal>
+      <Dependent Role="PARTICIPANTE">
+        <PropertyRef Name="idProyecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USUARIO__tipoUsu__37703C52">
+    <End Type="SISTEMADECONVENIOSModel.TIPOUSUARIO" Role="TIPOUSUARIO" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.USUARIO" Role="USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOUSUARIO">
+        <PropertyRef Name="tipoUsuario1" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="tipoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

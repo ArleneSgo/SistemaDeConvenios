@@ -32,18 +32,6 @@ namespace CONTROLADOR
                 throw new Exception("Hubo un error en la capa del Modelo: " + ex.Message.ToString());
             }
         }
-
-        public static List<TablaParticipantes> BuscarParticipantesCriterios(string criterios)
-        {
-            try
-            {   ///Devuelve Número de participantes con los criterios buscados
-                return ParticipanteModelo.BuscarParticipantesCriterios(criterios);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Hubo un error en la capa del Modelo: " + ex.Message.ToString());
-            }
-        }
         public static PARTICIPANTE BuscarParticipantePorID(int idParticipante)
         {
             try
@@ -55,23 +43,11 @@ namespace CONTROLADOR
                 throw new Exception("Hubo un error en la capa del Modelo: " + ex.Message.ToString());
             }
         }
-        public static TablaParticipantes BuscarParticipantesPorID(int idConvenio)
-        {
-            try
-            {   ///Devuelve número de  participantes perteneciente al ID buscado
-                return ParticipanteModelo.BuscarParticipantesPorID(idConvenio);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Hubo un error en la capa del Modelo: " + ex.Message.ToString());
-            }
-        }
-
         public static void ModificarParticipante(PARTICIPANTE participanteModificado)
         {
             try
             {   ///Verifica que sea un PArticipante válido y que los campos no estne vacios
-                if (participanteModificado.idTablaParticipante > 0 && participanteModificado.nombreProyecto != string.Empty)
+                if (participanteModificado.idParticipante > 0 && participanteModificado.nombreParticipante != string.Empty)
                 {
                     ParticipanteModelo.ModificarParticipante(participanteModificado);
                 }
