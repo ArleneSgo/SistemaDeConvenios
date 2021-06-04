@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SISTEMADECONVENIOSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SISTEMADECONVENIOSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ACTIVIDADECONOMICA">
           <Key>
             <PropertyRef Name="idActEcon" />
@@ -88,6 +88,17 @@
           <Property Name="nombreProyecto" Type="varchar" MaxLength="100" />
           <Property Name="num_participantes" Type="int" />
           <Property Name="num_convenio" Type="int" />
+          <Property Name="semestre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PARTICIPANTE_CARRERA">
+          <Key>
+            <PropertyRef Name="idParticipanteCarrera" />
+          </Key>
+          <Property Name="idTablaParticipante" Type="int" Nullable="false" />
+          <Property Name="nombreCarrera" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="nombreAlumno" Type="varchar" MaxLength="255" />
+          <Property Name="numeroControl" Type="varchar" MaxLength="8" />
+          <Property Name="idParticipanteCarrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="RECURSOS">
           <Key>
@@ -145,7 +156,7 @@
           <Property Name="segundo_apellido" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="telefono" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="contrasena" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="contrasena" Type="varchar" MaxLength="255" />
           <Property Name="empresa" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="tipoUsuario" Type="int" Nullable="false" />
         </EntityType>
@@ -169,6 +180,7 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
           <Property Name="nombreProyecto" Type="varchar" MaxLength="100" />
           <Property Name="num_participantes" Type="int" />
           <Property Name="num_convenio" Type="int" />
+          <Property Name="semestre" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK__CONVENIO__idActE__078C1F06">
           <End Role="ACTIVIDADECONOMICA" Type="Self.ACTIVIDADECONOMICA" Multiplicity="1" />
@@ -290,6 +302,18 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__PARTICIPA__idTab__0FEC5ADD">
+          <End Role="PARTICIPANTE" Type="Self.PARTICIPANTE" Multiplicity="1" />
+          <End Role="PARTICIPANTE_CARRERA" Type="Self.PARTICIPANTE_CARRERA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PARTICIPANTE">
+              <PropertyRef Name="idTablaParticipante" />
+            </Principal>
+            <Dependent Role="PARTICIPANTE_CARRERA">
+              <PropertyRef Name="idTablaParticipante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__USUARIO__tipoUsu__37703C52">
           <End Role="TIPOUSUARIO" Type="Self.TIPOUSUARIO" Multiplicity="1" />
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
@@ -355,6 +379,7 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
           <EntitySet Name="NATURALEZA" EntityType="Self.NATURALEZA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ODS" EntityType="Self.ODS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PARTICIPANTE" EntityType="Self.PARTICIPANTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PARTICIPANTE_CARRERA" EntityType="Self.PARTICIPANTE_CARRERA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RECURSOS" EntityType="Self.RECURSOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SECTOR" EntityType="Self.SECTOR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -373,7 +398,8 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
     [TablaParticipantes].[idTablaParticipante] AS [idTablaParticipante], 
     [TablaParticipantes].[nombreProyecto] AS [nombreProyecto], 
     [TablaParticipantes].[num_participantes] AS [num_participantes], 
-    [TablaParticipantes].[num_convenio] AS [num_convenio]
+    [TablaParticipantes].[num_convenio] AS [num_convenio], 
+    [TablaParticipantes].[semestre] AS [semestre]
     FROM [dbo].[TablaParticipantes] AS [TablaParticipantes]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK__CONVENIO__idActE__078C1F06" Association="Self.FK__CONVENIO__idActE__078C1F06">
@@ -416,6 +442,10 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
             <End Role="MODALIDAD" EntitySet="MODALIDAD" />
             <End Role="CONVENIO" EntitySet="CONVENIO" />
           </AssociationSet>
+          <AssociationSet Name="FK__PARTICIPA__idTab__0FEC5ADD" Association="Self.FK__PARTICIPA__idTab__0FEC5ADD">
+            <End Role="PARTICIPANTE" EntitySet="PARTICIPANTE" />
+            <End Role="PARTICIPANTE_CARRERA" EntitySet="PARTICIPANTE_CARRERA" />
+          </AssociationSet>
           <AssociationSet Name="FK__USUARIO__tipoUsu__37703C52" Association="Self.FK__USUARIO__tipoUsu__37703C52">
             <End Role="TIPOUSUARIO" EntitySet="TIPOUSUARIO" />
             <End Role="USUARIO" EntitySet="USUARIO" />
@@ -425,8 +455,7 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
             <End Role="PARTICIPANTE" EntitySet="PARTICIPANTE" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SISTEMADECONVENIOSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -531,6 +560,8 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
           <Property Name="num_participantes" Type="Int32" />
           <Property Name="num_convenio" Type="Int32" />
           <NavigationProperty Name="CONVENIO" Relationship="Self.FK_PARTICIPANTE_CONVENIO" FromRole="PARTICIPANTE" ToRole="CONVENIO" />
+          <Property Name="semestre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PARTICIPANTE_CARRERA" Relationship="SISTEMADECONVENIOSModel.FK__PARTICIPA__idTab__0FEC5ADD" FromRole="PARTICIPANTE" ToRole="PARTICIPANTE_CARRERA" />
         </EntityType>
         <EntityType Name="RECURSOS">
           <Key>
@@ -593,29 +624,10 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
           <Property Name="segundo_apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="contrasena" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="tipoUsuario" Type="Int32" Nullable="false" />
           <NavigationProperty Name="TIPOUSUARIO1" Relationship="Self.FK__USUARIO__tipoUsu__37703C52" FromRole="USUARIO" ToRole="TIPOUSUARIO" />
-        </EntityType>
-        <EntityType Name="TablaParticipantes">
-          <Key>
-            <PropertyRef Name="numConvenio" />
-            <PropertyRef Name="nombreInstrumento" />
-            <PropertyRef Name="plazoConvenio" />
-            <PropertyRef Name="nombreInstitucion" />
-            <PropertyRef Name="idTablaParticipante" />
-          </Key>
-          <Property Name="numConvenio" Type="Int32" Nullable="false" />
-          <Property Name="nombreInstrumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="inicioConvenio" Type="DateTime" Precision="0" />
-          <Property Name="finConvenio" Type="DateTime" Precision="0" />
-          <Property Name="plazoConvenio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nombreInstitucion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="idTablaParticipante" Type="Int32" Nullable="false" />
-          <Property Name="nombreProyecto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="num_participantes" Type="Int32" />
-          <Property Name="num_convenio" Type="Int32" />
         </EntityType>
         <Association Name="FK__CONVENIO__idActE__078C1F06">
           <End Role="ACTIVIDADECONOMICA" Type="Self.ACTIVIDADECONOMICA" Multiplicity="1" />
@@ -778,7 +790,6 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
           <EntitySet Name="TIPOCONVENIOESP" EntityType="Self.TIPOCONVENIOESP" />
           <EntitySet Name="TIPOUSUARIO" EntityType="Self.TIPOUSUARIO" />
           <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
-          <EntitySet Name="TablaParticipantes" EntityType="Self.TablaParticipantes" />
           <AssociationSet Name="FK__CONVENIO__idActE__078C1F06" Association="Self.FK__CONVENIO__idActE__078C1F06">
             <End Role="ACTIVIDADECONOMICA" EntitySet="ACTIVIDADECONOMICA" />
             <End Role="CONVENIO" EntitySet="CONVENIO" />
@@ -857,6 +868,12 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="PARTICIPANTE_CARRERA" EntityType="SISTEMADECONVENIOSModel.PARTICIPANTE_CARRERA" />
+          <AssociationSet Name="FK__PARTICIPA__idTab__0FEC5ADD" Association="SISTEMADECONVENIOSModel.FK__PARTICIPA__idTab__0FEC5ADD">
+            <End Role="PARTICIPANTE" EntitySet="PARTICIPANTE" />
+            <End Role="PARTICIPANTE_CARRERA" EntitySet="PARTICIPANTE_CARRERA" />
+          </AssociationSet>
+          <EntitySet Name="TablaParticipantesSet" EntityType="SISTEMADECONVENIOSModel.TablaParticipantes" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -869,6 +886,49 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="PARTICIPANTE_CARRERA">
+          <Key>
+            <PropertyRef Name="idParticipanteCarrera" />
+          </Key>
+          <Property Name="idParticipanteCarrera" Type="Int32" Nullable="false" />
+          <Property Name="idTablaParticipante" Type="Int32" Nullable="false" />
+          <Property Name="nombreCarrera" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="nombreAlumno" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="numeroControl" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PARTICIPANTE" Relationship="SISTEMADECONVENIOSModel.FK__PARTICIPA__idTab__0FEC5ADD" FromRole="PARTICIPANTE_CARRERA" ToRole="PARTICIPANTE" />
+        </EntityType>
+        <Association Name="FK__PARTICIPA__idTab__0FEC5ADD">
+          <End Type="SISTEMADECONVENIOSModel.PARTICIPANTE" Role="PARTICIPANTE" Multiplicity="1" />
+          <End Type="SISTEMADECONVENIOSModel.PARTICIPANTE_CARRERA" Role="PARTICIPANTE_CARRERA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PARTICIPANTE">
+              <PropertyRef Name="idTablaParticipante" />
+            </Principal>
+            <Dependent Role="PARTICIPANTE_CARRERA">
+              <PropertyRef Name="idTablaParticipante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TablaParticipantes">
+          <Key>
+            <PropertyRef Name="numConvenio" />
+            <PropertyRef Name="nombreInstrumento" />
+            <PropertyRef Name="plazoConvenio" />
+            <PropertyRef Name="nombreInstitucion" />
+            <PropertyRef Name="idTablaParticipante" />
+          </Key>
+          <Property Name="numConvenio" Type="Int32" Nullable="false" />
+          <Property Name="nombreInstrumento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="inicioConvenio" Type="DateTime" Precision="0" />
+          <Property Name="finConvenio" Type="DateTime" Precision="0" />
+          <Property Name="plazoConvenio" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="nombreInstitucion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="idTablaParticipante" Type="Int32" Nullable="false" />
+          <Property Name="nombreProyecto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="num_participantes" Type="Int32" />
+          <Property Name="num_convenio" Type="Int32" />
+          <Property Name="semestre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -959,6 +1019,7 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
           <EntitySetMapping Name="PARTICIPANTE">
             <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.PARTICIPANTE">
               <MappingFragment StoreEntitySet="PARTICIPANTE">
+                <ScalarProperty Name="semestre" ColumnName="semestre" />
                 <ScalarProperty Name="idTablaParticipante" ColumnName="idTablaParticipante" />
                 <ScalarProperty Name="nombreProyecto" ColumnName="nombreProyecto" />
                 <ScalarProperty Name="num_participantes" ColumnName="num_participantes" />
@@ -1033,22 +1094,6 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TablaParticipantes">
-            <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TablaParticipantes">
-              <MappingFragment StoreEntitySet="TablaParticipantes">
-                <ScalarProperty Name="numConvenio" ColumnName="numConvenio" />
-                <ScalarProperty Name="nombreInstrumento" ColumnName="nombreInstrumento" />
-                <ScalarProperty Name="inicioConvenio" ColumnName="inicioConvenio" />
-                <ScalarProperty Name="finConvenio" ColumnName="finConvenio" />
-                <ScalarProperty Name="plazoConvenio" ColumnName="plazoConvenio" />
-                <ScalarProperty Name="nombreInstitucion" ColumnName="nombreInstitucion" />
-                <ScalarProperty Name="idTablaParticipante" ColumnName="idTablaParticipante" />
-                <ScalarProperty Name="nombreProyecto" ColumnName="nombreProyecto" />
-                <ScalarProperty Name="num_participantes" ColumnName="num_participantes" />
-                <ScalarProperty Name="num_convenio" ColumnName="num_convenio" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_creatediagram" />
           <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_dropdiagram" />
@@ -1073,6 +1118,34 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SISTEMADECONVENIOSModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="PARTICIPANTE_CARRERA">
+            <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.PARTICIPANTE_CARRERA">
+              <MappingFragment StoreEntitySet="PARTICIPANTE_CARRERA">
+                <ScalarProperty Name="numeroControl" ColumnName="numeroControl" />
+                <ScalarProperty Name="nombreAlumno" ColumnName="nombreAlumno" />
+                <ScalarProperty Name="nombreCarrera" ColumnName="nombreCarrera" />
+                <ScalarProperty Name="idTablaParticipante" ColumnName="idTablaParticipante" />
+                <ScalarProperty Name="idParticipanteCarrera" ColumnName="idParticipanteCarrera" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TablaParticipantesSet">
+            <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TablaParticipantes">
+              <MappingFragment StoreEntitySet="TablaParticipantes">
+                <ScalarProperty Name="semestre" ColumnName="semestre" />
+                <ScalarProperty Name="num_convenio" ColumnName="num_convenio" />
+                <ScalarProperty Name="num_participantes" ColumnName="num_participantes" />
+                <ScalarProperty Name="nombreProyecto" ColumnName="nombreProyecto" />
+                <ScalarProperty Name="idTablaParticipante" ColumnName="idTablaParticipante" />
+                <ScalarProperty Name="nombreInstitucion" ColumnName="nombreInstitucion" />
+                <ScalarProperty Name="plazoConvenio" ColumnName="plazoConvenio" />
+                <ScalarProperty Name="finConvenio" ColumnName="finConvenio" />
+                <ScalarProperty Name="inicioConvenio" ColumnName="inicioConvenio" />
+                <ScalarProperty Name="nombreInstrumento" ColumnName="nombreInstrumento" />
+                <ScalarProperty Name="numConvenio" ColumnName="numConvenio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

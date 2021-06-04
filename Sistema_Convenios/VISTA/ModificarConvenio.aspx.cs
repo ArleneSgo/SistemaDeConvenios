@@ -13,6 +13,27 @@ namespace VISTA
     {
         protected void Page_Load(object sender, EventArgs e)
         {   ///Despliega en las casillas los datos del objeto registrados en la base de datos
+            
+                int tipousuario = (int)Session["id_rol"];
+                if (tipousuario != 1)
+                {
+                    try
+                    {
+                        Session.Abandon();
+                        Session["LoginId"] = null;
+                        Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                        Response.Buffer = true;
+                        Response.ExpiresAbsolute = DateTime.Now.AddDays(-1d);
+                        Response.Expires = -1000;
+                        Response.CacheControl = "no-cache";
+                        Response.Redirect("InicioSesion.aspx", true);
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write(ex.Message);
+                    }
+                }
+            
             if (!IsPostBack)
             {
                 var numCon = Convert.ToInt32(Request.QueryString["NUM"]);
@@ -57,6 +78,7 @@ namespace VISTA
                     txtEducacion.Text = convenio.educacionContinua;
                 ///becas
                 if (!convenio.becas.Equals("") || convenio.publicadoDonde.Equals("NULL"))
+                    cbxBecas.Checked = true;
                     txtBecas.Text = convenio.becas;
                 ///movilidad
                 if (convenio.movilidad == 1)

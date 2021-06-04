@@ -88,6 +88,9 @@
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="ParticipanteModelo.cs" />
+    <Compile Include="PARTICIPANTE_CARRERA.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="RECURSOS.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>

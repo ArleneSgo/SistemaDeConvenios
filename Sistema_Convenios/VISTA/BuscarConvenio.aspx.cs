@@ -15,6 +15,27 @@ namespace VISTA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+                int tipousuario = (int)Session["id_rol"];
+                if (tipousuario != 1)
+                {
+                    try
+                    {
+                        Session.Abandon();
+                        Session["LoginId"] = null;
+                        Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                        Response.Buffer = true;
+                        Response.ExpiresAbsolute = DateTime.Now.AddDays(-1d);
+                        Response.Expires = -1000;
+                        Response.CacheControl = "no-cache";
+                        Response.Redirect("InicioSesion.aspx", true);
+                    }
+                    catch (Exception ex)
+                    {
+                        Response.Write(ex.Message);
+                    }
+                }
+            
             /// este metodo busca convenios
             var resultado = ConvenioControlador.BuscarConvenioCriterios(txtCriterios.Text);
             gvBuscarConvenios.DataSource = resultado;
@@ -226,5 +247,13 @@ namespace VISTA
             Page_Load(null, null);
         }
 
+        protected void btnAplicar4_Click(object sender, EventArgs e)
+        {
+            var resultado = ConvenioModelo.BuscarConvenioFiltros(ObjJurDDL.Text, SectorDDL.Text, AmbitoDDL.Text);
+            gvBuscarConvenios.DataSource = resultado;
+            gvBuscarConvenios.DataBind();
+            var datos = "$(function() {$('#collapseExample').collapse()});";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", datos, true);
+        }
     }
 }

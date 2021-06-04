@@ -101,6 +101,8 @@
     <Property Name="num_participantes" Type="Int32" />
     <Property Name="num_convenio" Type="Int32" />
     <NavigationProperty Name="CONVENIO" Relationship="Self.FK_PARTICIPANTE_CONVENIO" FromRole="PARTICIPANTE" ToRole="CONVENIO" />
+    <Property Name="semestre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PARTICIPANTE_CARRERA" Relationship="SISTEMADECONVENIOSModel.FK__PARTICIPA__idTab__0FEC5ADD" FromRole="PARTICIPANTE" ToRole="PARTICIPANTE_CARRERA" />
   </EntityType>
   <EntityType Name="RECURSOS">
     <Key>
@@ -163,29 +165,10 @@
     <Property Name="segundo_apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contrasena" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="tipoUsuario" Type="Int32" Nullable="false" />
     <NavigationProperty Name="TIPOUSUARIO1" Relationship="Self.FK__USUARIO__tipoUsu__37703C52" FromRole="USUARIO" ToRole="TIPOUSUARIO" />
-  </EntityType>
-  <EntityType Name="TablaParticipantes">
-    <Key>
-      <PropertyRef Name="numConvenio" />
-      <PropertyRef Name="nombreInstrumento" />
-      <PropertyRef Name="plazoConvenio" />
-      <PropertyRef Name="nombreInstitucion" />
-      <PropertyRef Name="idTablaParticipante" />
-    </Key>
-    <Property Name="numConvenio" Type="Int32" Nullable="false" />
-    <Property Name="nombreInstrumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="inicioConvenio" Type="DateTime" Precision="0" />
-    <Property Name="finConvenio" Type="DateTime" Precision="0" />
-    <Property Name="plazoConvenio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="nombreInstitucion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="idTablaParticipante" Type="Int32" Nullable="false" />
-    <Property Name="nombreProyecto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="num_participantes" Type="Int32" />
-    <Property Name="num_convenio" Type="Int32" />
   </EntityType>
   <Association Name="FK__CONVENIO__idActE__078C1F06">
     <End Role="ACTIVIDADECONOMICA" Type="Self.ACTIVIDADECONOMICA" Multiplicity="1" />
@@ -348,7 +331,6 @@
     <EntitySet Name="TIPOCONVENIOESP" EntityType="Self.TIPOCONVENIOESP" />
     <EntitySet Name="TIPOUSUARIO" EntityType="Self.TIPOUSUARIO" />
     <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
-    <EntitySet Name="TablaParticipantes" EntityType="Self.TablaParticipantes" />
     <AssociationSet Name="FK__CONVENIO__idActE__078C1F06" Association="Self.FK__CONVENIO__idActE__078C1F06">
       <End Role="ACTIVIDADECONOMICA" EntitySet="ACTIVIDADECONOMICA" />
       <End Role="CONVENIO" EntitySet="CONVENIO" />
@@ -427,6 +409,12 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="PARTICIPANTE_CARRERA" EntityType="SISTEMADECONVENIOSModel.PARTICIPANTE_CARRERA" />
+    <AssociationSet Name="FK__PARTICIPA__idTab__0FEC5ADD" Association="SISTEMADECONVENIOSModel.FK__PARTICIPA__idTab__0FEC5ADD">
+      <End Role="PARTICIPANTE" EntitySet="PARTICIPANTE" />
+      <End Role="PARTICIPANTE_CARRERA" EntitySet="PARTICIPANTE_CARRERA" />
+    </AssociationSet>
+    <EntitySet Name="TablaParticipantesSet" EntityType="SISTEMADECONVENIOSModel.TablaParticipantes" />
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -439,4 +427,47 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="PARTICIPANTE_CARRERA">
+    <Key>
+      <PropertyRef Name="idParticipanteCarrera" />
+    </Key>
+    <Property Name="idParticipanteCarrera" Type="Int32" Nullable="false" />
+    <Property Name="idTablaParticipante" Type="Int32" Nullable="false" />
+    <Property Name="nombreCarrera" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombreAlumno" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="numeroControl" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PARTICIPANTE" Relationship="SISTEMADECONVENIOSModel.FK__PARTICIPA__idTab__0FEC5ADD" FromRole="PARTICIPANTE_CARRERA" ToRole="PARTICIPANTE" />
+  </EntityType>
+  <Association Name="FK__PARTICIPA__idTab__0FEC5ADD">
+    <End Type="SISTEMADECONVENIOSModel.PARTICIPANTE" Role="PARTICIPANTE" Multiplicity="1" />
+    <End Type="SISTEMADECONVENIOSModel.PARTICIPANTE_CARRERA" Role="PARTICIPANTE_CARRERA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PARTICIPANTE">
+        <PropertyRef Name="idTablaParticipante" />
+      </Principal>
+      <Dependent Role="PARTICIPANTE_CARRERA">
+        <PropertyRef Name="idTablaParticipante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TablaParticipantes">
+    <Key>
+      <PropertyRef Name="numConvenio" />
+      <PropertyRef Name="nombreInstrumento" />
+      <PropertyRef Name="plazoConvenio" />
+      <PropertyRef Name="nombreInstitucion" />
+      <PropertyRef Name="idTablaParticipante" />
+    </Key>
+    <Property Name="numConvenio" Type="Int32" Nullable="false" />
+    <Property Name="nombreInstrumento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="inicioConvenio" Type="DateTime" Precision="0" />
+    <Property Name="finConvenio" Type="DateTime" Precision="0" />
+    <Property Name="plazoConvenio" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nombreInstitucion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="idTablaParticipante" Type="Int32" Nullable="false" />
+    <Property Name="nombreProyecto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="num_participantes" Type="Int32" />
+    <Property Name="num_convenio" Type="Int32" />
+    <Property Name="semestre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

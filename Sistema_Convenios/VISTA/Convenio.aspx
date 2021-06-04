@@ -4,7 +4,7 @@
   <script src="Include/js/Login.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Titulos" runat="server">
-  <h1 class="display-4 mb-2 mx-auto text-center" style="color:aliceblue">Convenio</h1>
+  <h1 class="display-4 mb-2 mx-auto text-center" style="color:aliceblue">Modificar Convenio</h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="p-4 m-4 border-top-0">

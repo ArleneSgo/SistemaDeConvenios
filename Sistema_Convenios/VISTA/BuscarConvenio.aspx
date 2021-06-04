@@ -18,8 +18,8 @@
       <button id="btnFiltro" class="btn btn-primary mt-1" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
       aria-controls="collapseExample">Filtrar</button>
       <asp:Button ID="btnExpExcel" Text="Exportar a Excel" CssClass="btn btn-success mt-1" runat="server" OnClick="btnExportar_Click" />
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
+      <div class="collapse row" id="collapseExample">
+        <div class="card card-body col-md-6">
             Busqueda por fechas: <br>
           <label class="radio-inline"><input type="radio" name="optradio1" id="rbtnInic" value="1" runat="server" onclick="ShowHideDiv();">
           &nbsp Buscar por fechas de Inicio &nbsp&nbsp&nbsp&nbsp</label>
@@ -51,6 +51,33 @@
             <asp:RegularExpressionValidator ID="RegularExpressionValidator" runat="server" ErrorMessage="* Formato Incorrecto, se esperan 4 digitos" ControlToValidate="year" Display="Dynamic" ForeColor="Red" ValidationExpression="[0-9]\w{3}"></asp:RegularExpressionValidator>
             <asp:Button ID="btnAplicar3" Text="Aplicar" CssClass="btn btn-primary mt-1" runat="server" OnClick="btnAplicar3_Click"/>
           </div>
+        </div>
+        <div class="card card-body col-md-6">
+            Por Instrumento Jurídico:
+              <asp:DropDownList ID="ObjJurDDL" runat="server">
+                <asp:ListItem Value="">Seleccionar</asp:ListItem>
+                <asp:ListItem Value="SERVICIO SOCIAL">SERVICIO SOCIAL</asp:ListItem>
+                <asp:ListItem Value="RESIDENCIAS">RESIDENCIAS</asp:ListItem>
+                <asp:ListItem Value="CONVENIO MARCO">CONVENIO MARCO</asp:ListItem>
+              </asp:DropDownList><br />
+            Por Sector:
+              <asp:DropDownList ID="SectorDDL" runat="server">
+                <asp:ListItem Value="">Seleccionar</asp:ListItem>
+                <asp:ListItem Value="Público">Público</asp:ListItem>
+                <asp:ListItem Value="Privado">Privado</asp:ListItem>
+                <asp:ListItem Value="Social">Social</asp:ListItem>
+              </asp:DropDownList><br />
+            Por Ámbito:
+              <asp:DropDownList ID="AmbitoDDL" runat="server">
+                <asp:ListItem Value="">Seleccionar</asp:ListItem>
+                <asp:ListItem Value="Municipal">Municipal</asp:ListItem>
+                <asp:ListItem Value="Estatal">Estatal</asp:ListItem>
+                <asp:ListItem Value="Regional">Regional</asp:ListItem>
+                <asp:ListItem Value="Nacional">Nacional</asp:ListItem>
+                <asp:ListItem Value="Internacional">Internacional</asp:ListItem>
+              </asp:DropDownList>
+            <asp:Button ID="btnAplicar4" Text="Aplicar" CssClass="btn btn-primary mt-1" runat="server" OnClick="btnAplicar4_Click"/>
+
         </div>
       </div>
 

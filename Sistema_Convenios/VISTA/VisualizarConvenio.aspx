@@ -247,6 +247,13 @@
         </div>
       </div>     
     </div>
+    <div>
+       <h4>Documento Escaneado</h4>
+        <asp:Panel runat="server" ID="alertArchivo" CssClass="alert alert-primary">Archivo Enviado</asp:Panel>
+       <asp:FileUpload ID="fupEscaneado" runat="server" accept="application/pdf"/>
+        <asp:Button ID="btnEscaneado" class="btn btn-primary"  Text="Subir Escaneado" runat="server" OnClick="btnEscaneado_Click"/>
+        <asp:Button ID="btnVerEscaneado"  class="btn btn-primary"  Text="Ver Escaneado" runat="server" OnClick="btnVerEscaneado_Click"  />
+    </div>
     <asp:Button ID="btnAtras" class="btn btn-primary align-content-center" runat="server" Text="Atras" OnClick="btnAtras_Click" Visible="true" />
     <asp:Button ID="btnImprimir" class="btn btn-primary" runat="server" Text="Imprimir" OnClientClick="ImprimeDiv();"/>
   </div>

@@ -15,14 +15,42 @@
           <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:SISTEMADECONVENIOSConnectionString %>' SelectCommand="SELECT idTablaParticipante, nombreProyecto, num_participantes, num_convenio FROM PARTICIPANTE WHERE (num_convenio IS NULL)"></asp:SqlDataSource>
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-row">
-          <asp:Label ID="lbl" runat="server" Text="Número de Participantes:" style="font-size: 0.8571em;margin-bottom: 5px;color: #9A9A9A;"></asp:Label>
-          <asp:TextBox ID="txbNumParticipantes" runat="server" TextMode="Number" Style="margin-left: 20px; margin-top: 24px;" Width="335px" Height="41px"></asp:TextBox>
-          <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="*Solo se admiten números" ControlToValidate="txbNumParticipantes" Display="Dynamic" ForeColor="Red" ValidationExpression="\d+"></asp:RegularExpressionValidator>
-          <asp:RequiredFieldValidator ID="valNumero" runat="server" ErrorMessage=" * Favor de agregar un número" ControlToValidate="txbNumParticipantes" Display="Dynamic" ForeColor="Red" InitialValue=""></asp:RequiredFieldValidator>
-        </div>
-      </div>
+          <asp:Repeater ID="Repeater1" runat="server">
+              <HeaderTemplate>
+                    <h6>Participantes</h6>
+                  <div class="form-row">
+                      <div class="col-md-6">
+                          Nombre de Participante
+                      </div>
+                      <div class="col-md-3">
+                          Carrera de Participante
+                      </div>
+                  </div>
+              </HeaderTemplate>
+              <ItemTemplate>
+                  <div class="form-row mb-3">
+                      <div class="col-md-6">
+                        <asp:TextBox ID="Nombre" runat="server" CssClass="form-control border-dark"></asp:TextBox>
+                      </div>
+                      <div class="col-md-3">
+                        <asp:DropDownList ID="CarreraDDL" runat="server" CssClass="form-control border-dark">
+                          <asp:ListItem Value="">Seleccionar</asp:ListItem>
+                          <asp:ListItem Value="ING. AERONÁUTICA">ING. AERONÁUTICA</asp:ListItem>
+                          <asp:ListItem Value="ING. BIOMÉDICA">ING. BIOMÉDICA</asp:ListItem>
+                          <asp:ListItem Value="ING. ELÉCTRICA">ING. ELÉCTRICA</asp:ListItem>
+                          <asp:ListItem Value="ING. ELECTRÓNICA">ING. ELECTRÓNICA</asp:ListItem>
+                          <asp:ListItem Value="ING. INDUSTRIAL">ING. INDUSTRIAL</asp:ListItem>
+                          <asp:ListItem Value="ING. MECÁNICA">ING. MECÁNICA</asp:ListItem>
+                          <asp:ListItem Value="ING. MECATRÓNICA">ING. MECATRÓNICA</asp:ListItem>
+                          <asp:ListItem Value="LIC. ADMINISTRACIÓN">LIC. ADMINISTRACIÓN</asp:ListItem>
+                          <asp:ListItem Value="ING. SISTEMAS COMPUTACIONALES">ING. SISTEMAS COMPUTACIONALES</asp:ListItem>
+                          <asp:ListItem Value="ING. INFORMÁTICA">ING. INFORMÁTICA</asp:ListItem>
+                          <asp:ListItem Value="ING. GESTIÓN EMPRESARIAL">ING. GESTIÓN EMPRESARIAL</asp:ListItem>
+                        </asp:DropDownList>
+                      </div>
+                  </div>
+              </ItemTemplate>
+          </asp:Repeater>
     </div>
     <asp:Button ID="btnAtras" class="btn btn-primary align-content-center" runat="server" Text="Atras" OnClientClick="btnAtrasClick()" OnClick="btnAtras_Click" Visible="true" />
     <asp:Button ID="btnGuardar" class="btn btn-primary" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
@@ -34,7 +62,6 @@
   <script>
       /*Deshabilitar RequireValidator*/
       function btnAtrasClick() {
-          ValidatorEnable(document.getElementById('<%= valNumero.ClientID %>'), false);
       }
   </script>
 </asp:Content>

@@ -12,7 +12,7 @@
           <asp:Label ID="Label1" runat="server" Text="Nombre del Proyecto:" style="font-size: 0.8571em;margin-bottom: 5px;color: #9A9A9A;"></asp:Label>
           <asp:TextBox ID="txbNombreProyecto" runat="server" Style="margin-left: 20px; margin-top: 24px;" Width="335px" Height="41px"></asp:TextBox>
           <asp:RegularExpressionValidator  ID="valNombre1" runat="server" ControlToValidate="txbNombreProyecto" ErrorMessage=" * Numero de digitos 
-          incorrecto (3 - 100)" ValidationExpression="^[a-zA-Z0-9'@&#.\s]{3,100}$" Display="Dynamic" ForeColor="Red" InitialValue=""/> 
+          incorrecto (3 - 100)" ValidationExpression="^[a-zA-ZñÑáéíóúÁÉÓÚ0-9'@&#.\s]{3,100}$" Display="Dynamic" ForeColor="Red" InitialValue=""/> 
           <asp:RequiredFieldValidator ID="valNombreExiste" runat="server" ErrorMessage=" * Favor de agregar un nombre" 
           ControlToValidate="txbNombreProyecto" Display="Dynamic" ForeColor="Red" InitialValue=""></asp:RequiredFieldValidator>
         </div>
@@ -26,6 +26,10 @@
           <asp:RequiredFieldValidator ID="valNumero" runat="server" ErrorMessage=" * Favor de agregar un número" 
           ControlToValidate="txbNumParticipantes" Display="Dynamic" ForeColor="Red" InitialValue=""></asp:RequiredFieldValidator>
         </div>
+      </div>
+      <div>          
+          <asp:Label ID="Label2" runat="server" Text="Semestre:" style="font-size: 0.8571em;margin-bottom: 5px;color: #9A9A9A;"></asp:Label>
+          <asp:TextBox ID="txtSemestre" runat="server" Style="margin-left: 20px; margin-top: 24px;" Width="335px" Height="41px"></asp:TextBox>
       </div>
     </div>
     <asp:Button ID="btnAtras" class="btn btn-primary align-content-center" runat="server" Text="Atras" OnClientClick="btnAtrasClick()" OnClick="btnAtras_Click" Visible="true" />

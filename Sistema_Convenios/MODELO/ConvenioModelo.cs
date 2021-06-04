@@ -22,7 +22,7 @@ namespace MODELO
             ///Crea una lista con los datos del convenio buscado por algun criterio
             using (var modelo = new SISTEMADECONVENIOSEntities())
             {
-                List<CONVENIO> resultado = (from con in modelo.CONVENIO
+                List<CONVENIO> resultado = (from con in modelo.CONVENIO.Include("PARTICIPANTE").Include("PARTICIPANTE.PARTICIPANTE_CARRERA")
                                             where (con.nombreInstrumento.Contains(criterios)
                                             || con.publicadoDonde.Contains(criterios)
                                             || con.objetivoInstrumento.Contains(criterios)
@@ -39,6 +39,21 @@ namespace MODELO
                                             || con.entregable.Contains(criterios)
                                             || con.eje.Contains(criterios)
                                             || con.plazoConvenio.Contains(criterios)
+                                            )
+                                            select con).ToList();
+                return resultado;
+            }
+        }
+
+        public static List<CONVENIO> BuscarConvenioFiltros(string objeto, string sector, string ambito)
+        {
+            ///Crea una lista con los datos del convenio buscado por algun criterio
+            using (var modelo = new SISTEMADECONVENIOSEntities())
+            {
+                List<CONVENIO> resultado = (from con in modelo.CONVENIO
+                                            where (con.objetivoInstrumento.Contains(objeto)
+                                            && con.SECTOR.descripcionSec.Contains(sector)
+                                            && con.AMBITO.descripcionAmbito.Contains(ambito)
                                             )
                                             select con).ToList();
                 return resultado;

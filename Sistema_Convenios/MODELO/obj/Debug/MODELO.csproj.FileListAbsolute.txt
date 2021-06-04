@@ -94,3 +94,39 @@ C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\M
 C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.dll
 C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\bin\Debug\MODELO.dll.config
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\bin\Debug\MODELO.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\bin\Debug\MODELO.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.xml
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\obj\Debug\MODELO.csproj.CoreCompileInputs.cache
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\obj\Debug\MODELO.csproj.CopyComplete
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\obj\Debug\MODELO.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\obj\Debug\MODELO.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\MODELO\obj\Debug\MODELO.csprojAssemblyReference.cache
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\MODELO.dll.config
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\MODELO.dll
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\MODELO.pdb
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.dll
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.xml
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csprojAssemblyReference.cache
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csproj.CoreCompileInputs.cache
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csproj.CopyComplete
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.dll
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\MODELO.dll.config
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\MODELO.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\MODELO.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.xml
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csprojAssemblyReference.cache
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csproj.CoreCompileInputs.cache
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.csproj.CopyComplete
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\MODELO\obj\Debug\MODELO.pdb

@@ -11,7 +11,28 @@ namespace VISTA
 {
     public partial class AgregarConvenio : System.Web.UI.Page
     {
-
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            int tipousuario = (int)Session["id_rol"];
+            if (tipousuario != 1)
+            {
+                try
+                {
+                    Session.Abandon();
+                    Session["LoginId"] = null;
+                    Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                    Response.Buffer = true;
+                    Response.ExpiresAbsolute = DateTime.Now.AddDays(-1d);
+                    Response.Expires = -1000;
+                    Response.CacheControl = "no-cache";
+                    Response.Redirect("InicioSesion.aspx", true);
+                }
+                catch (Exception ex)
+                {
+                    Response.Write(ex.Message);
+                }
+            }
+        }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             int totalmeses = 0;

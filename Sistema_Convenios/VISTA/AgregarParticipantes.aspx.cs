@@ -21,7 +21,8 @@ namespace VISTA
                 var newparticipante = new PARTICIPANTE()
                 {
                     nombreProyecto = txbNombreProyecto.Text,
-                    num_participantes = Convert.ToInt32(txbNumParticipantes.Text)
+                    num_participantes = Convert.ToInt32(txbNumParticipantes.Text),
+                    semestre = txtSemestre.Text
                 };
                 ParticipanteModelo.InsertarParticipante(newparticipante);
                 mensaje.Visible = true;

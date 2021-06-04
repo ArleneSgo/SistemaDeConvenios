@@ -42,6 +42,16 @@
               <asp:BoundField DataField="nombreInstitucion" HeaderText="Nombre de la(s) Institucion(es) con la que se suscribe el instrumento jurídico" />
               <asp:BoundField DataField="nombreProyecto" HeaderText="Nombre de Proyecto" />
               <asp:BoundField DataField="num_participantes" HeaderText="Numero de Participantes" />
+            <asp:TemplateField HeaderText="Carreras">
+            <ItemTemplate>
+                <asp:Repeater runat="server" DataSource="<%# ParticipanteModelo.BuscarParticipantePorID(((TablaParticipantes)Container.DataItem).idTablaParticipante).PARTICIPANTE_CARRERA.GroupBy(pc => pc.nombreCarrera).Select(g => new {name=g.Key, count=g.Count() }).Where(g => g.name.Length > 0) %>">
+                    <ItemTemplate>
+                      <b><asp:Label runat="server" Text='<%# Eval("name") %>'></asp:Label>:</b> <asp:Label runat="server" Text='<%# Eval("count") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ItemTemplate>
+            </asp:TemplateField>
+              <asp:BoundField DataField="semestre" HeaderText="Semestre" />
               <asp:TemplateField HeaderText="Acciones">
                 <ItemTemplate>
                   <asp:LinkButton ID="imgModificar" runat="server" CommandArgument="<%#((TablaParticipantes)(Container.DataItem)).idTablaParticipante %>" OnCommand="imgModificar_Command"><i class="fas fa-edit"></i></asp:LinkButton>

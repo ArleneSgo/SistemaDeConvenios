@@ -17,7 +17,7 @@ namespace VISTA
             if (sesion != 0)
             {
                 nombreUsuario = Session["nombre"].ToString();
-                DataBind();
+                //DataBind();
                 HyperLink1.NavigateUrl = ("ModificarUsuario.aspx?ID=" + sesion);///redirige a la pagina del perfil
                 var rol = Convert.ToInt32(Session["id_rol"]);
                 if (rol != 1)

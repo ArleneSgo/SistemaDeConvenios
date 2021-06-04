@@ -9,7 +9,7 @@
     <div id="contactanosFormulario" class="contactanosFormulario">
       <h5>Datos del Instrumento Jurídico</h5> 
         <div class="form-row">        
-          <div class="form-group col-md-3">
+          <div class="form-group col-md-6">
             <h6>Nombre del Instrumento Jurídico</h6>
               <asp:DropDownList ID="NomJurDDL" runat="server">
                 <asp:ListItem Value="">Seleccionar</asp:ListItem>
@@ -20,7 +20,7 @@
               <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage=" * Favor de seleccionar una opción" 
               ControlToValidate="NomJurDDL" Display="Dynamic" ForeColor="Red" InitialValue=""></asp:RequiredFieldValidator>
           </div>
-          <div class="form-group col-md-5">
+          <div class="form-group col-md-6">
             <div class="form-row">
               <h6>Vigencia del Instrumento Jurídico</h6>
             </div>
@@ -42,7 +42,22 @@
               </asp:CompareValidator> 
             </div>  
           </div>
-          <div class="form-group col-md-4">
+          
+        </div>      
+        <div class="form-row" >
+          <div class="form-group col-md-6">
+            <h6>Objeto/objetivo del Instrumento Jurídico</h6>
+              <asp:DropDownList ID="ObjJurDDL" runat="server">
+                <asp:ListItem Value="">Seleccionar</asp:ListItem>
+                <asp:ListItem Value="SERVICIO SOCIAL">SERVICIO SOCIAL</asp:ListItem>
+                <asp:ListItem Value="RESIDENCIAS">RESIDENCIAS</asp:ListItem>
+                <asp:ListItem Value="CONVENIO MARCO">CONVENIO MARCO</asp:ListItem>
+              </asp:DropDownList>
+              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage=" * Favor de seleccionar una opción" 
+              ControlToValidate="ObjJurDDL" Display="Dynamic" ForeColor="Red" InitialValue=""></asp:RequiredFieldValidator>
+          </div>
+
+            <div class="form-group col-md-6">
             <div class="form-row">
               <h6>Se encuentra publicado en algún medio</h6>
             </div>
@@ -67,27 +82,16 @@
               Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
             </div>  
           </div>
-        </div>      
-        <div class="form-row" >
-          <div class="form-group col-md-3">
-            <h6>Objeto/objetivo del Instrumento Jurídico</h6>
-              <asp:DropDownList ID="ObjJurDDL" runat="server">
-                <asp:ListItem Value="">Seleccionar</asp:ListItem>
-                <asp:ListItem Value="SERVICIO SOCIAL">SERVICIO SOCIAL</asp:ListItem>
-                <asp:ListItem Value="RESIDENCIAS">RESIDENCIAS</asp:ListItem>
-                <asp:ListItem Value="CONVENIO MARCO">CONVENIO MARCO</asp:ListItem>
-              </asp:DropDownList>
-              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage=" * Favor de seleccionar una opción" 
-              ControlToValidate="ObjJurDDL" Display="Dynamic" ForeColor="Red" InitialValue=""></asp:RequiredFieldValidator>
-          </div>
-          <div class="form-group col-md-8">
+
+
+
+
+          <div class="form-group ">
             <div class="form-row">
-              <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Naturaleza</h6>
+              <h6> Naturaleza</h6>
             </div>
             <div class="form-row">   
-              <div class="form-group col-md-5">
+              <div class="form-group col-md-4">
                 <asp:DropDownList ID="NaturalezaDDL" runat="server">
                   <asp:ListItem Value="">Seleccionar</asp:ListItem>
                   <asp:ListItem Value="1">SERVICIO SOCIAL</asp:ListItem>
@@ -105,7 +109,7 @@
                 <input type="radio" id="rbtnMixta" name="modalidad" value="3" runat="server"/>
                 <label for="rbtnMixta">Mixta</label><br>
               </div>  
-              <div class="form-group col">
+              <div class="form-group col-md-6">
                 <div class="form-row">
                   <div class="form-group col">
                     <label>Prestación:</label>
@@ -127,10 +131,9 @@
                   </div>
                 </div>             
               </div>
-            </div>
-            <div class="form-row">
+       
               <div class="form-group col-md-2" id="becasMod"  >
-                <label>Movilidad/Intercambio</label>
+                <label>Movilidad/Intercambio</label> <br>
                 <input type="radio" id="rbtnPresencialBecas" name="modalidadBecas" value="1" runat="server" />
                 <label for="rbtnPresencialBecas">Presencial</label><br>
                 <input type="radio" id="rbtnVirtualBecas" name="modalidadBecas" value="2" runat="server" />
@@ -138,19 +141,15 @@
                 <input type="radio" id="rbtnMixtaBecas" name="modalidadBecas" value="3" runat="server"/>
                 <label for="rbtnMixtaBecas">Mixta</label><br>
               </div>
-              <div class="form-group col-md-4 ">
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              <div class="form-group col-md-3 ">
                 <input type="checkbox" id="cbxBecas" name="becas" onclick="Checado()" />
                 <label for="cbxBecas"> Becas</label><br>
-                <div class="form-row" id="becas" style="display: none" >
+                <div id="becas" style="display: none" >
                   <label>Indique nombre de la Beca:</label>
                   <asp:TextBox ID="txtBecas" CssClass="form-control" runat="server" MaxLength="100"></asp:TextBox>
                 </div>  
               </div>                                  
-            </div>
+            </div>          
           </div>
         </div>
         <div class="form-row">
@@ -162,18 +161,18 @@
             <asp:RequiredFieldValidator ID="rfvnombreRepITH" runat="server" ErrorMessage="* Campo Requerido" ControlToValidate="txtNombreRepITH" 
             Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="rfvnombreRepITH1" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " 
-            ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+            ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-ZñÑáéíóúÁÉÓÚ ]{1,}$"></asp:RegularExpressionValidator>
             <asp:RegularExpressionValidator ID="rfvnombreRepITH2" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el nombre 
             correctamente " ControlToValidate="txtNombreRepITH" Display="Dynamic" ForeColor="Red" ValidationExpression=".{8}.*"></asp:RegularExpressionValidator>
         </div>
         <div class="form-group col-md-6">
-          <h6>Nombre de la(s) Institución(es) con la que se suscribe el instrumento jurídico &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <h6>Nombre comercial de la(s) Institución(es) con la que se suscribe el instrumento jurídico &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
           <asp:TextBox ID="txtNombreInstitucion" CssClass="form-control" runat="server" MaxLength="150"></asp:TextBox>
           <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="* Campo Requerido" 
           ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " 
-          ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+          ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-ZñÑáéíóúÁÉÓÚ ]{1,}$"></asp:RegularExpressionValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el 
           nombre correctamente " ControlToValidate="txtNombreInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression=".{2}.*"></asp:RegularExpressionValidator>
         </div>
@@ -185,7 +184,7 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="* Campo Requerido" 
             ControlToValidate="txtNombreRepInstitucion" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " 
-            ControlToValidate="txtNombreRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+            ControlToValidate="txtNombreRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-ZñÑáéíóúÁÉÓÚ ]{1,}$"></asp:RegularExpressionValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el nombre 
             correctamente " ControlToValidate="txtNombreRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression=".{8}.*"></asp:RegularExpressionValidator>
         </div>
@@ -195,7 +194,7 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="* Campo Requerido" 
             ControlToValidate="txtCargoRepInstitucion" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator> 
             <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " 
-            ControlToValidate="txtCargoRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+            ControlToValidate="txtCargoRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-ZñÑáéíóúÁÉÓÚ ]{1,}$"></asp:RegularExpressionValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="* Tamaño inválido, favor de ingresar el 
             nombre correctamente " ControlToValidate="txtCargoRepInstitucion" Display="Dynamic" ForeColor="Red" ValidationExpression=".{3}.*"></asp:RegularExpressionValidator>
         </div>
@@ -256,7 +255,7 @@
     <div class="form-row">                        
       <h5>Entregables</h5>
     </div> 
-    <div class="form-row">
+    <div class="form-row col-md-6">
       <label>Indique cuáles:</label>
       <asp:TextBox ID="txtEntregables" CssClass="form-control" runat="server" MaxLength="100"></asp:TextBox>
     </div>
@@ -436,7 +435,7 @@
         <asp:ListItem Value="4">EDUCACION DE CALIDAD</asp:ListItem>
         <asp:ListItem Value="5">IGUALDAD DE GENERO</asp:ListItem>
         <asp:ListItem Value="6">AGUA LIMPIA Y SANEAMIENTO</asp:ListItem>
-        <asp:ListItem Value="7">ENERGIA ASEQUIBLE Y NO OCNTAMINANTE</asp:ListItem>
+        <asp:ListItem Value="7">ENERGIA ASEQUIBLE Y NO CONTAMINANTE</asp:ListItem>
         <asp:ListItem Value="8">TRABAJO DOCENTE Y CRECIMIENTO ECONOMICO</asp:ListItem>
         <asp:ListItem Value="9">INDUSTRIA, INNOVACION E INFRAESTRUCTURA</asp:ListItem>
         <asp:ListItem Value="10">REDUCCION DE LAS DESIGUALDADES</asp:ListItem>

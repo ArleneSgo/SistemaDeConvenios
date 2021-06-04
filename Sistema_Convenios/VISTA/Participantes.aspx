@@ -55,6 +55,15 @@
               </asp:TemplateField>
               <asp:BoundField DataField="nombreInstitucion" HeaderText="Nombre de la(s) Institucion(es) con la que se suscribe el instrumento jurídico" />
               <asp:BoundField DataField="num_participantes" HeaderText="Numero de Participantes" />
+              <asp:TemplateField HeaderText="Carreras">
+                <ItemTemplate>
+                    <asp:Repeater runat="server" DataSource="<%# ((CONVENIO)Container.DataItem).PARTICIPANTE.SelectMany(p => p.PARTICIPANTE_CARRERA).GroupBy(pc => pc.nombreCarrera).Select(g => new {name=g.Key, count=g.Count() }).Where(g => g.name.Length > 0) %>">
+                        <ItemTemplate>
+                            <b><asp:Label runat="server" Text='<%# Eval("name") %>'></asp:Label>:</b> <asp:Label runat="server" Text='<%# Eval("count") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </ItemTemplate>
+              </asp:TemplateField>
               <asp:TemplateField HeaderText="Acciones">
                 <ItemTemplate>
                   <asp:LinkButton ID="imgAgregar"  runat="server" CommandArgument="<%#((CONVENIO)(Container.DataItem)).numConvenio%>" OnCommand="imgAgregar_Command"><i class="now-ui-icons  ui-1_simple-add"></i></asp:LinkButton>

@@ -15,27 +15,22 @@ namespace MODELO
 using System;
     using System.Collections.Generic;
     
-public partial class NATURALEZA
+public partial class PARTICIPANTE_CARRERA
 {
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public NATURALEZA()
-    {
+    public int idParticipanteCarrera { get; set; }
 
-        this.CONVENIO = new HashSet<CONVENIO>();
+    public int idTablaParticipante { get; set; }
 
-    }
+    public string nombreCarrera { get; set; }
 
+    public string nombreAlumno { get; set; }
 
-    public int idNaturaleza { get; set; }
-
-    public string nombreInstrumento { get; set; }
+    public string numeroControl { get; set; }
 
 
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-    public virtual ICollection<CONVENIO> CONVENIO { get; set; }
+    public virtual PARTICIPANTE PARTICIPANTE { get; set; }
 
 }
 

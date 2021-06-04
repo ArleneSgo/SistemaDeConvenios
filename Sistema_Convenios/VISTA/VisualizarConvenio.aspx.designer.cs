@@ -393,6 +393,42 @@ namespace VISTA
         protected global::System.Web.UI.WebControls.Label lblODS;
 
         /// <summary>
+        /// Control alertArchivo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel alertArchivo;
+
+        /// <summary>
+        /// Control fupEscaneado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fupEscaneado;
+
+        /// <summary>
+        /// Control btnEscaneado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEscaneado;
+
+        /// <summary>
+        /// Control btnVerEscaneado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVerEscaneado;
+
+        /// <summary>
         /// Control btnAtras.
         /// </summary>
         /// <remarks>

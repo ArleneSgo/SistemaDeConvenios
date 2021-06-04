@@ -132,6 +132,42 @@ namespace VISTA
         protected global::System.Web.UI.WebControls.Button btnAplicar3;
 
         /// <summary>
+        /// Control ObjJurDDL.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ObjJurDDL;
+
+        /// <summary>
+        /// Control SectorDDL.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList SectorDDL;
+
+        /// <summary>
+        /// Control AmbitoDDL.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList AmbitoDDL;
+
+        /// <summary>
+        /// Control btnAplicar4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAplicar4;
+
+        /// <summary>
         /// Control gvBuscarConvenios.
         /// </summary>
         /// <remarks>

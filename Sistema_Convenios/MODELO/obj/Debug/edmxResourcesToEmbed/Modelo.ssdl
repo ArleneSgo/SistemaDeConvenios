@@ -83,6 +83,17 @@
     <Property Name="nombreProyecto" Type="varchar" MaxLength="100" />
     <Property Name="num_participantes" Type="int" />
     <Property Name="num_convenio" Type="int" />
+    <Property Name="semestre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PARTICIPANTE_CARRERA">
+    <Key>
+      <PropertyRef Name="idParticipanteCarrera" />
+    </Key>
+    <Property Name="idTablaParticipante" Type="int" Nullable="false" />
+    <Property Name="nombreCarrera" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nombreAlumno" Type="varchar" MaxLength="255" />
+    <Property Name="numeroControl" Type="varchar" MaxLength="8" />
+    <Property Name="idParticipanteCarrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="RECURSOS">
     <Key>
@@ -140,7 +151,7 @@
     <Property Name="segundo_apellido" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="telefono" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="contrasena" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contrasena" Type="varchar" MaxLength="255" />
     <Property Name="empresa" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="tipoUsuario" Type="int" Nullable="false" />
   </EntityType>
@@ -164,6 +175,7 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
     <Property Name="nombreProyecto" Type="varchar" MaxLength="100" />
     <Property Name="num_participantes" Type="int" />
     <Property Name="num_convenio" Type="int" />
+    <Property Name="semestre" Type="varchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK__CONVENIO__idActE__078C1F06">
     <End Role="ACTIVIDADECONOMICA" Type="Self.ACTIVIDADECONOMICA" Multiplicity="1" />
@@ -285,6 +297,18 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__PARTICIPA__idTab__0FEC5ADD">
+    <End Role="PARTICIPANTE" Type="Self.PARTICIPANTE" Multiplicity="1" />
+    <End Role="PARTICIPANTE_CARRERA" Type="Self.PARTICIPANTE_CARRERA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PARTICIPANTE">
+        <PropertyRef Name="idTablaParticipante" />
+      </Principal>
+      <Dependent Role="PARTICIPANTE_CARRERA">
+        <PropertyRef Name="idTablaParticipante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__USUARIO__tipoUsu__37703C52">
     <End Role="TIPOUSUARIO" Type="Self.TIPOUSUARIO" Multiplicity="1" />
     <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
@@ -350,6 +374,7 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
     <EntitySet Name="NATURALEZA" EntityType="Self.NATURALEZA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ODS" EntityType="Self.ODS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PARTICIPANTE" EntityType="Self.PARTICIPANTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PARTICIPANTE_CARRERA" EntityType="Self.PARTICIPANTE_CARRERA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RECURSOS" EntityType="Self.RECURSOS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SECTOR" EntityType="Self.SECTOR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -368,7 +393,8 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
     [TablaParticipantes].[idTablaParticipante] AS [idTablaParticipante], 
     [TablaParticipantes].[nombreProyecto] AS [nombreProyecto], 
     [TablaParticipantes].[num_participantes] AS [num_participantes], 
-    [TablaParticipantes].[num_convenio] AS [num_convenio]
+    [TablaParticipantes].[num_convenio] AS [num_convenio], 
+    [TablaParticipantes].[semestre] AS [semestre]
     FROM [dbo].[TablaParticipantes] AS [TablaParticipantes]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__CONVENIO__idActE__078C1F06" Association="Self.FK__CONVENIO__idActE__078C1F06">
@@ -410,6 +436,10 @@ advertencia 6002: La tabla o vista 'SISTEMADECONVENIOS.dbo.TablaParticipantes' n
     <AssociationSet Name="FK__CONVENIO__natura__01D345B0" Association="Self.FK__CONVENIO__natura__01D345B0">
       <End Role="MODALIDAD" EntitySet="MODALIDAD" />
       <End Role="CONVENIO" EntitySet="CONVENIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PARTICIPA__idTab__0FEC5ADD" Association="Self.FK__PARTICIPA__idTab__0FEC5ADD">
+      <End Role="PARTICIPANTE" EntitySet="PARTICIPANTE" />
+      <End Role="PARTICIPANTE_CARRERA" EntitySet="PARTICIPANTE_CARRERA" />
     </AssociationSet>
     <AssociationSet Name="FK__USUARIO__tipoUsu__37703C52" Association="Self.FK__USUARIO__tipoUsu__37703C52">
       <End Role="TIPOUSUARIO" EntitySet="TIPOUSUARIO" />

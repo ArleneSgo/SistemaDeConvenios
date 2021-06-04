@@ -123,14 +123,17 @@ namespace CONTROLADOR
                     && usuario.contrasena != string.Empty)
                 {
                     var resultado = UsuarioModelo.IngresarSistema(usuario);
+                    if (resultado == null)
+                    {
+                        throw new Errores("Usuario y/o contraseña incorrectos");
+                    }
 
                     string[] contraseña = resultado.contrasena.Split('!');
 
                     byte[] salt = Convert.FromBase64String(contraseña[0]);
-                    byte[] hash = Convert.FromBase64String(contraseña[1]);
                     byte[] newhash = EncriptarContraseña(usuario.contrasena, salt);
 
-                    if (hash.SequenceEqual(newhash))
+                    if (contraseña[1] == Convert.ToBase64String(newhash).Substring(0, 20))
                     {
                         return resultado;
                     }

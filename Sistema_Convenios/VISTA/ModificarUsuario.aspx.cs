@@ -48,7 +48,7 @@ namespace VISTA
                 usuarioModificado.email = txtCorreoElectronico.Text;
                 usuarioModificado.contrasena = txtContrasena.Text;
                 usuarioModificado.empresa = txtEmpresa.Text;
-                UsuarioModelo.ModificarUsuario(usuarioModificado);
+                UsuarioControlador.ModificarUsuario(usuarioModificado);
                 mensaje.Visible = true;
                 string javaScript = "OcultarMensaje();";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", javaScript, true);

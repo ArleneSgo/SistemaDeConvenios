@@ -181,6 +181,7 @@
     <Content Include="ModificarUsuario.aspx" />
     <Content Include="Participantes.aspx" />
     <Content Include="ParticipantesRegistrados.aspx" />
+    <Content Include="Respaldo.aspx" />
     <Content Include="scripts\build-assets.js" />
     <Content Include="scripts\build-pug.js" />
     <Content Include="scripts\build-scripts.js" />
@@ -305,6 +306,13 @@
       <DependentUpon>ParticipantesRegistrados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respaldo.aspx.cs">
+      <DependentUpon>Respaldo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Respaldo.aspx.designer.cs">
+      <DependentUpon>Respaldo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

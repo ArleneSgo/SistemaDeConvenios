@@ -94,3 +94,39 @@ C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\C
 C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.dll
 C:\Users\Usuario\Desktop\Arlene\escritorio\Sistema_Convenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll.config
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.xml
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csprojAssemblyReference.cache
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CoreCompileInputs.cache
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConvenios-master\SistemaDeConvenios-master\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.pdb
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.dll
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.pdb
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.dll
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.pdb
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll.config
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.xml
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csprojAssemblyReference.cache
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CoreCompileInputs.cache
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.dll
+C:\Users\naomi\Desktop\Nueva carpeta\16\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\CONTROLADOR.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.pdb
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\MODELO.dll.config
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\bin\Debug\EntityFramework.xml
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csprojAssemblyReference.cache
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CoreCompileInputs.cache
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.csproj.CopyComplete
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.dll
+C:\Users\Gabo Banda\Downloads\SistemaDeConveniosA\SistemaDeConvenios\Sistema_Convenios\CONTROLADOR\obj\Debug\CONTROLADOR.pdb

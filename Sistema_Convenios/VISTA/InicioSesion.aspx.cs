@@ -21,16 +21,16 @@ namespace VISTA
                 contrasena = txtContrasena.Text,
                 email = txtUsuario.Text,
             };
-            var usuario = UsuarioModelo.IngresarSistema(newUsuario);
-            Session.Timeout = 20;
-            if (usuario != null)
+            try
             {
+                var usuario = UsuarioControlador.IngresarSistema(newUsuario);
+                Session.Timeout = 20;
                 Session["nombre"] = usuario.nombre + " " + usuario.primer_apellido;
                 Session["id_rol"] = usuario.tipoUsuario;
                 Session["id_usuario"] = usuario.id_usuario;
                 Response.Redirect("Inicio.aspx");
             }
-            else
+            catch
             {
                 mensajeError.Visible = true;
             }

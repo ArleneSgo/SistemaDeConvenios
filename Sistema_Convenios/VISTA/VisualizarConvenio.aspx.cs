@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MODELO;
 using CONTROLADOR;
+using System.IO;
 
 namespace VISTA
 {
@@ -13,6 +14,7 @@ namespace VISTA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            alertArchivo.Visible = false;
             if (!IsPostBack)
             {   ///Busca el convenio y carga sus valores para su visualizacion
                 var numCon = Convert.ToInt32(Request.QueryString["NUM"]);
@@ -321,12 +323,32 @@ namespace VISTA
                 {
                     lblODS.Text = "ALIANZAS PARA LOGRAR LOS OBJETIVOS";
                 }
+
+                if (!File.Exists(Server.MapPath("~/Include/" + convenio.numConvenio + "convenio.pdf")))
+                {
+                    btnVerEscaneado.Visible = false;
+                }
             }
         }
 
         protected void btnAtras_Click(object sender, EventArgs e)
         {   ///Regresa a la pantalla del grid de convenios
             Response.Redirect("buscarConvenio.aspx");
+        }
+
+        protected void btnEscaneado_Click(object sender, EventArgs e)
+        {
+            if (fupEscaneado.HasFile && System.IO.Path.GetExtension(fupEscaneado.FileName) == ".pdf")
+            {
+                fupEscaneado.SaveAs(Server.MapPath("~/Include/" +Request.QueryString["NUM"]+ "convenio.pdf"));
+                btnVerEscaneado.Visible = true;
+                alertArchivo.Visible = true;
+            }
+        }
+
+        protected void btnVerEscaneado_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Include/"+Request.QueryString["NUM"]+ "convenio.pdf");
         }
     }
 }

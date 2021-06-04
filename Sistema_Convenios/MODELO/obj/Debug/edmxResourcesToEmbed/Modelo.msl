@@ -85,6 +85,7 @@
     <EntitySetMapping Name="PARTICIPANTE">
       <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.PARTICIPANTE">
         <MappingFragment StoreEntitySet="PARTICIPANTE">
+          <ScalarProperty Name="semestre" ColumnName="semestre" />
           <ScalarProperty Name="idTablaParticipante" ColumnName="idTablaParticipante" />
           <ScalarProperty Name="nombreProyecto" ColumnName="nombreProyecto" />
           <ScalarProperty Name="num_participantes" ColumnName="num_participantes" />
@@ -159,22 +160,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TablaParticipantes">
-      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TablaParticipantes">
-        <MappingFragment StoreEntitySet="TablaParticipantes">
-          <ScalarProperty Name="numConvenio" ColumnName="numConvenio" />
-          <ScalarProperty Name="nombreInstrumento" ColumnName="nombreInstrumento" />
-          <ScalarProperty Name="inicioConvenio" ColumnName="inicioConvenio" />
-          <ScalarProperty Name="finConvenio" ColumnName="finConvenio" />
-          <ScalarProperty Name="plazoConvenio" ColumnName="plazoConvenio" />
-          <ScalarProperty Name="nombreInstitucion" ColumnName="nombreInstitucion" />
-          <ScalarProperty Name="idTablaParticipante" ColumnName="idTablaParticipante" />
-          <ScalarProperty Name="nombreProyecto" ColumnName="nombreProyecto" />
-          <ScalarProperty Name="num_participantes" ColumnName="num_participantes" />
-          <ScalarProperty Name="num_convenio" ColumnName="num_convenio" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_creatediagram" />
     <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_dropdiagram" />
@@ -199,5 +184,33 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SISTEMADECONVENIOSModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SISTEMADECONVENIOSModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="PARTICIPANTE_CARRERA">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.PARTICIPANTE_CARRERA">
+        <MappingFragment StoreEntitySet="PARTICIPANTE_CARRERA">
+          <ScalarProperty Name="numeroControl" ColumnName="numeroControl" />
+          <ScalarProperty Name="nombreAlumno" ColumnName="nombreAlumno" />
+          <ScalarProperty Name="nombreCarrera" ColumnName="nombreCarrera" />
+          <ScalarProperty Name="idTablaParticipante" ColumnName="idTablaParticipante" />
+          <ScalarProperty Name="idParticipanteCarrera" ColumnName="idParticipanteCarrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TablaParticipantesSet">
+      <EntityTypeMapping TypeName="SISTEMADECONVENIOSModel.TablaParticipantes">
+        <MappingFragment StoreEntitySet="TablaParticipantes">
+          <ScalarProperty Name="semestre" ColumnName="semestre" />
+          <ScalarProperty Name="num_convenio" ColumnName="num_convenio" />
+          <ScalarProperty Name="num_participantes" ColumnName="num_participantes" />
+          <ScalarProperty Name="nombreProyecto" ColumnName="nombreProyecto" />
+          <ScalarProperty Name="idTablaParticipante" ColumnName="idTablaParticipante" />
+          <ScalarProperty Name="nombreInstitucion" ColumnName="nombreInstitucion" />
+          <ScalarProperty Name="plazoConvenio" ColumnName="plazoConvenio" />
+          <ScalarProperty Name="finConvenio" ColumnName="finConvenio" />
+          <ScalarProperty Name="inicioConvenio" ColumnName="inicioConvenio" />
+          <ScalarProperty Name="nombreInstrumento" ColumnName="nombreInstrumento" />
+          <ScalarProperty Name="numConvenio" ColumnName="numConvenio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

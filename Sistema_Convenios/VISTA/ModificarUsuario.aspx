@@ -15,7 +15,7 @@
             ControlToValidate="txtNombre" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
             ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtNombre" Display="Dynamic" 
-            ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$"></asp:RegularExpressionValidator>
+            ForeColor="Red" ValidationExpression="^[a-zA-ZñÑáéíóúÁÉÓÚ ]{1,}$"></asp:RegularExpressionValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" 
             ErrorMessage="* Tamaño inválido, favor de ingresar el nombre correctamente " ControlToValidate="txtNombre" 
             Display="Dynamic" ForeColor="Red" ValidationExpression=".{2}.*">
@@ -31,7 +31,7 @@
           </asp:RequiredFieldValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" 
             ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtPrimerApellido" 
-            Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$">
+            Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-ZñÑáéíóúÁÉÓÚ ]{1,}$">
           </asp:RegularExpressionValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" 
             ErrorMessage="* Tamaño inválido, favor de ingresar el apellido correctamente " 
@@ -48,7 +48,7 @@
           </asp:RequiredFieldValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" 
             ErrorMessage="* Formato Incorrecto Solo Se Permiten Letras " ControlToValidate="txtSegundoApellido" 
-            Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]{1,}$">
+            Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-ZñÑáéíóúÁÉÓÚ ]{1,}$">
           </asp:RegularExpressionValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" 
             ErrorMessage="* Tamaño inválido, favor de ingresar el apellido correctamente " 
@@ -103,7 +103,7 @@
           </asp:RequiredFieldValidator>
           <asp:RegularExpressionValidator ID="RegularExpressionValidator" runat="server" 
             ErrorMessage="* Formato Incorrecto 1 May 5 Caracteres" ControlToValidate="txtContrasena" Display="Dynamic" 
-            ForeColor="Red" ValidationExpression="[A-Z]\w{4}">
+            ForeColor="Red" ValidationExpression="[A-Z]\w{4,}">
           </asp:RegularExpressionValidator>
         </div>
       </div> 
